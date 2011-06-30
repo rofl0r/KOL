@@ -1,0 +1,16 @@
+
+[disks]
+    1 =. ,"TESTDRIVER Driver",disk1
+
+[Installable.Drivers]
+TESTDRIVER = 1:testdriver.dll,  "MIDI", "This is not a midi driver yet",,,
+
+[TESTDRIVER]
+
+
+
+
+
+
+
+

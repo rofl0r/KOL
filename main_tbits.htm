@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>KOL Help: TBits object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TBits( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TBits = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Variable-length bits array object. Created using function <a href=kol_pas.htm#newbits target="_top">NewBits</a>. See also
+<a href="kol_pas.htm#Small bit arrays (max 32 bits in array)">
+Small bit arrays (max 32 bits in array)
+</a>.
+<h3 align="center"><font color="#FF8080">TBits properties</font></h3>
+<a name="bits"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Bits</b></font>[ Idx: <b>Integer</b> ]: <b>Boolean</b>;</font>
+<br>
+</p>
+<a name="size"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Size</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Size in bytes of the array. To get know number of bits, use property <a href=#count target="main">Count</a>.
+</p>
+<a name="count"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Count</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Number of bits an the array.
+</p>
+<a name="capacity"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Capacity</b></font>: <b>Integer</b>;</font>
+<br>
+Number of bytes allocated. Can be set before assigning bit values
+to improve performance (minimizing amount of memory allocation
+operations).
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TBits methods</font></h3>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>virtual</b>;</font>
+<br>
+</p>
+<a name="copy"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Copy</b></font>( From, BitsCount: <b>Integer</b> ): PBits;</font>
+<br>
+Use this property to get a sub-range of bits starting from given bit
+and of BitsCount bits count.
+</p>
+<a name="indexof"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>IndexOf</b></font>( Value: <b>Boolean</b> ): <b>Integer</b>;</font>
+<br>
+Returns index of first bit with given value (True or False).
+</p>
+<a name="openbit"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>OpenBit</b></font>: <b>Integer</b>;</font>
+<br>
+Returns index of the first bit not set to true.
+</p>
+<a name="clear"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Clear</b></font>;</font>
+<br>
+Clears bits array. <a href=#count target="main">Count</a>, <a href=#size target="main">Size</a> and <a href=#capacity target="main">Capacity</a> become 0.
+</p>
+<a name="loadfromstream"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>LoadFromStream</b></font>( strm: PStream ): <b>Integer</b>;</font>
+<br>
+Loads bits from the stream. Data should be stored in the stream
+earlier using <a href=#savetostream target="main">SaveToStream</a> method. While loading, previous bits
+data are discarded and replaced with new one totally. In part,
+<a href=#count target="main">Count</a> of bits also is changed. <a href=#count target="main">Count</a> of bytes read from the stream
+while loading data is returned.
+</p>
+<a name="savetostream"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>SaveToStream</b></font>( strm: PStream ): <b>Integer</b>;</font>
+<br>
+Saves entire array of bits to the stream. First, <a href=#count target="main">Count</a> of bits
+in the array is saved, then all bytes containing bits data.
+</p>
+<a name="range"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Range</b></font>( Idx, N: <b>Integer</b> ): PBits;</font>
+<br>
+Creates and returns new TBits object instance containing N bits
+starting from index Idx. If you call this method, you are responsible
+for destroying returned object when it become not neccessary.
+</p>
+<a name="assignbits"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>AssignBits</b></font>( ToIdx: <b>Integer</b>; FromBits: PBits; FromIdx, N: <b>Integer</b> );</font>
+<br>
+Assigns bits from another bits array object. N bits are assigned
+starting at index ToIdx.
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TBits events</font></h3>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TBits fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

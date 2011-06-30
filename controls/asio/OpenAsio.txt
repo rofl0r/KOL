@@ -1,0 +1,29 @@
+OpenASIO wrapper for ASIO drivers v1.01
+
+(ASIO Technology by Steinberg, http://www.steinberg.net)
+
+
+Purpose:
+- The IASIO COM interface used by ASIO drivers has no explicitly declared calling convention for the 
+   functions. This has resulted in the interface being unusable from some compilers (i.e. Delphi).
+- OpenAsio provides a simple wrapper dll which exposes an interface where this problem has been corrected.
+
+Wrapper:
+- A Visual C++ 6 dll which declares a new COM interface IOpenASIO which matches
+   the Steinberg IASIO interface but changes the calling convention to __stdcall.
+- Some files from the ASIO SDK will be needed to compile the dll. This is available from
+   Steinberg.
+
+Client:
+- A Delphi import unit (OpenAsio.pas). This requires (and is included in) the Delphi ASIO SDK
+   translation located at http://www.axiworld.be.
+- Support for further languages (i.e. non-microsoft C++ compilers) may be added in future.
+
+History:
+(v1.01)
+- reference counting of the IOpenAsio interface fixed.
+
+
+OpenAsio is public domain / open source. Please mail comments, etc to:
+
+Martin Fay (martin@martinfay.com), 17/04/2001

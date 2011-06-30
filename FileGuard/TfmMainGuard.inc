@@ -1,0 +1,1 @@
+TfmMainGuard = class(TObj)

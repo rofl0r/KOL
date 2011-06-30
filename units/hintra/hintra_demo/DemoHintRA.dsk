@@ -1,0 +1,103 @@
+[MainWindow]
+Create=1
+Visible=1
+State=2
+Left=0
+Top=0
+Width=640
+Height=106
+MaxLeft=-4
+MaxTop=-4
+MaxWidth=648
+MaxHeight=106
+ClientWidth=640
+ClientHeight=60
+
+[ProjectManager]
+LargeButtons=1
+Column0Width=75
+Column1Width=125
+Column2Width=125
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=-1
+Top=102
+Width=190
+Height=337
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=313
+SplitPos=84
+
+[HistoryLists\hiOpenFile]
+Count=2
+H0=h:\program files\borland\delphi 3\kollib\mykolcomponents\hintra\demohintra\unit1_1.inc
+H1=h:\program files\borland\delphi 3\kollib\hintrad3.dpk
+
+[HistoryLists\hiUnitAlias]
+Count=1
+H0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+
+[Closed Files]
+File_0=SourceModule,'H:\Program Files\Borland\Delphi 3\KolLib\MyKOLComponents\HintRA\DemoHintRA\Unit1_1.inc',0,1,17,19,64,0,0
+File_1=SourceModule,'H:\Program Files\Borland\Delphi 3\KolLib\KOLHintRA.pas',0,1,174,42,182,0,0
+File_2=PackageEditModule,'H:\Program Files\Borland\Delphi 3\KolLib\HintRAD3.dpk',0,191,140,576,436,1
+File_3=SourceModule,'H:\Program Files\Borland\Delphi 3\KolLib\mckHintRA.pas',0,1,181,12,184,0,0
+File_4=SourceModule,'H:\Program Files\Delphi-Projects\KOL\x\Unit1.pas',0,1,64,26,70,1,0
+File_5=SourceModule,'H:\Program Files\Delphi-Projects\KOL\x\Unit1_1.inc',0,21,15,56,16,0,0
+File_6=SourceModule,'H:\Program Files\Delphi-Projects\KOL\xxx\Unit1_1.inc',0,1,12,1,16,0,0
+File_7=SourceModule,'H:\Program Files\Delphi-Projects\KOL\xxx\Unit1.pas',0,1,50,1,54,1,0
+File_8=SourceModule,'H:\Program Files\Delphi-Projects\KOL\x\mckHintRA.pas',0,1,92,38,100,0,0
+File_9=SourceModule,'H:\Program Files\Delphi-Projects\KOL\x\KOLHintRA.pas',0,1,57,1,68,0,0
+
+[Modules]
+Module0=H:\Program Files\Borland\Delphi 3\KolLib\MyKOLComponents\HintRA\DemoHintRA\Unit1.pas
+Module1=H:\Program Files\Borland\Delphi 3\KolLib\MyKOLComponents\HintRA\DemoHintRA\DemoHintRA.dpr
+Count=2
+EditWindowCount=1
+
+[H:\Program Files\Borland\Delphi 3\KolLib\MyKOLComponents\HintRA\DemoHintRA\Unit1.pas]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[H:\Program Files\Borland\Delphi 3\KolLib\MyKOLComponents\HintRA\DemoHintRA\DemoHintRA.dpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+Create=1
+Visible=1
+State=0
+Left=210
+Top=123
+Width=435
+Height=304
+MaxLeft=-4
+MaxTop=98
+ClientWidth=427
+ClientHeight=277
+SplitPos=50
+MessagePane=0
+ViewCount=1
+CurrentView=0
+View0=0
+
+[View0]
+Module=H:\Program Files\Borland\Delphi 3\KolLib\MyKOLComponents\HintRA\DemoHintRA\Unit1.pas
+CursorX=1
+CursorY=79
+TopLine=76
+LeftCol=1
+
+[Watches]
+Count=0
+
+[Breakpoints]
+Count=0
+

@@ -1,0 +1,140 @@
+unit KOL_KC_;
+
+interface
+
+uses Windows, Messages, KOL;
+
+type
+
+  // TMyEvent = procedure(Sender: PControl; Str: String; const Error: Boolean; var Retry: Boolean) of object;
+
+  P_KC_ = ^T_KC_;
+  T_KC_ = object(TControl)
+  private
+  
+   // function GetMyEvent: TMyEvent;
+   // procedure SetMyEvent(const Value: TMyEvent);
+
+   // procedure OnNewLVData(Sender: PControl; Idx, SubItem: Integer; var Txt: String;
+   //			    var ImgIdx: Integer; var State: DWORD; var Store: Boolean);
+
+  public
+   
+   // property MyEvent: TMyEvent read GetMyEvent write SetMyEvent;
+   // property OnLVData: Boolean read FNotAvailable;
+
+  end;
+
+  TKOL_KC_ = P_KC_;
+
+function New_KC_(Sender: PControl { ПАРАМЕТРЫ } ): P_KC_;
+
+implementation
+
+// uses CommCtrl, ShellApi;
+
+{ ДАННЫЕ ДЛЯ НАШЕГО ОБЪЕКТА (СВОЙСТВА И ОБРАБОТЧИКИ) }
+type
+ P_CD_ = ^T_CD_;
+ T_CD_ = object(TObj)
+  fControl: PControl; 
+
+  //MyEvent: TMyEvent; 
+
+  destructor Destroy; virtual;
+ end;
+
+{-------------------------}
+{ Destructor НАШИХ ДАННЫХ }
+{-------------------------}
+destructor T_CD_.Destroy;
+begin
+// All Strings := '';
+// Free_And_Nil(All PObj);
+
+ inherited;
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{--------------------}
+{ ОБРАБОТЧИК ОБЪЕКТА }
+{--------------------}
+function WndProc_WP_(Ctl: PControl; var Msg: TMsg; var Rslt: Integer): Boolean;
+// var
+//  D: P_CD_,
+//  LV: PNMLISTVIEW;
+begin
+// D := Pointer(Ctl.CustomObj);
+Result := FALSE;
+
+case Msg.message of
+
+WM_KEYDOWN:; { Нажатие клавиш }
+
+{ ComboBox }
+// CM_COMMAND: { CM_, а не WM_ - это штучки от Borland }
+//  case HiWord(Msg.wParam) of
+//   CBN_DROPDOWN:;
+//   CBN_CLOSEUP:;
+//   CBN_SELENDOK:;
+//  end;
+
+{ ListView }
+// WM_NOTIFY:
+// begin
+//  LV := Pointer(Msg.lParam);
+//  if LV.hdr.code = NM_DBLCLK { Двойной клик по левой кнопки мыши }
+//   then ShowMessage('OK');
+// end;
+
+// Из WndProcXXX обработчик вызывается:
+// if Assigned(D.OnMyEvent) then D.OnMyEvent(Ctl, St, Err, Retry);
+// Из самого объекта обработчик вызывается:
+// if Assigned(D.OnMyEvent) then D.OnMyEvent(@Self, St, Err, Retry);
+
+// Если Result := TRUE, то дальше сообщение контролу не передается.
+end; { case Msg }
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{-----------------------------}
+{ КОНСТРУКТОР ДЛЯ KOL ОБЪЕКТА }
+{-----------------------------}
+function New_KC_;
+var D: P_CD_;
+begin
+New(D, Create);
+
+Result := P_KC_( { ОБЪЕКТ - PControl } );
+
+Result.CustomObj := D;
+D.fControl := Result;
+
+// Code
+
+{ Установка обработчиков }
+Result.AttachProc(WndProc_WP_);
+
+{ Установка нового обработчика }
+// Result.SetOnLVData(Result.OnNewLVData);
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{--------------------}
+{ ОБРАБОТЧИК MyEvent }
+{--------------------}
+{ procedure T_KC_.SetMyEvent;
+var D: P_CD_;
+begin
+D := Pointer(CustomObj);
+D.MyEvent := Value;
+end;
+
+function T_KC_.GetMyEvent;
+var D: P_CD_;
+begin
+D := Pointer(CustomObj);
+Result := D.MyEvent;
+end; }
+
+end.

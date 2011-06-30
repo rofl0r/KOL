@@ -1,0 +1,1 @@
+TfmHistory = class(TObj)

@@ -1,0 +1,16 @@
+Welcome to DIUcl!
+
+This example project demonstrates how to compress and decompresss Delphi strings using the UclCompressStrA and UclDecompressStrA functions.
+
+Text is compressed and decompressed after each change, so you can monitor the performance of real-time compression and decompression. This is not normally necessary in real world applications, which usually compress data only after an edit is complete, that is, when the edit control has lost focus or data is posted to the database.
+
+The string compression uses the UCL NRV2E compression algorithm, which features the best compression ratio of the those available by UCL. The upper right combo box allows to set the compression level. A compression level of 10 results in maximum compression, while 1 results in maximum speed during compression. Please note that UCL decompression speed does not decrese for higher compression levels!
+
+As with all compression alrogithms, very short data does not achieve good compression ratios. Starting with medium sized texts, the compression starts to increase and UCL reaches considerable results comparable with those achieved by ZLib and BZip2.
+
+Both AnsiStrings and WideStrings have their special flavor of the same string compression functions. Each is optimized for its own kind, but please keep in mind, however, that their are not mutually exchangable. To test this example with WideString compression and decompression, simply set the "Wide" compiler directive and recompile.
+
+We hope you enjoy using DIUcl!
+
+The Delphi Inspiration
+http://www.zeitungsjunge.de/delphi/

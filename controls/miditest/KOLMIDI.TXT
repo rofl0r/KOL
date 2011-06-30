@@ -1,0 +1,61 @@
+**********
+TDKKOLMIDI
+**********
+
+  The contents of this file are subject to the Mozilla Public License Version 1.1 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at http://www.mozilla.org/MPL/
+  Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF   ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+
+
+TdkKolMidi.pas provides a complete midi implementation for KOL.
+It is written by Thaddy de Koning based on the work by Robert Rossmair
+for the Jedi Code Library.
+As such this code is not freeware but subject to the Mozilla Public License agreement.
+
+The object does not need any extra units except for KOL (> 1.44) , ERR and MMSYSTEM
+
+****
+DEMO
+****
+The demo implements a MIDI keyboard with several features such as
+- pitch control
+- Modulation
+- Octave selection
+- Instrument selection
+- Note values
+- MIDI device selection
+- Graphical representation of a MIDI keyboard.
+
+The demo does not use the MCK.
+
+It needs two extra controls from the KOL webside that are not included in this package:
+KOLMHUPDOWN and MHTRACKBAR
+Please collect these from www.xcl.cjb.net
+
+The code is written very cleanly, not necessarily for size.
+Still at under 45 K it's probably one of the smallest keyboards available.
+
+*****
+FILES
+*****
+KOLMIDI.TXT     - this file
+KOLMIDI.htm     - Help file for demo application
+TDKKOLMIDI.PAS  - KOLMIDIOUT object unit file
+MIDI1.PAS       - Demo implementation unit
+KOLMIDITEST.DPR - Demo project file
+
+JCLMIDI
+JCLWINMIDI      - Original JCL library code, not necessary.
+
+*******
+CONTACT
+*******
+email:thaddy@thaddy.com
+
+*******
+HISTORY
+*******
+February 4th, 2003      Initial release 1.00
+
+

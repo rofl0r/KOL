@@ -1,0 +1,70 @@
+object TComponent: TKOLDummy
+  Tag = Tag
+end 
+object TControl: TKOLDummy (TComponent)
+  Left = Left
+  Top = Top
+  Width = Width 
+  Height = Height
+  Color = Color
+  Caption = Caption
+  Font.Name = Font.FontName
+  Font.Color = Font.Color
+  Font.Height = Font.FontHeight
+end
+object TForm: TKOLForm (TControl)
+
+end
+object TButton: TKOLButton (TControl)
+
+end
+object TLabel: TKOLLabel (TControl)
+
+end
+object TPanel: TKOLPanel (TControl)
+
+end
+object TScrollBox: TKOLScrollBox (TControl)
+
+end
+object TPaintBox: TKOLPaintBox (TControl)
+
+end
+object TEdit: TKOLEditBox (TControl)
+
+end
+object TTimer: TKOLTimer (TComponent)
+  Enabled = Enabled
+  Interval = Interval
+end
+object TImageList: TKOLImageList (TComponent)
+
+end
+
+object TSpeedButton: TKOLBitBtn (TControl)
+  Glyph.Data = glyphBitmap.Data
+end
+
+object TCheckBox: TKOLCheckBox (TControl)
+
+end
+
+object TRadioBox: TKOLRadioBox (TControl)
+
+end
+
+object TRadioBox: TKOLRadioBox (TControl)
+
+end
+
+object TPageControl: TKOLTabControl (TControl)
+
+end
+
+object TToolBar: TKOLToolBar (TControl)
+
+end
+
+object TGroupBox: TKOLGroupBox (TControl)
+
+end

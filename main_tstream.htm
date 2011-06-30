@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>KOL Help: TStream object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TStream( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TStream = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Simple stream object. Can be opened for file, or as memory stream (see
+<a href=kol_pas.htm#newreadfilestream target="_top">NewReadFileStream</a>, <a href=kol_pas.htm#newwritefilestream target="_top">NewWriteFileStream</a>, <a href=kol_pas.htm#newmemorystream target="_top">NewMemoryStream</a>, etc.). And, another
+type of streaming object can be derived (without inheriting new object
+type, just by writing another New...Stream method, which calls
+<a href=kol_pas.htm#_newstream target="_top">_NewStream</a> and pass methods record to it).
+<h3 align="center"><font color="#FF8080">TStream properties</font></h3>
+<a name="size"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Size</b></font>: <b>DWord</b>;</font>
+<br>
+Returns stream size. For some custom streams, can be slow
+operation, or even always return undefined value (-1 recommended).
+</p>
+<a name="position"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Position</b></font>: <b>DWord</b>;</font>
+<br>
+Current position.
+</p>
+<a name="memory"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Memory</b></font>: <b>Pointer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Only for memory stream.
+</p>
+<a name="handle"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Handle</b></font>: THandle;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Only for file stream. It is possible to check that Handle &lt;&gt;
+INVALID_HANDLE_VALUE to ensure that file stream is created OK.
+</p>
+<a name="methods"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Methods</b></font>: PStreamMethods;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Pointer to TStreamMethods record. Useful to implement custom-defined
+streams, which can access its fCustom field, or even to change
+methods when necessary.
+</p>
+<a name="data"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Data</b></font>: TStreamData;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Pointer to TStreamData record. Useful to implement custom-defined
+streams, which can access Data fields directly when implemented.
+</p>
+<a name="capacity"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Capacity</b></font>: <b>DWORD</b>;</font>
+<br>
+Amound of memory allocated for data (MemoryStream).
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TStream methods</font></h3>
+<a name="read"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <b>Read</b>( <b>var</b> Buffer; Count: <b>DWord</b> ): <b>DWord</b>;</font>
+<br>
+Reads Count bytes from a stream. Returns number of bytes read.
+</p>
+<a name="seek"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Seek</b></font>( MoveTo: <b>Integer</b>; MoveMethod: TMoveMethod ): <b>DWord</b>;</font>
+<br>
+Allows to change current position or to obtain it. Property
+<a href=#position target="main">Position</a> uses this method both for get and set position.
+</p>
+<a name="write"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <b>Write</b>( <b>var</b> Buffer; Count: <b>DWord</b> ): <b>DWord</b>;</font>
+<br>
+Writes Count bytes from Buffer, starting from current position
+in a stream. Returns how much bytes are written.
+</p>
+<a name="writestr"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>WriteStr</b></font>( S: <b>String</b> ): <b>DWORD</b>;</font>
+<br>
+Writes string to the stream, not including ending #0. Exactly
+Length( S ) characters are written.
+</p>
+<a name="writestrz"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>WriteStrZ</b></font>( S: <b>String</b> ): <b>DWORD</b>;</font>
+<br>
+Writes string, adding #0. Number of bytes written is returned.
+</p>
+<a name="readstrz"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>ReadStrZ</b></font>: <b>String</b>;</font>
+<br>
+Reads string, finished by #0. After reading, current position in
+the stream is set to the byte, follows #0.
+</p>
+<a name="readstr"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>ReadStr</b></font>: <b>String</b>;</font>
+<br>
+Reads string, finished by #13, #10 or #13#10 symbols. Terminating symbols
+#13 and/or #10 are not added to the end of returned string though
+stream positioned follow it.
+</p>
+<a name="writestrex"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>WriteStrEx</b></font>( S: <b>String</b> ): <b>DWord</b>;</font>
+<br>
+Writes string S to stream, also saving its size for future use by
+ReadStrEx* functions. Returns number of actually written characters.
+</p>
+<a name="readstrexvar"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>ReadStrExVar</b></font>( <b>var</b> S: <b>String</b> ): <b>DWord</b>;</font>
+<br>
+Reads string from stream and assigns it to S.
+Returns number of actually read characters.
+Note:
+String must be written by using <a href=#writestrex target="main">WriteStrEx</a> function.
+Return value is count of characters READ, not the length of string.
+</p>
+<a name="readstrex"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>ReadStrEx</b></font>: <b>String</b>;</font>
+<br>
+Reads string from stream and returns it.
+</p>
+<a name="writestrpas"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>WriteStrPas</b></font>( S: <b>String</b> ): <b>DWORD</b>;</font>
+<br>
+Writes a string in Pascal short string format - 1 byte length, then string
+itself without trailing #0 char. S parameter length should not exceed 255
+chars, rest chars are truncated while writing. Total amount of bytes
+written is returned.
+</p>
+<a name="readstrpas"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>ReadStrPas</b></font>: <b>String</b>;</font>
+<br>
+Reads 1 byte from a stream, then treat it as a length of following string
+which is read and returned. A purpose of this function is reading strings
+written using <a href=#writestrpas target="main">WriteStrPas</a>.
+</p>
+<a name="seekasync"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>SeekAsync</b></font>( MoveTo: <b>Integer</b>; MoveMethod: TMoveMethod );</font>
+<br>
+Changes current position asynchronously. To wait for finishing the
+operation, use method <a href=#wait target="main">Wait</a>.
+</p>
+<a name="readasync"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>ReadAsync</b></font>( <b>var</b> Buffer; Count: <b>DWord</b> );</font>
+<br>
+Reads Count bytes from a stream asynchronously. To wait finishing the
+operation, use method <a href=#wait target="main">Wait</a>.
+</p>
+<a name="writeasync"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>WriteAsync</b></font>( <b>var</b> Buffer; Count: <b>DWord</b> );</font>
+<br>
+Writes Count bytes from Buffer, starting from current position
+in a stream - asynchronously. To wait finishing the operation,
+use method <a href=#wait target="main">Wait</a>.
+</p>
+<a name="busy"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Busy</b></font>: <b>Boolean</b>;</font>
+<br>
+Returns TRUE until finishing the last asynchronous operation
+started by calling <a href=#seekasync target="main">SeekAsync</a>, <a href=#readasync target="main">ReadAsync</a>, <a href=#writeasync target="main">WriteAsync</a> methods.
+</p>
+<a name="wait"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Wait</b></font>;</font>
+<br>
+Waits for finishing the last asynchronous operation.
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TStream events</font></h3>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TStream fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

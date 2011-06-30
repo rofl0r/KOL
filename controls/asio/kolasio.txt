@@ -1,0 +1,35 @@
+****************
+KOL ASIO SUPPORT
+****************
+
+KOL support for the very fast Audio Streaming protocol by
+Steinberg Hard und Software Gmbh
+
+Enables you to write audio streaming applications with typically
+very low latency if your audiocard comes with ASIO drivers.
+(All professional and most modern budget cards do)
+Tou need to install openasio.dll (just 50k) with yout application.
+
+A simple example that does no actual streaming is included.
+I have succesfully used it in combination with Wave output code, but I can not release that since its from a commercial library.
+HINT: Make shure the ASIO buffers match the WaveOut buffers minus
+waveOutPrepareHaeders
+
+Released:
+July 4, 2003, Thaddy de Koning
+
+**************
+IMPORTANT NOTE
+**************
+Although Steinberg has released the original code to almost any developer that wants it and for free. They reserve certain rights,
+amongst which is the signing of a licensing agreement if you use the libraries
+or the methods in final products that are released to others.
+You are also obliged to use their logo in your about box.
+See www.steinberg.com for more information.
+THIS code complies in that it is only aimed at developers.
+
+
+****************
+Acknowledgement:
+****************
+Thanks to Martin Fay for the original code and the openasio dll.

@@ -1,0 +1,13 @@
+This is the second beta release of my KOL mp3 player.
+Much improved but still beta:
+
++ Win95 and 98 compatible
++ much improved performance
++ Uses less resources (Due to better UI handling)
+- Many bug fixes
+
+
+Have fun,
+
+
+Thaddy

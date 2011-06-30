@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>KOL Help: TCABFile object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TCABFile( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TCABFile = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+An object to simplify extracting files from a cabinet (.CAB) files.
+The only what need to use this object, setupapi.dll. It is provided
+with all latest versions of Windows.
+<h3 align="center"><font color="#FF8080">TCABFile properties</font></h3>
+<a name="paths"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Paths</b></font>[ Idx: <b>Integer</b> ]: <b>String</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+A list of CAB-files. It is stored, when constructing function
+<a href=kol_pas.htm#opencabfile target="_top">OpenCABFile</a> called.
+</p>
+<a name="names"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Names</b></font>[ Idx: <b>Integer</b> ]: <b>String</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+A list of file names, stored in a sequence of CAB files. To get know,
+how many files are there, check <a href=#count target="main">Count</a> property.
+</p>
+<a name="count"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Count</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Number of files stored in a sequence of CAB files.
+</p>
+<a name="curcab"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>CurCAB</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Index of current CAB file in a sequence of CAB files. When <a href=#onnextcab target="main">OnNextCAB</a>
+event is called (if any), CurCAB property is already set to the
+index of path, what should be provided.
+</p>
+<a name="targetpath"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>TargetPath</b></font>: <b>String</b>;</font>
+<br>
+Optional target directory to place there extracted files.
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TCABFile methods</font></h3>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>virtual</b>;</font>
+<br>
+</p>
+<a name="execute"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Execute</b></font>: <b>Boolean</b>;</font>
+<br>
+Call this method to extract or enumerate files in CAB. For every
+file, found during executing, event <a href=#onfile target="main">OnFile</a> is alled (if assigned).
+If the event handler (if any) does not provide full target path for
+a file to extract to, property <a href=#targetpath target="main">TargetPath</a> is applyed (also if it
+is assigned), or file is extracted to the default directory (usually
+the same directory there CAB file is located, or current directory
+- by a decision of the system).
+<br>
+If a sequence of CAB files is used, and not all names for CAB files
+are provided (absent or represented by a string '?' ), an event
+<a href=#onnextcab target="main">OnNextCAB</a> is called to obtain the name of the next CAB file.
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TCABFile events</font></h3>
+<a name="onnextcab"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnNextCAB</b></font>: TOnNextCAB;</font>
+<br>
+This event is called, when a series of CAB files is needed and not
+all CAB file names are provided (absent or represented by '?' string).
+If this event is not assigned, the user is prompted to browse file.
+</p>
+<a name="onfile"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnFile</b></font>: TOnCABFile;</font>
+<br>
+This event is called for every file found during <a href=#execute target="main">Execute</a> method.
+In an event handler (if any assigned), it is possible to return
+False to skip file, or to provide another full target path for
+file to extract it to, then default. If the event is not assigned,
+all files are extracted either to default directory, or to the
+directory <a href=#targetpath target="main">TargetPath</a>, if it is provided.
+</p>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TCABFile fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

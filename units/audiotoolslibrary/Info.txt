@@ -1,0 +1,151 @@
+Получение информации о файлах форматов: MPEGaudio, WAV, CDAtrack, 
+					TwinVQ, MPEGplus, OggVorbis, Monkey, FLAC, AAC.
+Чтение и запись тегов в форматах: ID3v1, ID3v2, WMA, TwinVQ, OggVorbis, APE, FLAC.  
+
+На основе [Audio Tools Library by Jurgen Faul]
+Портировано в KOL - Матвеев Дмитрий
+
+В оригинальные файлы внесены следующие изменения:
+* Изменен способ доступа к файлам.
+* FLAC - добавил поддержку FLAC-тегов.
+* TwinVQ  - добавил возможность записи тегов.
+* WMA - добавил возможность записи тегов.
+* APE - исправил ошибку при совместном использовании с ID3v1.
+* Monkey - исправил поддержку APE-тегов.
+
+
+{ *************************************************************************** }
+{                                                                             }
+{ Audio Tools Library (Freeware)                                              }
+{ Programming tools for Borland Delphi 3,4,5,6                                }
+{                                                                             }
+{ Copyright (c) 2001,2002 by Jurgen Faul                                      }
+{ E-mail: jfaul@gmx.de                                                        }
+{ http://jfaul.de/atl                                                         }
+{                                                                             }
+{ Version 1.9 (4 November 2002)                                               }
+{                                                                             }
+{ The pack includes several components described below:                       }
+{                                                                             }
+{ MPEGaudio 1.7 - for manipulating with MPEG audio file information           }
+{ ID3v1     1.0 - for manipulating with ID3v1 tags                            }
+{ ID3v2     1.7 - for manipulating with ID3v2 tags                            }
+{ WAVfile   1.2 - for extracting information from WAV file header             }
+{ OggVorbis 1.6 - for manipulating with Ogg Vorbis file information           }
+{ MPEGplus  1.6 - for manipulating with MPEGplus file information             }
+{ TwinVQ    1.1 - for extracting information from TwinVQ file header          }
+{ Monkey    1.4 - for manipulating with Monkey's Audio file information       }
+{ APEtag    1.0 - for manipulating with APE tags                              }
+{ WMAfile   1.0 - for extracting information from WMA file header             }
+{ FLACfile  1.0 - for manipulating with FLAC file information                 }
+{ AACfile   1.0 - for manipulating with AAC file information                  }
+{ CDAtrack  1.0 - for getting information for CDA track                       }
+{                                                                             }
+{ Support is available only through the e-mail. Remember this is a freeware   }
+{ project, therefore I cannot dedicate too much time and efforts to it.       }
+{ I will do my best to respond to any mail regarding this subject. You are    }
+{ welcome to send bug reports, comments and suggestions to the author.        }
+{ Spoken languages: English, German, Russian. You are also welcome to support }
+{ the author by donation of literature, tools, software or money, but it is   }
+{ not reqired.                                                                }
+{                                                                             }
+{ 04.11.2002                                                                  }
+{   - TCDAtrack: first release                                                }
+{   - TMPEGaudio: ability to recognize QDesign MPEG audio encoder             }
+{   - TMPEGaudio: fixed bug with MPEG Layer II                                }
+{   - TMPEGaudio: fixed bug with very big files                               }
+{                                                                             }
+{ 02.10.2002                                                                  }
+{   - TAACfile: first release                                                 }
+{   - TID3v2: added property TrackString                                      }
+{   - TOggVorbis: writing support for Vorbis tag                              }
+{   - TOggVorbis: changed several properties                                  }
+{   - TOggVorbis: fixed bug with long Vorbis tag fields                       }
+{                                                                             }
+{ 13.08.2002                                                                  }
+{   - TFLACfile: first release                                                }
+{   - TTwinVQ: Added property Album                                           }
+{   - TTwinVQ: Support for Twin VQ 2.0                                        }
+{                                                                             }
+{ 29.07.2002                                                                  }
+{   - TMonkey: correction for calculating of duration                         }
+{   - TID3v2: reading support for Unicode                                     }
+{   - TID3v2: removed limitation for the track number                         }
+{                                                                             }
+{ 23.05.2002                                                                  }
+{   - TMPEGaudio: improved reading performance (up to 50% faster)             }
+{   - TID3v2: support for padding                                             }
+{                                                                             }
+{ 29.04.2002                                                                  }
+{   - TWMAfile: first release                                                 }
+{                                                                             }
+{ 21.04.2002                                                                  }
+{   - TAPEtag: first release                                                  }
+{                                                                             }
+{ 24.03.2002                                                                  }
+{   - TID3v2: reading support for ID3v2.2.x & ID3v2.4.x tags                  }
+{                                                                             }
+{ 18.02.2002                                                                  }
+{   - TOggVorbis: added property BitRateNominal                               }
+{   - TOggVorbis: fixed bug with tag fields                                   }
+{                                                                             }
+{ 16.02.2002                                                                  }
+{   - TID3v2: fixed bug with property Comment                                 }
+{   - TID3v2: added info: composer, encoder, copyright, language, link        }
+{                                                                             }
+{ 08.02.2002                                                                  }
+{   - TMPEGplus: fixed bug with property Corrupted                            }
+{                                                                             }
+{ 14.01.2002                                                                  }
+{   - TWAVfile: fixed bug with calculating of duration                        }
+{   - TWAVfile: some class properties added/changed                           }
+{                                                                             }
+{ 21.10.2001                                                                  }
+{   - TOggVorbis: support for UTF-8                                           }
+{   - TOggVorbis: fixed bug with vendor info detection                        }
+{                                                                             }
+{ 17.10.2001                                                                  }
+{   - TID3v2: writing support for ID3v2.3.x tags                              }
+{   - TID3v2: fixed bug with track number detection                           }
+{   - TID3v2: fixed bug with tag reading                                      }
+{                                                                             }
+{ 09.10.2001                                                                  }
+{   - TWAVfile: fixed bug with WAV header detection                           }
+{                                                                             }
+{ 11.09.2001                                                                  }
+{   - TMPEGaudio: improved encoder guessing for CBR files                     }
+{   - TMonkey: added property Samples                                         }
+{   - TMonkey: removed WAV header information                                 }
+{                                                                             }
+{ 07.09.2001                                                                  }
+{   - TMonkey: first release                                                  }
+{                                                                             }
+{ 31.08.2001                                                                  }
+{   - TMPEGaudio: first release                                               }
+{   - TID3v2: added public procedure ResetData                                }
+{                                                                             }
+{ 15.08.2001                                                                  }
+{   - TOggVorbis: first release                                               }
+{                                                                             }
+{ 14.08.2001                                                                  }
+{   - TID3v2: first release                                                   }
+{                                                                             }
+{ 06.08.2001                                                                  }
+{   - TTwinVQ: first release                                                  }
+{                                                                             }
+{ 02.08.2001                                                                  }
+{   - TMPEGplus: some class properties added/changed                          }
+{                                                                             }
+{ 31.07.2001                                                                  }
+{   - TWAVfile: first release                                                 }
+{                                                                             }
+{ 26.07.2001                                                                  }
+{   - TMPEGplus: fixed reading problem with "read only" files                 }
+{                                                                             }
+{ 25.07.2001                                                                  }
+{   - TID3v1: first release                                                   }
+{                                                                             }
+{ 23.05.2001                                                                  }
+{   - TMPEGplus: first release                                                }
+{                                                                             }
+{ *************************************************************************** }

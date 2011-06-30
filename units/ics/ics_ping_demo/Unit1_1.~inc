@@ -1,0 +1,34 @@
+{ KOL MCK } // Do not remove this line!
+
+procedure NewForm1( var Result: PForm1; AParent: PControl );
+begin
+
+  {$IFDEF KOLCLASSES}
+  Result := PForm1.Create;
+  {$ELSE OBJECTS}
+  New( Result, Create );
+  {$ENDIF KOL CLASSES/OBJECTS}
+  Result.Form := NewForm( AParent, 'Form1' ).SetPosition( 192, 114 ).SetSize( 544, 375 );
+  Applet :=  Result.Form;
+  Result.Form.Add2AutoFree( Result );
+    // Result.Label1.TabOrder = -1
+    Result.Label1 := NewLabel( Result.Form, 'Label1' ).SetPosition( 48, 64 );
+    // Result.HostEdit.TabOrder = 0
+    Result.HostEdit := NewEditBox( Result.Form, [  ] ).SetPosition( 136, 64 );
+    Result.HostEdit.Color := clWindow;
+    Result.HostEdit.Text := 'localhost';
+    // Result.DisplayMemo.TabOrder = 1
+    Result.DisplayMemo := NewEditBox( Result.Form, [ eoMultiline ] ).SetPosition( 32, 120 ).SetSize( 361, 129 );
+    Result.DisplayMemo.Color := clWindow;
+    Result.DisplayMemo.Text := 'Memo1'+#13+#10;
+    // Result.PingButton.TabOrder = 2
+    Result.PingButton := NewButton( Result.Form, 'Button1' ).SetPosition( 256, 64 );
+    // Result.CancelButton.TabOrder = 3
+    Result.CancelButton := NewButton( Result.Form, 'Button2' ).SetPosition( 328, 64 );
+      Result.PingButton.OnClick := Result.PingButtonClick;
+      Result.CancelButton.OnClick := Result.CancelButtonClick;
+      Result.CancelButton.OnChar := Result.CancelButtonChar;
+    Result.KOLForm1FormCreate( Result );
+
+end;
+

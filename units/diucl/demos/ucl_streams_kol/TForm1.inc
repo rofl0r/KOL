@@ -1,0 +1,1 @@
+TfrmStreamKOL = class(TObj)

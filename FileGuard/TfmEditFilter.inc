@@ -1,0 +1,1 @@
+TfmEditFilter = class(TObj)

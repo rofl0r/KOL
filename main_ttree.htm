@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>KOL Help: TTree object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TTree( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TTree = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Object to store tree-like data in memory (non-visual).
+<h3 align="center"><font color="#FF8080">TTree properties</font></h3>
+<a name="name"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Name</b></font>: <b>String</b>;</font>
+<br>
+Optional node name.
+</p>
+<a name="data"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Data</b></font>: <b>Pointer</b>;</font>
+<br>
+Optional user-defined pointer.
+</p>
+<a name="count"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Count</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Number of child nodes of given node.
+</p>
+<a name="items"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Items</b></font>[ Idx: <b>Integer</b> ]: PTree;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Child nodes list items.
+</p>
+<a name="parent"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Parent</b></font>: PTree;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns parent node (or nil, if there is no parent).
+</p>
+<a name="index"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Index</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns an index of the node in a list of nodes of the same parent
+(or -1, if <a href=#parent target="main">Parent</a> is not defined).
+</p>
+<a name="prevsibling"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>PrevSibling</b></font>: PTree;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns previous node in a list of children of the <a href=#parent target="main">Parent</a>. Nil is
+returned, if given node is the first child of the <a href=#parent target="main">Parent</a> or has
+no <a href=#parent target="main">Parent</a>.
+</p>
+<a name="nextsibling"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>NextSibling</b></font>: PTree;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns next node in a list of children of the <a href=#parent target="main">Parent</a>. Nil is returned,
+if given node is the last child of the <a href=#parent target="main">Parent</a> or has no <a href=#parent target="main">Parent</a> at all.
+</p>
+<a name="root"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Root</b></font>: PTree;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns root node (i.e. the last <a href=#parent target="main">Parent</a>, enumerating parents recursively).
+</p>
+<a name="level"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Level</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns level of the node, i.e. integer value, equal to 0 for root
+of a tree, 1 for its children, etc.
+</p>
+<a name="total"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Total</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns total number of children of the node and all its children
+counting its recursively (but node itself is not considered, i.e.
+Total for node without children is equal to 0).
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TTree methods</font></h3>
+<a name="createtree"></a>
+<p>
+<font face="Courier" color="#800080"><b>constructor</b> <font color="#808000"><b>CreateTree</b></font>( AParent: PTree; <b>const</b> AName: <b>String</b> );</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#78;</font>&nbsp;&nbsp;&nbsp;
+<br>
+</p>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>virtual</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#78;</font>&nbsp;&nbsp;&nbsp;
+<br>
+</p>
+<a name="clear"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Clear</b></font>;</font>
+<br>
+Destoyes all child nodes.
+</p>
+<a name="add"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Add</b></font>( Node: PTree );</font>
+<br>
+Adds another node as a child of given tree node. This operation
+as well as <a href=#insert target="main">Insert</a> can be used to move node together with its children
+to another location of the same tree or even from another tree.
+Anyway, added Node first correctly removed from old place (if it is
+defined for it). But for simplest task, such as filling of tree with
+nodes, code should looking as follows:
+<p align=left><font face="Courier" color="008080"><b><pre>
+  Node := <a href="kol_pas.htm#newtree target="_top""><font color="008080">NewTree</font></a>( nil, <font color="A08020">'test of creating node without parent'</font> );
+  RootOfMyTree.Add( Node );
+</pre></b></font></p>
+Though, this code gives the same result as:
+<p align=left><font face="Courier" color="008080"><b><pre>
+  Node := <a href="kol_pas.htm#newtree target="_top""><font color="008080">NewTree</font></a>( RootOfMyTree, <font color="A08020">'test of creatign node as a child'</font> );
+</pre></b></font></p>
+</p>
+<a name="insert"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Insert</b></font>( Before, Node: PTree );</font>
+<br>
+Inserts earlier created 'Node' just before given child node 'Before'
+as a child of given tree node. See also <a href=#add target="main">Add</a> method.
+</p>
+<a name="sortbyname"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>SortByName</b></font>;</font>
+<br>
+Sorts children of the node in ascending order. Sorting is not
+recursive, i.e. only immediate children are sorted.
+</p>
+<a name="swapnodes"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>SwapNodes</b></font>( i1, i2: <b>Integer</b> );</font>
+<br>
+Swaps two child nodes.
+</p>
+<a name="isparentofnode"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>IsParentOfNode</b></font>( Node: PTree ): <b>Boolean</b>;</font>
+<br>
+Returns true, if Node is the tree itself or is a parent of the given node
+on any level.
+</p>
+<a name="indexof"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>IndexOf</b></font>( Node: PTree ): <b>Integer</b>;</font>
+<br>
+<a href=#total target="main">Total</a> index of the child node (on any level under this node).
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TTree events</font></h3>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TTree fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

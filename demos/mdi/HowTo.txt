@@ -1,0 +1,18 @@
+How to create MDI project visually with MCK:
+
+1. Create project (New Application), prepare it to be as MCK-project as usual (save, drop TKOLProject on form, change its property destProject, drop TKOLForm, save all again, and then open resulting MCK project with the name, specified in destProject property of TKOLProject component).
+2. Drop TKOLMDIClient on form.
+3. Drop TKOLMainMenu, and add some items. For one of those items the property WindowMenu could be set to True. If an item with such property set to True exists, MDI children will be listed after this item at run-time automatically. (If there are no main menu at all, top-right buttons (minimize, maximize and close) will not be merged to menu bar when MDI child is maximized.
+4. Create new form. Save it to the same directory. Drop TKOLMDIChild on it. For the property ParentForm select MDI parent form from a drop-down list. If this property is not specified, MDI child form will not be created at application startup. You can create desired amound of MDI children at run time, using following code:
+
+  NewForm2( MDIChild, Form1 );
+
+where MDIChild is a variable to refer to created MDI child form (can be local variable) and Form1 is a name of main MDI form.
+
+Note1: in KOL/MCK it is possible to create and maintain several main MDI forms, and place MDI children on those at run time or at design time.
+Note2: TKOLMDIClient must be a single on the MDI parent form.
+Note3: Though it is possible to create TKOLMDIClient as a child of any control (like panel), it is strongly recommended to create it as a child of form itself. If you therefore drop TKOLMDIClient onto another control as its child control, do not allow maximizing MDI children! (Either abandon such operations and simulate maximizing by changing its size/position by your code, or disable maximize button at all). Other unpredictable problems could occur in such case, also.
+
+---------------------------------------------------------
+mailto: bonanzas@xcl.cjb.net
+Web Page: http://xcl.cjb.net

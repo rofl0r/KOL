@@ -1,0 +1,21 @@
+object KOLProject1: TKOLProject
+    Locked = False
+    Localizy = False
+    projectName = 'demokol'
+    projectDest = 'demokol'
+    sourcePath = 'G:\Prog\MyProgram\KOL\Conv\'
+    outdcuPath = 'G:\Prog\MyProgram\KOL\Conv\'
+    dprResource = False
+    protectFiles = True
+    showReport = False
+    isKOLProject = True
+    autoBuild = True
+    autoBuildDelay = 500
+    BUILD = False
+    consoleOut = False
+    SupportAnsiMnemonics = 0
+    PaintType = ptWYSIWIG
+    ShowHint = False
+    Left = 24
+    Top = 128
+  end

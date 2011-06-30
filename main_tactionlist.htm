@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>KOL Help: TActionList object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TActionList( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TActionList = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+TActionList maintains a list of actions used with components and controls,
+such as menu items and buttons.
+Action lists are used, in conjunction with actions, to centralize the response
+to user commands (actions).
+Write an <a href=#onupdateactions target="main">OnUpdateActions</a> handler to update actions state.
+Created using function <a href=kol_pas.htm#newactionlist target="_top">NewActionList</a>.
+See also <a href=taction.htm target="_top">TAction</a>.
+<h3 align="center"><font color="#FF8080">TActionList properties</font></h3>
+<a name="actions"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Actions</b></font>[ Idx: <b>integer</b> ]: PAction;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Access to actions in the list.
+</p>
+<a name="count"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Count</b></font>: <b>integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Number of actions in the list..
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TActionList methods</font></h3>
+<a name="add"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Add</b></font>( <b>const</b> ACaption, AHint: <b>string</b>; OnExecute: <a href=kol_pas.htm#tonevent target="_top">TOnEvent</a> ): PAction;</font>
+<br>
+Add a new action to the list. Returns pointer to action object.
+</p>
+<a name="delete"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Delete</b></font>( Idx: <b>integer</b> );</font>
+<br>
+Delete action by index from list.
+</p>
+<a name="clear"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Clear</b></font>;</font>
+<br>
+Clear all actions in the list.
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TActionList events</font></h3>
+<a name="onupdateactions"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnUpdateActions</b></font>: <a href=kol_pas.htm#tonevent target="_top">TOnEvent</a>;</font>
+<br>
+Event handler to update actions state. This event is called each time when application
+goes in the idle state (no messages in the queue).
+</p>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TActionList fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

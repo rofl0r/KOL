@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<title>KOL Help: unit err.pas</title>
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+
+<h1 align="center">
+&nbsp;&nbsp;<a href="kol_pas.htm"><font face="Webdings" size=7>&#55;</font></a>&nbsp;&nbsp;
+&nbsp;&nbsp;<a href="mmx_pas.htm"><font face="Webdings" size=7>&#56;</font></a>&nbsp;&nbsp;
+<font face="Arial" color="#FF8080">unit err.pas</font>
+</h1>
+<hr>
+<p>
+Unit to provide error handling for <a href=kol_pas.htm>KOL</a> programs using efficient
+exceptions mechanism. To use it, just place a reference to it into
+uses clause of any unit of the project (or dpr-file).
+<br><br>
+It is possible to use standard SysUtils instead, but it increases
+size of executable at least by 10K. Using this unit to handle exceptions
+increases executable only by 6,5K.
+</p>
+<h2 align="center"><font face="Arial" color="#FF8080">Content</font></h2>
+<a name="terror"></a>
+<p>
+<font face="Courier" color="#800080"><b>type</b> <font color="#808000"><b>TError</b></font> =( e_Abort, e_Heap, e_OutOfMem, e_InOut, e_External, e_Int, e_DivBy0, e_Range, e_IntOverflow, e_Math, e_Math_InvalidArgument, e_InvalidOp, e_ZeroDivide, e_Overflow, e_Underflow, e_InvalidPointer, e_InvalidCast, e_Convert, e_AccessViolation, e_Privilege, e_StackOverflow, e_CtrlC, e_Variant, e_PropReadOnly, e_PropWriteOnly, e_Assertion, e_Abstract, e_IntfCast, e_InvalidContainer, e_InvalidInsert, e_Package, e_Win32, e_SafeCall, e_License, e_Custom, e_Com, e_Ole, e_Registry );</font>
+<br>
+Main error codes. These are to determine which exception occure. You
+can use e_Custom code for your own exceptions.
+</p>
+<a name="exception"></a>
+<p>
+<font face="Courier" color="#808000"><b>type</b> <a href=exception.htm><b>Exception</b></a> = <b>class</b>( <b>TObject</b> )</font>
+<br>
+<a href=exception.htm>Exception</a> class. In <a href=kol_pas.htm>KOL</a>, there is a single exception class is used.
+Instead of inheriting new exception classes from this ancestor, an
+instance of the same <a href=exception.htm>Exception</a> class should be used. The difference
+is only in <a href=exception.htm#code>Code</a> property, which contains a kind of exception.
+</p>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

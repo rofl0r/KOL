@@ -1,0 +1,21 @@
+To install in Delphi5:
+
+0. Unpack all files to the directory where KOL is installed
+1. File|New... package
+2. File|Save as... (select directory where KOL installed, name pakage as DirTreeViewPackageD5.dpk for example)
+3. Add files DirTreeView.pas and mckDirTreeView.pas
+4. Change package options to "Design time only" and "Rebuild as needed"
+5. Install
+
+The same for Delphi3 and Delphi4
+
+When install for Delphi6, add also Designide.dcp to the "imports" section of the package before install.
+
+To install in Delphi2:
+
+0. Unpack all files to the directory where KOL is installed
+1. Component|Install..
+2. Add...
+3. Browse...  (select mckDirTreeView.pas), OK
+
+(will be available for Delphi2 starting from v1.23 though)

@@ -1,0 +1,108 @@
+lyInterval;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleDailyInterval], (Event.Schedule as IJclDailySchedule).Interval);
+end;
+
+procedure TTxtStore.StoreScheduleWeeklyDays;
+var
+  WD: TScheduleWeekDays;
+begin
+  WD := (Event.Schedule as IJclWeeklySchedule).DaysOfWeek;
+  WriteSet(TxtIdentifiers[seikScheduleWeeklyDays], WD, TypeInfo(TScheduleWeekDays));
+end;
+
+procedure TTxtStore.StoreScheduleWeeklyInterval;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleWeeklyInterval], (Event.Schedule as IJclWeeklySchedule).Interval);
+end;
+
+procedure TTxtStore.StoreScheduleMonthlyDay;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleMonthlyDay], (Event.Schedule as IJclMonthlySchedule).Day);
+end;
+
+procedure TTxtStore.StoreScheduleMonthlyIndexType;
+begin
+  WriteEnum(TxtIdentifiers[seikScheduleMonthlyIndexType], Ord((Event.Schedule as IJclMonthlySchedule).IndexKind),
+    TypeInfo(TScheduleIndexKind));
+end;
+
+procedure TTxtStore.StoreScheduleMonthlyIndex;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleMonthlyIndex], (Event.Schedule as IJclMonthlySchedule).IndexValue);
+end;
+
+procedure TTxtStore.StoreScheduleMonthlyInterval;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleMonthlyInterval], (Event.Schedule as IJclMonthlySchedule).Interval);
+end;
+
+procedure TTxtStore.StoreScheduleYearlyDay;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleYearlyDay], (Event.Schedule as IJclYearlySchedule).Day);
+end;
+
+procedure TTxtStore.StoreScheduleYearlyMonth;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleYearlyMonth], (Event.Schedule as IJclYearlySchedule).Month);
+end;
+
+procedure TTxtStore.StoreScheduleYearlyIndexType;
+begin
+  WriteEnum(TxtIdentifiers[seikScheduleYearlyIndexType], Ord((Event.Schedule as IJclYearlySchedule).IndexKind),
+    TypeInfo(TScheduleIndexKind));
+end;
+
+procedure TTxtStore.StoreScheduleYearlyIndex;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleYearlyIndex], (Event.Schedule as IJclYearlySchedule).IndexValue);
+end;
+
+procedure TTxtStore.StoreScheduleYearlyInterval;
+begin
+  WriteInt(TxtIdentifiers[seikScheduleYearlyInterval], (Event.Schedule as IJclYearlySchedule).Interval);
+end;
+
+procedure TTxtStore.BeginStruct(const StructType: TSchedEvtStructKind);
+begin
+  PushStruct(StructType);
+  case StructType of
+    seskSchedule:
+      WriteLn(sTXTID_SchedGeneric);
+    seskScheduleRecurInfo:
+      WriteLn(sTXTID_SchedRecur);
+    seskScheduleEndInfo:
+      WriteLn(sTXTID_SchedEnd);
+    seskScheduleDayFreq:
+      WriteLn(sTXTID_SchedFreq);
+    seskScheduleDaily:
+      WriteLn(sTXTID_SchedDaily);
+    seskScheduleWeekly:
+      WriteLn(sTXTID_SchedWeekly);
+    seskScheduleMonthly:
+      WriteLn(sTXTID_SchedMonthly);
+    seskScheduleYearly:
+      WriteLn(sTXTID_SchedYearly);
+  else
+    raise EJVCLException.CreateRes(@RsEUnexpectedStructure);
+  end;
+end;
+
+procedure TTxtStore.EndStruct;
+begin
+  PopStruct;
+end;
+
+procedure TTxtStore.CheckBeginStruct(const StructType: TSchedEvtStructKind);
+var
+  S: string;
+begin
+  PushStruct(StructType);
+  S := ReadNextLine;
+  case StructType of
+    seskSchedule:
+      if not AnsiSameText(S, sTXTID_SchedGeneric) then
+        raise EJVCLException.CreateRes(@RsEIncorrectStructure);
+    seskScheduleRecurInfo:
+      if not AnsiSameText(S, sTXTID_SchedRecur) then
+      

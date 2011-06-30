@@ -1,0 +1,50 @@
+package MirrorKOLPackageD7;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION '_KOL_ mirror controls for Delphi 7'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+{$DEFINE INPACKAGE}
+
+requires
+  rtl,
+  vcl,
+  designide,
+  vclactnband,
+  vclx;
+
+contains
+  mirror in 'mirror.pas',
+  mckCtrls in 'mckCtrls.pas',
+  mckCtrlDraw in 'mckCtrlDraw.pas',
+  mckObjs in 'mckObjs.pas',
+  mckToolbarEditor in 'mckToolbarEditor.pas',
+  mckFileFilterEditor in 'mckFileFilterEditor.pas',
+  kol in 'Kol.pas',
+  mckLVColumnsEditor in 'mckLVColumnsEditor.pas',
+  mckAccEditor in 'mckAccEditor.pas',
+  mckMenuEditor in 'mckMenuEditor.pas',
+  mckActionListEditor in 'mckActionListEditor.pas';
+
+end.

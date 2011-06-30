@@ -1,0 +1,500 @@
+<html>
+<head>
+<title>KOL Help: TMenu object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TMenu( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TMenu = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Dynamic menu incapsulation object. Can play role of form main menu or popup
+menu, depending on kind of parent window (form or control) and order of
+creation (created first (for a form) become main menu). Does not allow
+merging menus, but items can be hidden. Additionally checkmark bitmaps,
+shortcut key accelerators and other features are available.
+<h3 align="center"><font color="#FF8080">TMenu properties</font></h3>
+<a name="handle"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Handle</b></font>: HMenu;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Handle of Windows menu object.
+</p>
+<a name="menuid"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>MenuId</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Id of the menu item object. If menu item has subitems, it has
+also submenu <a href=#handle target="main">Handle</a>. Top parent menu object itself has no Id.
+Id-s areassigned automatically starting from 4096. Do not
+(re)create menu items instantly, because such values are not
+reused, and maximum possible Id value must not exceed 65535.
+</p>
+<a name="parent"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Parent</b></font>: PMenu;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Parent menu item (or parent menu).
+</p>
+<a name="topparent"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>TopParent</b></font>: PMenu;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Top parent menu, owning all nested subitems.
+</p>
+<a name="owner"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Owner</b></font>: <a href=kol_pas.htm#pcontrol target="_top">PControl</a>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+<a href=#parent target="main">Parent</a> control or form.
+</p>
+<a name="caption"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Caption</b></font>: <b>String</b>;</font>
+<br>
+Menu item caption text (including '&amp;' indicating mnemonic characters,
+and keyboard accelerator representation string, usually following
+tabulation character).
+</p>
+<a name="items"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Items</b></font>[ Id: HMenu ]: PMenu;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns menu item object by its index or by menu id. Since menu id
+values are starting from 4096, values from 0 to 4095 are interpreted
+as absolute index of menu item. Be careful accessing menu items or
+submenus by index, if you dynamically insert or delete items or
+submenus. In this version, separators are enumerating too, like
+all other items. Use index -1 to access object itself. The first
+item of a menu (or the first subitem of submenu item) has index 0.
+Children are enumerating before all siblings. The maximum available
+index is (<a href=#count target="main">Count</a> - 1), when accessing menu items by index.
+</p>
+<a name="count"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Count</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Count of items together with all its nested subitems.
+</p>
+<a name="byaccel"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ByAccel</b></font>: <b>Boolean</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+True, when <a href=#onmenuitem target="main">OnMenuItem</a> is called not by mouse, but by accelerator key.
+Check this flag for entire menu (<a href=#topparent target="main">TopParent</a>), not for item itself.
+(Note, that Sender in <a href=#onmenuitem target="main">OnMenuItem</a> always is <a href=#topparent target="main">TopParent</a> menu object). )
+</p>
+<a name="isseparator"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>IsSeparator</b></font>: <b>Boolean</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+TRUE, if a separator menu item.
+</p>
+<a name="menubreak"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>MenuBreak</b></font>: <a href=kol_pas.htm#tmenubreak target="_top">TMenuBreak</a>;</font>
+<br>
+Menu item break type.
+</p>
+<a name="radiogroup"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>RadioGroup</b></font>: <b>Integer</b>;</font>
+<br>
+Radio group index. Several neighbour items with the same radio group
+index form radio group. Only single item from the same group can be
+checked at a time.
+</p>
+<a name="ischeckitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>IsCheckItem</b></font>: <b>Boolean</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+If menu item is defined as check item, it is checked automatically
+when clicked.
+</p>
+<a name="checked"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Checked</b></font>: <b>Boolean</b>;</font>
+<br>
+Checked state of the item.
+</p>
+<a name="enabled"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Enabled</b></font>: <b>Boolean</b>;</font>
+<br>
+Enabled state of the item. Whaen assigned, Grayed state also is
+set to arbitrary value (i.e., when Enabled is set to true, Grayed
+is set to FALSE.
+</p>
+<a name="defaultitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>DefaultItem</b></font>: <b>Boolean</b>;</font>
+<br>
+Set this property to TRUE to make menu item default. Default item
+is drawn with bold.
+<br>If you change DefaultItem at run-time and whant
+to provide changing its visual state, recreate the item first resetting
+<a href=#visible target="main">Visible</a> property, then setting it again.
+</p>
+<a name="highlight"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Highlight</b></font>: <b>Boolean</b>;</font>
+<br>
+Highlight state of the item.
+</p>
+<a name="visible"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Visible</b></font>: <b>Boolean</b>;</font>
+<br>
+Visibility of menu item.
+</p>
+<a name="data"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Data</b></font>: <b>Pointer</b>;</font>
+<br>
+Data pointer, associated with the menu item.
+</p>
+<a name="bitmap"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Bitmap</b></font>: HBitmap;</font>
+<br>
+Bitmap used for unchecked state of the menu item.
+</p>
+<a name="bitmapchecked"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>BitmapChecked</b></font>: HBitmap;</font>
+<br>
+<a href=#bitmap target="main">Bitmap</a> used for checked state of the menu item.
+</p>
+<a name="bitmapitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>BitmapItem</b></font>: HBitmap;</font>
+<br>
+<a href=#bitmap target="main">Bitmap</a> used for item itself. In addition, following special values
+are possible:
+HBMMENU_CALLBACK, HBMMENU_MBAR_CLOSE, HBMMENU_MBAR_CLOSE_D,
+HBMMENU_MBAR_MINIMIZE, HBMMENU_MBAR_MINIMIZE_D, HBMMENU_MBAR_RESTORE,
+HBMMENU_POPUP_CLOSE, HBMMENU_POPUP_MAXIMIZE, HBMMENU_POPUP_MINIMIZE,
+HBMMENU_POPUP_RESTORE, HBMMENU_SYSTEM.
+</p>
+<a name="accelerator"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Accelerator</b></font>: <a href=kol_pas.htm#tmenuaccelerator target="_top">TMenuAccelerator</a>;</font>
+<br>
+Accelerator for menu item.
+</p>
+<a name="helpcontext"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>HelpContext</b></font>: <b>Integer</b>;</font>
+<br>
+Help context for entire menu (help context can not be assigned to
+individual menu items).
+</p>
+<a name="notpopup"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>NotPopup</b></font>: <b>Boolean</b>;</font>
+<br>
+Set this property to true to prevent popup of popup menu, e.g. in
+<a href=#onpopup target="main">OnPopup</a> event handler.
+</p>
+<a name="flags"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Flags</b></font>: <b>DWORD</b>;</font>
+<br>
+Pop-up flags, which are used to call TrackPopupMenuEx, when <a href=#popup target="main">Popup</a> or
+<a href=#popupex target="main">PopupEx</a> method is called. Can be a combination of following values:
+<br>
+TPM_CENTERALIGN or TPM_LEFTALIGN or TPM_RIGHTALIGN
+<br>
+TPM_BOTTOMALIGN or TPM_TOPALIGN or TPM_VCENTERALIGN
+<br>
+TPM_NONOTIFY or TPM_RETURNCMD
+<br>
+TPM_LEFTBUTTON or TPM_RIGHTBUTTON
+<br>
+TPM_HORNEGANIMATION or TPM_HORPOSANIMATION or TPM_NOANIMATION or
+TPM_VERNEGANIMATION or TPM_VERPOSANIMATION
+<br>
+TPM_HORIZONTAL or TPM_VERTICAL.
+<br>
+By default, a combination TPM_LEFTALIGN or TPM_LEFTBUTTON is used.
+</p>
+<a name="submenu"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>SubMenu</b></font>: HMenu;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Submenu associated with the menu item. The same as <a href=#handle target="main">Handle</a>. It was possible
+in ealier versions to change this value, replacing (removing, assigning)
+entire popup menu as a submenu for menu item.
+But in modern version of TMenu, this is not possible.
+Instead, entire menu object should be added or removed using
+InsertSubmenu or RemoveSubmenu methods.
+</p>
+<a name="ownerdraw"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OwnerDraw</b></font>: <b>Boolean</b>;</font>
+<br>
+Set this property to true for some items to make it owner-draw.
+</p>
+<a name="itemhandle"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemHandle</b></font>[ Idx: <b>Integer</b> ]: <b>DWORD</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Returns handle for item given by index.
+</p>
+<a name="itemchecked"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemChecked</b></font>[ Idx: <b>Integer</b> ]: <b>Boolean</b>;</font>
+<br>
+True, if correspondent menu item is checked.
+</p>
+<a name="itembitmap"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemBitmap</b></font>[ Idx: <b>Integer</b> ]: HBitmap;</font>
+<br>
+This property allows to assign bitmap to menu item (for unchecked state
+only - for checked menu items default checkmark bitmap is used).
+</p>
+<a name="itemtext"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemText</b></font>[ Idx: <b>Integer</b> ]: <b>String</b>;</font>
+<br>
+This property allows to get / modify menu item text at run time.
+</p>
+<a name="itemenabled"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemEnabled</b></font>[ Idx: <b>Integer</b> ]: <b>Boolean</b>;</font>
+<br>
+Controls enabling / disabling menu items. Disabled menu items are
+displayed (grayed) but inaccessible to click.
+</p>
+<a name="itemvisible"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemVisible</b></font>[ Idx: <b>Integer</b> ]: <b>Boolean</b>;</font>
+<br>
+This property allows to simulate visibility of menu items (implementing
+it by removing or inserting again if needed. For items of submenu, which
+is made invisible, True is returned. If such item made <a href=#visible target="main">Visible</a>, entire
+submenu with all its parent menu items becomes visible. To release menu
+properly it is necessary to make before all its items visible again.
+This does not matter, if menu is released at the end of execution, but
+can be sensible if owner form is destroyed and re-created at run time
+dynamically.
+</p>
+<a name="itemaccelerator"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemAccelerator</b></font>[ Idx: <b>Integer</b> ]: <a href=kol_pas.htm#tmenuaccelerator target="_top">TMenuAccelerator</a>;</font>
+<br>
+Allows to get / change accelerator key kodes assigned to menu items.
+Has no effect unless SupportMnemonics called for a form.
+</p>
+<a name="itemsubmenu"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemSubmenu</b></font>[ Idx: <b>Integer</b> ]: HMenu;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Retrieves submenu item dynamically. See also <a href=#submenu target="main">SubMenu</a> property.
+</p>
+<a name="curctl"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>CurCtl</b></font>: <a href=kol_pas.htm#pcontrol target="_top">PControl</a>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+By Alexander Pravdin. This property is assigned to a control which were
+initiated a pop-up, for popup menu.
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TMenu methods</font></h3>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>virtual</b>;</font>
+<br>
+To release menu dynamically, call <a href=#free target="main">Free</a> method instead. All (popup)
+menus created after this (for the same control) are destroyed in
+that case too.
+<br>
+It is not necessary to release menu object manually: all menus,
+created with given form (or control), are automatically released,
+when owner form (or control) is destroyed.
+</p>
+<a name="indexof"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>IndexOf</b></font>( Item: PMenu ): <b>Integer</b>;</font>
+<br>
+Returns index of an item. This index can be used to access
+menu item. Value -2 is returned, if the Item is not a child for menu
+or menu item, and has no parents, which are children for it, etc.
+Menu object itself always has index -1.
+</p>
+<a name="radiocheckitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>RadioCheckItem</b></font>;</font>
+<br>
+Call this method to check radio item. (Calling this method for
+an item, which is not belonging to a radio group, just sets its
+<a href=#checked target="main">Checked</a> state to TRUE).
+</p>
+<a name="assignevents"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>AssignEvents</b></font>( StartIdx: <b>Integer</b>; Events: <b>array</b> <b>of</b> <a href=kol_pas.htm#tonmenuitem target="_top">TOnMenuItem</a> );</font>
+<br>
+It is possible to assign its own event handler to every menu item
+using this call. This procedure also is called automatically in
+a constructor <a href=kol_pas.htm#newmenuex target="_top">NewMenuEx</a>.
+</p>
+<a name="popup"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Popup</b></font>( X, Y: <b>Integer</b> );</font>
+<br>
+Only for popup menu - to popup it at the given position on screen.
+</p>
+<a name="popupex"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>PopupEx</b></font>( X, Y: <b>Integer</b> );</font>
+<br>
+This version of popup command is very useful, when popup menu is activated
+when its parent window is not visible (e.g., for a kind of applications,
+which always are invisible, and can be activated only using tray icon).
+PopupEx method provides correct tracking of menu disappearing when mouse
+is clicked anywhere else on screen, fixing strange menu behavior in some
+Windows versions (NT).
+<br>
+Actually, when PopupEx used, parent form is shown but below of visible
+screen, and when menu is disappearing, previous state of the form (visibility
+and position) are restored. If such solvation is not satisfying You,
+You can do something else (e.g., use region clipping, etc.)
+</p>
+<a name="insert"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Insert</b></font>( InsertBefore: <b>Integer</b>; ACaption: <b>PChar</b>; Event: <a href=kol_pas.htm#tonmenuitem target="_top">TOnMenuItem</a>; Options: <a href=kol_pas.htm#tmenuoptions target="_top">TMenuOptions</a> ): PMenu;</font>
+<br>
+Inserts new menu item before item, given by Id (&gt;=4096) or index
+value InsertBefore. Pointer to an object created is returned.
+</p>
+<a name="insertsubmenu"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>InsertSubMenu</b></font>( SubMenuToInsert: PMenu; InsertBefore: <b>Integer</b> );</font>
+<br>
+Inserts existing menu item (together with its subitems if any present)
+into given position. See also <a href=#removesubmenu target="main">RemoveSubMenu</a>.
+</p>
+<a name="removesubmenu"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>RemoveSubMenu</b></font>( ItemToRemove: <b>Integer</b> ): PMenu;</font>
+<br>
+Removes menu item from the menu, returning TMenu object, representing it,
+if submenu item, having its own children, detached. If an individual menu
+item is removed, nil is returned.
+This function can be useful to add or remove dynamically entire submenus
+(created together with its subitems).
+</p>
+<a name="getmenuitemhandle"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>GetMenuItemHandle</b></font>( Idx: <b>Integer</b> ): <b>DWORD</b>;</font>
+<br>
+Returns Id of menu item with given index.
+</p>
+<a name="radiocheck"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>RadioCheck</b></font>( Idx: <b>Integer</b> );</font>
+<br>
+Call this method to check radio item. For radio items, do not
+use assignment to <a href=#itemchecked target="main">ItemChecked</a> or <a href=#checked target="main">Checked</a> properties.
+</p>
+<a name="assignbitmaps"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>AssignBitmaps</b></font>( StartIdx: <b>Integer</b>; Bitmaps: <b>array</b> <b>of</b> HBitmap );</font>
+<br>
+Can be used to assign bitmaps to several menu items during one call.
+</p>
+<a name="parentitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>ParentItem</b></font>( Idx: <b>Integer</b> ): <b>Integer</b>;</font>
+<br>
+Returns index of parent menu item (for submenu item). If there are no
+such item (Idx corresponds to root level menu item), -1 is returned.
+</p>
+<a name="additem"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>AddItem</b></font>( ACaption: <b>PChar</b>; Event: <a href=kol_pas.htm#tonmenuitem target="_top">TOnMenuItem</a>; Options: <a href=kol_pas.htm#tmenuoptions target="_top">TMenuOptions</a> ): <b>Integer</b>;</font>
+<br>
+Adds menu item dynamically. Returns ID of the added item.
+</p>
+<a name="insertitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>InsertItem</b></font>( InsertBefore: <b>Integer</b>; ACaption: <b>PChar</b>; Event: <a href=kol_pas.htm#tonmenuitem target="_top">TOnMenuItem</a>; Options: <a href=kol_pas.htm#tmenuoptions target="_top">TMenuOptions</a> ): <b>Integer</b>;</font>
+<br>
+Inserts menu item before an item with ID, given by InsertBefore parameter.
+</p>
+<a name="insertitemex"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>InsertItemEx</b></font>( InsertBefore: <b>Integer</b>; ACaption: <b>PChar</b>; Event: <a href=kol_pas.htm#tonmenuitem target="_top">TOnMenuItem</a>; Options: <a href=kol_pas.htm#tmenuoptions target="_top">TMenuOptions</a>; ByPosition: <b>Boolean</b> ): <b>Integer</b>;</font>
+<br>
+Inserts menu item by command or by position, dependant on ByPosition parameter
+</p>
+<a name="redrawformmenubar"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>RedrawFormMenuBar</b></font>;</font>
+<br>
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TMenu events</font></h3>
+<a name="onmenuitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnMenuItem</b></font>: <a href=kol_pas.htm#tonmenuitem target="_top">TOnMenuItem</a>;</font>
+<br>
+Is called when menu item is clicked. Absolute index of menu item
+clicked is passed as the second parameter. <a href=#topparent target="main">TopParent</a> always is
+passed as a Sender parameter.
+</p>
+<a name="onuncheckradioitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnUncheckRadioItem</b></font>: <a href=kol_pas.htm#tonmenuitem target="_top">TOnMenuItem</a>;</font>
+<br>
+Is called when radio item becomes unchecked in menu in result of
+checking another radio item of the same radio group.
+</p>
+<a name="onpopup"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnPopup</b></font>: <a href=kol_pas.htm#tonevent target="_top">TOnEvent</a>;</font>
+<br>
+This event occurs before the popup menu is shown.
+</p>
+<a name="onmeasureitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnMeasureItem</b></font>: <a href=kol_pas.htm#tonmeasureitem target="_top">TOnMeasureItem</a>;</font>
+<br>
+This event is called for owner-drawn menu items. Event handler should return
+menu item height in lower word of a result and item width (for menu) in
+high word of result. If either for height or for width returned value is 0,
+a default one is used.
+</p>
+<a name="ondrawitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnDrawItem</b></font>: <a href=kol_pas.htm#tondrawitem target="_top">TOnDrawItem</a>;</font>
+<br>
+This event is called for owner-drawn menu items.
+</p>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TMenu fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

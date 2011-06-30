@@ -1,0 +1,50 @@
+unit KOL_KC_;
+
+interface
+
+uses Windows, Messages, KOL;
+
+type
+ P_KC_ = ^T_KC_;
+ T_KC_ = object(TObj)
+  private
+   // code
+
+  public
+   // code
+
+  destructor Destroy; virtual;
+ end;
+
+  TKOL_KC_ = P_KC_;
+
+function New_KC_ { ( œ¿–¿Ã≈“–€ ) } : P_KC_;
+
+implementation
+
+// uses CommCtrl, ShellApi;
+
+{--------------------}
+{ Destructor Œ¡⁄≈ “¿ }
+{--------------------}
+destructor T_KC_.Destroy;
+begin
+// All Strings := '';
+// Free_And_Nil(All PObj);
+
+ inherited;
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{-----------------------------}
+{  ŒÕ—“–” “Œ– ƒÀﬂ KOL Œ¡⁄≈ “¿ }
+{-----------------------------}
+function New_KC_;
+begin
+New(Result, Create);
+
+// code
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+end.

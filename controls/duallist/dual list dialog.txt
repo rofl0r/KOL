@@ -1,0 +1,37 @@
+My first experience with KOL - simple dual list dialog (to visually exchange two list's items).
+Idea based on dual list component from RXLibrary.
+
+
+
+Usage:
+(No MCK mirror as it is not needed.)
+
+
+procedure TForm1.Button1Click(Sender: PObj);
+var
+i : Integer;
+L1,L2 : PStrList;
+begin
+L1 := NewStrList;
+L2 := NewStrList;
+L1.Add('test1a');
+L1.Add('test1b');
+L2.Add('test2a');
+L2.Add('test2b');
+if DualListDialog('test1','src','dest',L1,L2) then
+for i:=0 to L2.Count -1 do MsgOK(L2.Items[i]);
+L1.Free;
+L2.Free;
+end;
+
+Not a big deal, but useful for example to allow user select people from address list;
+Internally KOL form is created with two list box and a couple of buttons to switch items from left to right listbox and back.This form is modal.
+
+Note:
+Works ok when uses KOlDual is in implementation section (not interface)
+I'm not sure but it can'nt work when Applet is not created.
+
+
+
+Best Regards
+Boguslaw Brandys

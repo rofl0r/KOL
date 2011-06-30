@@ -1,0 +1,1 @@
+TfmRestore = class(TObj)

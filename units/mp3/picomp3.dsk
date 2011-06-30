@@ -1,0 +1,115 @@
+[Closed Files]
+File_0=SourceModule,'D:\Documents and Settings\Thaddy\Desktop\initial-src\PicoMP3\KOLMP3player1.pas',0,1,1,1,1,0,0
+File_1=SourceModule,'c:\program files\borland\delphi4\kol\KolMath.pas',0,1,1250,28,1258,0,0
+File_2=SourceModule,'d:\program files\borland\kol\Kol.pas',0,1,49714,9,49709,0,0
+File_3=SourceModule,'D:\Documents and Settings\Thaddy\Local Settings\Temp\Temporary Directory 2 for JVCL210SourceOnly.zip\jvcl\source\JvImageTransform.pas',0,1,28,1,1,0,0
+File_4=SourceModule,'D:\Documents and Settings\Thaddy\Desktop\initial-src\PicoMP3\KolSynthFilter.pas',0,1,1,32,475,0,0
+File_5=SourceModule,'D:\Documents and Settings\Thaddy\Desktop\initial-src\PicoMP3\KolPlayer.pas',0,1,82,1,1,0,0
+File_6=SourceModule,'D:\Documents and Settings\Thaddy\Desktop\initial-src\PicoMP3\kolThdtimer.pas',0,1,61,1,64,0,0
+File_7=SourceModule,'d:\program files\borland\delphi7\source\rtl\Win\ShlObj.pas',0,1,328,1,342,0,0
+File_8=SourceModule,'D:\Documents and Settings\Thaddy\Local Settings\Temp\Temporary Directory 1 for Shlwapi.zip\Pas\ShLwApi.pas',0,1,1582,1,1,0,0
+File_9=SourceModule,'D:\Documents and Settings\Thaddy\Desktop\initial-src\PicoMP3\kolBitReserve.pas',0,1,163,1,1,0,0
+
+[Modules]
+Count=0
+EditWindowCount=0
+
+[D:\Documents and Settings\Thaddy\Desktop\initial-src\PicoMP3\picomp3.dpr]
+FormState=0
+FormOnTop=0
+
+[D:\Documents and Settings\Thaddy\Desktop\initial-src\PicoMP3\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[Watches]
+Count=0
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[Main Window]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=0
+Width=1024
+Height=112
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=1016
+ClientHeight=78
+
+[ProjectManager]
+Create=1
+Visible=0
+State=0
+Left=369
+Top=372
+Width=438
+Height=305
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=430
+ClientHeight=279
+TBDockHeight=305
+LRDockWidth=438
+Dockable=1
+
+[AlignmentPalette]
+Create=1
+Visible=0
+State=0
+Left=200
+Top=114
+Width=156
+Height=84
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=150
+ClientHeight=60
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=362
+Width=190
+Height=367
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=341
+TBDockHeight=367
+LRDockWidth=190
+Dockable=1
+SplitPos=85
+ArrangeBy=Name
+SelectedItem=
+ExpandedItems=
+HiddenCategories=
+
+[ObjectTree]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=112
+Width=190
+Height=248
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=222
+TBDockHeight=248
+LRDockWidth=190
+Dockable=1
+
+[DockHosts]
+DockHostCount=0
+

@@ -1,0 +1,27 @@
+
+ KOL TitleMenu 
+   by MrBrdo   
+
+
+1) Installation
+  - Just add KOLTitleMenu.pas to the Library path (Tools - Environment Options - Library - Library path)
+
+2) Usage
+  - You create a new PTitleMenu object by using NewTitleMenu function. You can optionally specify if an edge should be shown and the Font Height.
+  - You can manipulate the Font with the Font property
+  - You can choose to draw an edge by changing the bDrawEdge variable, and you can change it's style by changing the EdgeStyle variable
+  - You can also change the colors clRight (right side of the gradient), clLeft and clText (the color of the text). The default clRight and clLeft colors are system colors, which change for example if you choose a different theme (so it's best to leave the colors alone, so they fit in with the users theme best)
+  - Use the Title property to modify the title
+  - Use AddMenuTitle to add the title (if it already exists, the result will be Flase)
+
+3) Important (Usage)
+  - Add this line to the OnDrawItem Event Handler for the Menu:
+    Result := YourTitleMenu.DrawTitle(DC, Rect, ItemIdx, DrawAction, ItemState);
+  - Add this line to the OnMeasureItem Event Handler for the Menu:
+    Result := YourTitleMenu.MeasureTitle(Idx);
+  - DrawTitle will return True if it fails (ex. not the right item)
+  - MeasureItem will return 0 if it fails (ex. not the right item)
+
+4) Enjoy :-)
+
+MrBrdo

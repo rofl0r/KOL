@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0062)http://support.microsoft.com/support/kb/articles/Q173/6/87.ASP -->
+<HTML><HEAD><TITLE>Q173687 - HOWTO: Access the Application Desktop from a Service</TITLE>
+<META http-equiv=CONTENT-Type content="text/html; charset=iso-8859-1">
+<META http-equiv=PICS-Label 
+content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "Inet@microsoft.com" for "http://support.microsoft.com" on "1998.02.17T12:28-0800" r (n 0 s 0 v 0 l 0))'>
+<META content=EN-US name=ms.locale>
+<META content="Support; KB Article" name=Category>
+<META content=Support name=Premium>
+<META content="Support; KB; win32sdk; kbOSWinNT; kbOSWinSearch; " name=KBArea>
+<META content=Q173687 name=KBID>
+<META content="HOWTO: Access the Application Desktop from a Service" 
+name=KBTitle>
+<META 
+content='The configuration of a Windows NT service determines how it may access the&#13;&#10;application desktop. The application desktop is named "default" and belongs&#13;&#10;to the "WinSta0" Window station object. The application desktop is&#13;&#10;associated with the in' 
+name=Description>
+<META content=win32sdk name=Product>
+<META content="September 10, 1997" name=KBCreate>
+<META content="October 21, 2000" name=KBModify>
+<META content="September 11, 1997" name=EditDate>
+<META content="" name=Question>
+<META content=winnt:3.51,4.0 name=Versions>
+<META content="" name=Component>
+<META content="kbOSWinNT kbOSWinSearch" name=Technology>
+<META content="" name=Links>
+<META 
+content="kbKernBase kbOSWin2000 kbSecurity kbService kbDSupport kbGrpKernBase" 
+name=Keywords>
+<META content="" name=Platform>
+<META content="" name=Hardware>
+<META content="" name=SolutionType>
+<META content=kbhowto name=IssueType>
+<META content=prodapp name=BoilerPlate>
+<META content="" name=ProducedView><LINK href="desktop_files/style.css" 
+type=text/css rel=STYLESHEET>
+<META content="MSHTML 5.50.4207.2601" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 rightMargin=0 MARGINWIDTH="0" 
+MARGINHEIGHT="0"><!-- Do not redirect KB Articles to the XMLStore at this time --><!--TOOLBAR_START--><A 
+name=TOP><A name=TOP></A><!-- Start: ToolBar V2.0--><!--TOOLBAR_EXEMPT-->
+<SCRIPT language=JavaScript src="desktop_files/toolbar.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="desktop_files/global.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="desktop_files/EN-US_local.js"></SCRIPT>
+<!-- Start: ToolBar for down-level browsers--><SPAN id=TBDownLevelDiv>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#ffffff border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%" height=60 rowSpan=2><A 
+      href="http://support.microsoft.com/isapi/gosupport.asp?target=/directory/default.asp"><IMG 
+      alt="Microsoft Product Support Services" src="desktop_files/pss_EN-US.gif" 
+      border=0></A></TD>
+    <TD vAlign=top align=right height=20><IMG height=20 alt="" src="" width=18 
+      border=0></TD><!--Start Global Toolbar Section-->
+    <TD vAlign=center noWrap align=right bgColor=#000000 colSpan=2 
+      height=20><FONT face="Verdana, Arial" color=#ffffff 
+      size=1><B>&nbsp;&nbsp;<A style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      target=_top 
+      href="http://support.microsoft.com/isapi/gomscom.asp?target=/products/"><FONT 
+      color=#ffffff>All Products</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> &nbsp;&nbsp;<A 
+      style="COLOR: #ffffff; TEXT-DECORATION: none" target=_top 
+      href="http://support.microsoft.com/isapi/gosupport.asp?target=/directory/default.asp?fr=0&amp;sd=gn"><FONT 
+      color=#ffffff>Support</FONT></A>&nbsp;&nbsp;<FONT color=#ffffff>|</FONT> 
+      &nbsp;&nbsp;<A style="COLOR: #ffffff; TEXT-DECORATION: none" target=_top 
+      href="http://support.microsoft.com/isapi/gosearch.asp?target=/"><FONT 
+      color=#ffffff>Search</FONT></A>&nbsp;&nbsp;<FONT color=#ffffff>|</FONT> 
+      &nbsp;&nbsp;<A style="COLOR: #ffffff; TEXT-DECORATION: none" target=_top 
+      href="http://support.microsoft.com/isapi/gomscom.asp?target=/"><FONT 
+      color=#ffffff>microsoft.com Home</FONT></A>&nbsp;&nbsp; </B></FONT></TD><!--End Global Toolbar Section--></TR>
+  <TR>
+    <TD vAlign=top width=19 height=40><IMG height=40 
+      src="desktop_files/1ptrans.gif" width=19 border=0></TD>
+    <TD vAlign=top noWrap align=right colSpan=2 height=40><A target=_top 
+      href="http://support.microsoft.com/isapi/gomscom.asp?target=/"><IMG 
+      height=40 alt=microsoft.com src="" width=112 border=0></A></TD></TR><!-- Start: Black Line Spacer  -->
+  <TR>
+    <TD noWrap bgColor=#000000 colSpan=4 height=1></TD></TR><!-- End: Black Line Spacer -->
+  <TR><!-- Start: Local menus -->
+    <TD vAlign=center noWrap bgColor=#000000 colSpan=4 height=20><FONT 
+      face="Verdana, Arial" color=#ffffff size=1><B>&nbsp;&nbsp;<A 
+      title="Support Home" style="COLOR: #ffffff; TEXT-DECORATION: none" 
+      target=_top 
+      href="http://support.microsoft.com/isapi/gosupport.asp?target=/directory/default.asp"><FONT 
+      color=#ffffff>Support Home</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> &nbsp;&nbsp;<A title="Self Support" 
+      style="COLOR: #ffffff; TEXT-DECORATION: none" target=_top 
+      href="http://support.microsoft.com/isapi/gosupport.asp?target=/directory/self.asp?sd=gn"><FONT 
+      color=#ffffff>Self Support</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> &nbsp;&nbsp;<A title="Assisted Support" 
+      style="COLOR: #ffffff; TEXT-DECORATION: none" target=_top 
+      href="http://support.microsoft.com/isapi/gosupport.asp?target=/directory/getitem.asp?item=AD&amp;sd=gn"><FONT 
+      color=#ffffff>Assisted Support</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> &nbsp;&nbsp;<A 
+      title="Comprehensive support customized by customer type" 
+      style="COLOR: #ffffff; TEXT-DECORATION: none" target=_top 
+      href="http://support.microsoft.com/isapi/gosupport.asp?target=/directory/customer.asp&amp;sd=gn"><FONT 
+      color=#ffffff>Custom Support</FONT></A>&nbsp;&nbsp;<FONT 
+      color=#ffffff>|</FONT> </B></FONT></TD><!-- End: Local menus --></TR><!-- Start: Black Line Spacer  -->
+  <TR>
+    <TD noWrap bgColor=#000000 colSpan=4 height=1></TD></TR><!-- End: Black Line Spacer --></TBODY></TABLE></SPAN><!-- End: ToolBar For down-level browsers-->
+<SCRIPT language=JavaScript>
+<!--// Hide from old browsers
+	var ToolBar_Supported = ToolBar_Supported;
+	if (ToolBar_Supported != null && ToolBar_Supported == true)
+	{
+		TBDownLevelDiv.style.display = "none";
+		drawToolbar();
+	}
+//-->
+</SCRIPT>
+<!-- End: ToolBar V2.0--><!--TOOLBAR_END--><!--TOOLBAR_END-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width="95%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top><FONT face="Verdana, Arial, Helvetica" size=2>
+            <TABLE>
+              <TBODY>
+              <TR>
+                <TD>
+                  <H2>HOWTO: Access the Application Desktop from a 
+                Service</H2></TD></TR></TBODY></TABLE>
+            <HR>
+            The information in this article applies to:<BR>
+            <UL>
+              <LI>Microsoft Win32 Application Programming Interface (API), used 
+              with:
+              <UL>
+                <LI>The Microsoft Windows NT operating system, versions 3.51, 
+                4.0 
+                <LI>The Microsoft Windows 2000 operating system</LI></UL></LI></UL>
+            <HR>
+            <BR>
+            <H2>SUMMARY</H2>
+            <P>The configuration of a Windows NT service determines how it may 
+            access the application desktop. The application desktop is named 
+            "default" and belongs to the "WinSta0" Window station object. The 
+            application desktop is associated with the interactively logged-on 
+            user. A process that has access to the application desktop can 
+            display message boxes, windows, and dialog boxes that can be seen 
+            visually by the interactively logged-on user. In addition, a process 
+            with access to the application desktop can send messages to other 
+            processes running on the desktop. The application desktop is not 
+            destroyed when the interactively logged-on user logs off. 
+            <BR><BR>NOTE: Running interactive services under the LocalSystem 
+            account is a VERY dangerous practice. This is especially true of the 
+            command processor and batch files. A user who wants to control the 
+            system can just hit CTRL+C to get an interactive system command 
+            prompt. </P><BR>
+            <H2>MORE INFORMATION</H2>
+            <P>A service that is configured in the LocalSystem account and is 
+            interacting with the desktop (the service type includes the 
+            SERVICE_INTERACTIVE_PROCESS flag) has access to the application 
+            desktop. <BR><BR>A service that is configured in the LocalSystem 
+            account and is not interacting with the desktop does not have access 
+            to the application desktop by default. If the service needs to 
+            display information through a message box, you can do this by 
+            specifying one of the following two flag types: <PRE class=FIXEDTEXT>   MB_DEFAULT_DESKTOP_ONLY - The message box will appear on the application
+                             desktop, for example, "winsta0\default".
+   MB_SERVICE_NOTIFICATION - The message box will appear on the currently
+                             active desktop. </PRE>In addition, a 
+            service configured in the LocalSystem account can reconfigure its 
+            thread to access the application desktop. This is demonstrated in 
+            the following sample code. The sample code obtains handles to the 
+            "WinSta0" window station and the "default" desktop. Then it re- 
+            associates the current thread to the application desktop. Then the 
+            sample will display a message box and, when access to the 
+            interactive desktop is no longer needed, it resets the thread to the 
+            original window station and desktop. This must be done for every 
+            thread that wants access to the application desktop. 
+            <H3>Sample Code</H3><PRE class=CODESAMP>   BOOL ThreadInteract(void)
+   {
+      HDESK   hdeskCurrent;
+      HDESK   hdesk;
+      HWINSTA hwinstaCurrent;
+      HWINSTA hwinsta;
+
+      // 
+      // Save the current Window station
+      // 
+      hwinstaCurrent = GetProcessWindowStation();
+      if (hwinstaCurrent == NULL)
+         return FALSE;
+
+      // 
+      // Save the current desktop
+      // 
+      hdeskCurrent = GetThreadDesktop(GetCurrentThreadId());
+      if (hdeskCurrent == NULL)
+         return FALSE;
+
+      // 
+      // Obtain a handle to WinSta0 - service must be running
+      // in the LocalSystem account
+      // 
+      hwinsta = OpenWindowStation("winsta0", FALSE,
+                                  WINSTA_ACCESSCLIPBOARD   |
+                                  WINSTA_ACCESSGLOBALATOMS |
+                                  WINSTA_CREATEDESKTOP     |
+                                  WINSTA_ENUMDESKTOPS      |
+                                  WINSTA_ENUMERATE         |
+                                  WINSTA_EXITWINDOWS       |
+                                  WINSTA_READATTRIBUTES    |
+                                  WINSTA_READSCREEN        |
+                                  WINSTA_WRITEATTRIBUTES);
+      if (hwinsta == NULL)
+         return FALSE;
+
+      // 
+      // Set the windowstation to be winsta0
+      // 
+      if (!SetProcessWindowStation(hwinsta))
+         return FALSE;
+
+      // 
+      // Get the default desktop on winsta0
+      // 
+      hdesk = OpenDesktop("default", 0, FALSE,
+                            DESKTOP_CREATEMENU |
+                  DESKTOP_CREATEWINDOW |
+                            DESKTOP_ENUMERATE    |
+                            DESKTOP_HOOKCONTROL  |
+                            DESKTOP_JOURNALPLAYBACK |
+                            DESKTOP_JOURNALRECORD |
+                            DESKTOP_READOBJECTS |
+                            DESKTOP_SWITCHDESKTOP |
+                            DESKTOP_WRITEOBJECTS);
+   if (hdesk == NULL)
+           return FALSE;
+
+   // 
+   // Set the desktop to be "default"
+   // 
+   if (!SetThreadDesktop(hdesk))
+           return FALSE;
+
+   // 
+   // Do a message box
+   // 
+   MessageBox(NULL, "MB_OK", "test_interact", MB_OK);
+
+   // 
+   // Reset the Window station and desktop
+   // 
+   if (!SetProcessWindowStation(hwinstaCurrent))
+           return FALSE;
+
+   if (!SetThreadDesktop(hdeskCurrent))
+      return FALSE;
+
+   // 
+   // Close the windowstation and desktop handles
+   // 
+   if (!CloseWindowStation(hwinsta))
+      return FALSE;
+
+   if (!CloseDesktop(hdesk))
+           return FALSE;
+
+      return TRUE;
+   } </PRE>A service configured for a user account can access the 
+            application desktop through the message box types mentioned above. 
+            The above code will fail for a service configured for a user account 
+            due to security reasons but it will work for a service that 
+            impersonates the interactively logged-on user. For example, 
+            impersonation can be done through a named pipe connection from a 
+            process running on the application desktop. The service would have 
+            to impersonate the named pipe client. 
+            <P></P>
+            <P>Additional query words: </P></FONT><FONT 
+            face="Verdana, Arial, Helvetica" size=1>
+            <P>Keywords : kbKernBase kbOSWin2000 kbSecurity kbService kbDSupport 
+            kbGrpKernBase <BR>Issue type : kbhowto <BR>Technology : kbOSWinNT 
+            kbOSWinSearch 
+      </P><!--CONVLEGACY DELIMITER--></FONT></TD></TR></TBODY></TABLE>
+      <P>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top>
+            <CENTER><BR><FONT face="Verdana, Arial, Helvetica" size=1>Last 
+            Reviewed: October 21, 2000<BR><A 
+            href="http://support.microsoft.com/support/misc/cpyright.asp">© 2001 
+            Microsoft Corporation. All rights reserved. Terms of 
+            Use.</A><BR></FONT></CENTER></TD></TR></TBODY></TABLE></P></CENTER></TD>
+    <TD vAlign=top width=1 bgColor=#003399><IMG height="100%" 
+      src="G:\KIN\PAS\desktop_files\1ptrans(1).gif" width=1 border=0></TD>
+    <TD vAlign=top width=135>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width="90%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top><FONT face="Verdana, Arial, Helvetica" size=1><BR>
+            <P>Article ID: Q173687</P>
+            <P><B>Last Reviewed:</B><BR>October 21, 2000 </P>
+            <P><A title="Send this article to a friend" 
+            href="mailto:?subject=Microsoft Knowledge Base Article - Q173687&amp;body=This article pointer was forwarded to you from the Microsoft Online Support site. http://support.microsoft.com/support/kb/articles/Q173/6/87.ASP"><IMG 
+            height=10 src="desktop_files/icoEmail.gif" width=18 align=absMiddle 
+            border=0>Send to a friend</A><BR><BR>
+            <P>Provided by<BR><A target=_top 
+            href="http://support.microsoft.com/directory/default.asp">Microsoft 
+            Product Support Services</A> 
+            <P>
+            <HR>
+
+            <FORM name=VOTED onsubmit="return votingsubmit();" 
+            action=/support/contentvoting/voting_idc.asp method=post><INPUT 
+            type=hidden value=Q173687 name=KBID> <INPUT type=hidden 
+            value="Support; KB; win32sdk" name=PROD> <INPUT type=hidden 
+            value="Support; KB; win32sdk" name=KBAREA> <INPUT type=hidden 
+            value=support.microsoft.com name=SRV> <INPUT type=hidden 
+            value=/support/kb/articles/Q173/6/87.ASP name=URL> Did the 
+            information in this article help answer your question? 
+            <P><INPUT type=radio value=1 name=VOTE>Yes<BR><INPUT type=radio 
+            value=2 name=VOTE>No<BR><INPUT type=radio value=3 name=VOTE>Did not 
+            apply 
+            <P>Please provide additional comments about this 
+            information.<BR>(255 character max) <BR><BR><TEXTAREA id=COMMENTS style="FONT-WEIGHT: normal; FONT-SIZE: xx-small; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal" name=COMMENTS rows=5 wrap=virtual cols=17 MAXLENGTH="255"></TEXTAREA> 
+            <BR>
+            <CENTER><INPUT type=image height=32 alt=Submit width=88 
+            src="desktop_files/votesubmit.gif" border=0> </CENTER>
+            <SCRIPT language=JavaScript>
+<!--//
+function votingsubmit()
+{
+	if((document.VOTED.VOTE[0].checked == false) && (document.VOTED.VOTE[1].checked == false) && (document.VOTED.VOTE[2].checked == false)){
+		alert("Please choose a voting option.");
+		return false;}
+	if(document.VOTED.COMMENTS.value.length > 255){
+		alert("Your comment has exceeded the 255 character limit.\nPlease reduce the number of characters in your comment.");
+		document.forms[0].COMMENTS.focus();
+		return false;}
+	else return true;
+}
+//-->
+</SCRIPT>
+            </FORM>
+            <P></P></FONT></TD></TR></TBODY></TABLE></CENTER></TD></TR></TBODY></TABLE></BODY></HTML>

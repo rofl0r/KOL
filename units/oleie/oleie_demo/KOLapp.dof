@@ -1,0 +1,115 @@
+[Compiler]
+A=1
+B=0
+C=1
+D=1
+E=0
+F=0
+G=1
+H=1
+I=0
+J=1
+K=0
+L=1
+M=0
+N=1
+O=1
+P=1
+Q=0
+R=0
+S=0
+T=0
+U=0
+V=1
+W=0
+X=1
+Y=1
+Z=1
+ShowHints=1
+ShowWarnings=1
+UnitAliases=Classes=;mirror=
+[Linker]
+MapFile=0
+OutputObjs=0
+ConsoleApp=1
+DebugInfo=0
+RemoteSymbols=0
+MinStackSize=16384
+MaxStackSize=1048576
+ImageBase=4194304
+ExeDescription=
+[Directories]
+OutputDir=
+UnitOutputDir=
+PackageDLLOutputDir=
+PackageDCPOutputDir=
+SearchPath=$(DELPHI)\Source\KOL\sys;$(DELPHI)\Source\KOL
+Packages=Vcl50;Vclx50;Rz21ND50;vclie50
+Conditionals=KOL_MCK
+DebugSourceDirs=
+UsePackages=0
+[Parameters]
+RunParams=
+HostApplication=
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+[Excluded Packages]
+$(DELPHI)\Bin\dclstd50.bpl=Borland Standard Components
+$(DELPHI)\Bin\dcldb50.bpl=Borland Database Components
+$(DELPHI)\Bin\dclado50.bpl=Borland ADO DB Components
+$(DELPHI)\Bin\dclbde50.bpl=Borland BDE DB Components
+$(DELPHI)\bin\dclusr50.bpl=Borland User Components
+$(DELPHI)\Bin\dclsmp50.bpl=Borland Sample Components
+$(DELPHI)\Bin\dclrx5.bpl=RX Library Controls and Tools
+$(DELPHI)\Bin\dclrxdb5.bpl=RX Library Database Components
+$(DELPHI)\Bin\dclrxbd5.bpl=RX Library BDE Database Components
+$(DELPHI)\Bin\dclnet50.bpl=Borland Internet Components
+$(DELPHI)\Bin\DCLNMF50.bpl=NetMasters Fastnet Tools
+$(DELPHI)\Bin\dclwbm50.bpl=Borland InternetExpress Components
+$(DELPHI)\Bin\dclocx50.bpl=Borland Sample Imported ActiveX Controls
+$(DELPHI)\Bin\dclmid50.bpl=Borland MIDAS Components
+$(DELPHI)\Bin\dclqrt50.bpl=QuickReport Components
+$(DELPHI)\Bin\DCLIB50.bpl=InterBase Data Access Components
+$(DELPHI)\Bin\ibevnt50.bpl=Borland Interbase Event Alerter Component
+$(DELPHI)\Bin\dcltqr50.bpl=TeeChart 5.0 for QuickReport Components Design Package
+$(DELPHI)\Bin\dcltee50.bpl=TeeChart 5.0 Components
+$(DELPHI)\Bin\DBWEBXPRT.BPL=Borland Web Wizard Package
+$(DELPHI)\Bin\dcl31w50.bpl=Delphi 1.0 Compatibility Components
+$(DELPHI)\Bin\applet50.bpl=Borland Control Panel Applet Package
+$(DELPHI)\Bin\dclsmpedit50.bpl=Borland Editor Script Enhancements
+$(DELPHI)\Bin\dcldss50.bpl=Borland Decision Cube Components
+$(DELPHI)\Bin\dclite50.bpl=Borland Integrated Translation Environment
+[HistoryLists\hlUnitAliases]
+Count=2
+Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+Item1=Classes=;mirror=
+[HistoryLists\hlSearchPath]
+Count=5
+Item0=$(DELPHI)\Lib\Debug;$(DELPHI)\Source\Toolsapi
+Item1=$(DELPHI)\Source\KOL\sys;$(DELPHI)\Source\KOL;$(DELPHI)\Source\KOL\Util;$(DELPHI)\Source\Toolsapi;H:\Program Files\Borland\MyUtils
+Item2=$(DELPHI)\Source\Toolsapi
+Item3=$(DELPHI)\Source\Toolsapi;H:\Program Files\Borland\DelphiR\AGL\Units
+Item4=H:\Program Files\Borland\DelphiR\Source\Toolsapi

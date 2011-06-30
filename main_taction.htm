@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>KOL Help: TAction object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TAction( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TAction = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Use action objects, in conjunction with action lists, to centralize the response
+to user commands (actions).
+Use AddControl, AddMenuItem, AddToolbarButton methods to link controls to an action.
+See also <a href=tactionlist.htm target="_top">TActionList</a>.
+<h3 align="center"><font color="#FF8080">TAction properties</font></h3>
+<a name="caption"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Caption</b></font>: <b>string</b>;</font>
+<br>
+Text caption.
+</p>
+<a name="hint"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Hint</b></font>: <b>string</b>;</font>
+<br>
+Hint (tooltip). Currently used for toolbar buttons only.
+</p>
+<a name="checked"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Checked</b></font>: <b>boolean</b>;</font>
+<br>
+Checked state.
+</p>
+<a name="enabled"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Enabled</b></font>: <b>boolean</b>;</font>
+<br>
+Enabled state.
+</p>
+<a name="visible"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Visible</b></font>: <b>boolean</b>;</font>
+<br>
+Visible state.
+</p>
+<a name="helpcontext"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>HelpContext</b></font>: <b>integer</b>;</font>
+<br>
+Help context.
+</p>
+<a name="accelerator"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Accelerator</b></font>: <a href=kol_pas.htm#tmenuaccelerator target="_top">TMenuAccelerator</a>;</font>
+<br>
+Accelerator for menu items.
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TAction methods</font></h3>
+<a name="linkcontrol"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>LinkControl</b></font>( Ctrl: <a href=kol_pas.htm#pcontrol target="_top">PControl</a> );</font>
+<br>
+Add a link to a TControl or descendant control.
+</p>
+<a name="linkmenuitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>LinkMenuItem</b></font>( Menu: PMenu; MenuItemIdx: <b>integer</b> );</font>
+<br>
+Add a link to a menu item.
+</p>
+<a name="linktoolbarbutton"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>LinkToolbarButton</b></font>( Toolbar: <a href=kol_pas.htm#pcontrol target="_top">PControl</a>; ButtonIdx: <b>integer</b> );</font>
+<br>
+Add a link to a toolbar button.
+</p>
+<a name="execute"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Execute</b></font>;</font>
+<br>
+Executes a <a href=#onexecute target="main">OnExecute</a> event handler.
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TAction events</font></h3>
+<a name="onexecute"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnExecute</b></font>: <a href=kol_pas.htm#tonevent target="_top">TOnEvent</a>;</font>
+<br>
+This event is executed when user clicks on a linked object or <a href=#execute target="main">Execute</a> method was called.
+</p>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TAction fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

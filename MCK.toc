@@ -1,0 +1,52 @@
+:Base MCK
+:Title Mirror Classes Kit for Key Objects Library
+:Index MCK Help=MCK.hlp
+1 Introduction to KOL and MCK
+2 Release notes=IDH_ReleaseNotes@MCK.hlp>MCK
+2 Introduction to KOL=IDH_IntroKOL@MCK.hlp>MCK
+2 Introduction to MCK=IDH_IntroMCK@MCK.hlp>MCK
+1 MCK project creating and mainainance
+2 Creating MCK project=IDH_CreateMCKproject@MCK.hlp>MCK
+2 Adding a form to MCK project=IDH_AddingForm@MCK.hlp>MCK
+2 Removing a form from the MCK project=IDH_RemovingForm@MCK.hlp>MCK
+2 Writing code=IDH_WritingCode@MCK.hlp>MCK
+2 Using VCL non-visual components=IDH_UsingVCLnonvisual@MCK.hlp>MCK
+1 MCK tool components (TKOLProject, TKOLForm, TKOLApplet, TKOLDataModule)
+2 TKOLProject component=IDH_TKOLProject@MCK.hlp>MCK
+2 TKOLForm component=IDH_TKOLForm@MCK.hlp>MCK
+2 TKOLApplet component=IDH_TKOLApplet@MCK.hlp>MCK
+2 TKOLDataModule component=IDH_TKOLDataModule@MCK.hlp>MCK
+2 TKOLFrame component=IDH_TKOLFrame@MCK.hlp>MCK
+1 MCK visual controls
+2 TKOLButton=IDH_TKOLButton@MCK.hlp>MCK
+2 TKOLBitBtn=IDH_TKOLBitBtn@MCK.hlp>MCK
+2 TKOLLabel=IDH_TKOLLabel@MCK.hlp>MCK
+2 TKOLLabelEffect=IDH_TKOLLabelEffect@MCK.hlp>MCK
+2 TKOLPanel=IDH_TKOLPanel@MCK.hlp>MCK
+2 TKOLGradientPanel=IDH_TKOLGradientPanel@MCK.hlp>MCK
+2 TKOLSplitter=IDH_TKOLSplitter@MCK.hlp>MCK
+2 TKOLGroupBox=IDH_TKOLGroupBox@MCK.hlp>MCK
+2 TKOLCheckBox=IDH_TKOLCheckBox@MCK.hlp>MCK
+2 TKOLRadioBox=IDH_TKOLRadioBox@MCK.hlp>MCK
+2 TKOLEditBox=IDH_TKOLEditBox@MCK.hlp>MCK
+2 TKOLMemo=IDH_TKOLMemo@MCK.hlp>MCK
+2 TKOLRichEdit=IDH_TKOLRichEdit@MCK.hlp>MCK
+2 TKOLListBox=IDH_TKOLListBox@MCK.hlp>MCK
+2 TKOLComboBox=IDH_TKOLComboBox@MCK.hlp>MCK
+2 TKOLPaintBox=IDH_TKOLPaintBox@MCK.hlp>MCK
+2 TKOLImageShow=IDH_TKOLImageShow@MCK.hlp>MCK
+2 TKOLProgressBar=IDH_TKOLProgressBar@MCK.hlp>MCK
+2 TKOLListView=IDH_TKOLListView@MCK.hlp>MCK
+2 TKOLTreeView=IDH_TKOLTreeView@MCK.hlp>MCK
+2 TKOLToolbar=IDH_TKOLToolbar@MCK.hlp>MCK
+2 TKOLTabControl=IDH_TKOLTabControl@MCK.hlp>MCK
+1 MCK non-visual components
+2 TKOLTimer=IDH_TKOLTimer@MCK.hlp>MCK
+2 TKOLThread=IDH_TKOLThread@MCK.hlp>MCK
+2 TKOLMainMenu=IDH_TKOLMainMenu@MCK.hlp>MCK
+2 TKOLPopupMenu=IDH_TKOLPopupMenu@MCK.hlp>MCK
+2 TKOLOpenSaveDialog=IDH_TKOLOpenSaveDialog@MCK.hlp>MCK
+2 TKOLOpenDirDialog=IDH_TKOLOpenDirDialog@MCK.hlp>MCK
+2 TKOLColorDialog=IDH_TKOLColorDialog@MCK.hlp>MCK
+2 TKOLImageList=IDH_TKOLImageList@MCK.hlp>MCK
+2 TKOLTrayIcon=IDH_TKOLTrayIcon@MCK.hlp>MCK

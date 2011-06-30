@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>KOL Help: TMetafile object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TMetafile( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TMetafile = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Object type to incapsulate metafile image.
+<h3 align="center"><font color="#FF8080">TMetafile properties</font></h3>
+<a name="handle"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Handle</b></font>: THandle;</font>
+<br>
+Returns handle of enchanced metafile.
+</p>
+<a name="width"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Width</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Native width of the metafile.
+</p>
+<a name="height"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Height</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Native height of the metafile.
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TMetafile methods</font></h3>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>virtual</b>;</font>
+<br>
+</p>
+<a name="clear"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Clear</b></font>;</font>
+<br>
+</p>
+<a name="empty"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Empty</b></font>: <b>Boolean</b>;</font>
+<br>
+Returns TRUE if empty
+</p>
+<a name="loadfromstream"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>LoadFromStream</b></font>( Strm: PStream ): <b>Boolean</b>;</font>
+<br>
+Loads emf or wmf file format from stream.
+</p>
+<a name="loadfromfile"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>LoadFromFile</b></font>( <b>const</b> Filename: <b>String</b> ): <b>Boolean</b>;</font>
+<br>
+Loads emf or wmf from stream.
+</p>
+<a name="draw"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Draw</b></font>( DC: HDC; X, Y: <b>Integer</b> );</font>
+<br>
+Draws enchanced metafile on DC.
+</p>
+<a name="stretchdraw"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>StretchDraw</b></font>( DC: HDC; <b>const</b> R: TRect );</font>
+<br>
+Draws enchanced metafile stretched.
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TMetafile events</font></h3>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TMetafile fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

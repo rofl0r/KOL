@@ -1,0 +1,16 @@
+Компонент KOL/MCK (KOL >= 1.76).
+Помещает иконку в трей.
+Поддерживает balloon ("воздушный шарик") в Windows Me, NT5.x и выше.
+
+Поддержка Д5 - Д7.
+Для получения полной справки, запустите xHelpGen.
+
+[v1.05]
+-------
+[*] MCK и код.
+[+] Свойство HideBallOnTimer.
+
+--
+Александр Бартов
+E-mail: delphikol@narod.ru
+Web-page: http://delphikol.narod.ru

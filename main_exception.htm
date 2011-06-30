@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>KOL Help: Exception class (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>Exception( unit <a href=err_pas.htm>err.pas</a> )
+ <font face="Wingdings">ï</font> TObject
+</b></font></p>
+<p><b>
+Exception = class( TObject )
+</b></p>
+Exception class. In <a href=kol_pas.htm>KOL</a>, there is a single exception class is used.
+Instead of inheriting new exception classes from this ancestor, an
+instance of the same Exception class should be used. The difference
+is only in <a href=#code target="main">Code</a> property, which contains a kind of exception.
+<h3 align="center"><font color="#FF8080">Exception properties</font></h3>
+<a name="message"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Message</b></font>: <b>string</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Text string, containing descriptive message about the exception.
+</p>
+<a name="code"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Code</b></font>: <a href=err_pas.htm#terror target="_top">TError</a>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Main exception code. This property can be used to determine, which exception
+occure.
+</p>
+<a name="errorcode"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ErrorCode</b></font>: <b>DWORD</b>;</font>
+<br>
+This code is to detailize error. For <a href=#code target="main">Code</a> = e_InOut, ErrorCode contains
+more detail description of input/output error. For e_Custom, You can
+assign it to any value You want.
+</p>
+<a name="exceptionrecord"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ExceptionRecord</b></font>: PExceptionRecord;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+This property is only for e_External exception.
+</p>
+<a name="data"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Data</b></font>: <b>Pointer</b>;</font>
+<br>
+Custom defined pointer. Use it in your custom exceptions.
+</p>
+<h3 align="center"><font color="#FF8080">Exception methods</font></h3>
+<a name="create"></a>
+<p>
+<font face="Courier" color="#800080"><b>constructor</b> <font color="#808000"><b>Create</b></font>( ACode: <a href=err_pas.htm#terror target="_top">TError</a>; <b>const</b> Msg: <b>string</b> );</font>
+<br>
+Use this constructor to raise exception, which does not require of
+argument formatting.
+</p>
+<a name="createfmt"></a>
+<p>
+<font face="Courier" color="#800080"><b>constructor</b> <font color="#808000"><b>CreateFmt</b></font>( ACode: <a href=err_pas.htm#terror target="_top">TError</a>; <b>const</b> Msg: <b>string</b>; <b>const</b> Args: <b>array</b> <b>of</b> <b>const</b> );</font>
+<br>
+Use this constructor to raise an exception with formatted <a href=#message target="main">Message</a> string.
+Take into attention, that <a href=kol_pas.htm#format>Format</a> procedure defined in <a href=kol_pas.htm>KOL</a>, uses API wvsprintf
+function, which can understand a restricted set of format specifications.
+</p>
+<a name="createcustom"></a>
+<p>
+<font face="Courier" color="#800080"><b>constructor</b> <font color="#808000"><b>CreateCustom</b></font>( AError: <b>DWORD</b>; <b>const</b> Msg: <b>String</b> );</font>
+<br>
+Use this constructor to create e_Custom exception and to assign AError to
+its <a href=#errorcode target="main">ErrorCode</a> property.
+</p>
+<a name="createcustomfmt"></a>
+<p>
+<font face="Courier" color="#800080"><b>constructor</b> <font color="#808000"><b>CreateCustomFmt</b></font>( AError: <b>DWORD</b>; <b>const</b> Msg: <b>String</b>; <b>const</b> Args: <b>array</b> <b>of</b> <b>const</b> );</font>
+<br>
+Use this constructor to create e_Custom exception with formatted message
+string and to assign AError to its <a href=#errorcode target="main">ErrorCode</a> property.
+</p>
+<a name="createresfmt"></a>
+<p>
+<font face="Courier" color="#800080"><b>constructor</b> <font color="#808000"><b>CreateResFmt</b></font>( ACode: <a href=err_pas.htm#terror target="_top">TError</a>; Ident: <b>Integer</b>; <b>const</b> Args: <b>array</b> <b>of</b> <b>const</b> );</font>
+<br>
+</p>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>override</b>;</font>
+<br>
+destructor
+</p>
+<h3 align="center"><font color="#FF8080">Exception events</font></h3>
+<a name="ondestroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnDestroy</b></font>: TDestroyException;</font>
+<br>
+This event is to allow to do something when custom Exception is
+released.
+</p>
+<a name=tasks></a><h3 align="center"><font color="#FF8080">Exception tasks</font></h3>
+With err unit, it is possible to use all capabilities of Delphi exception
+handling almost in the same way as usual. The difference only in that the
+single exception class should be used. To determine which exception occure,
+use property <a href=#code target="main">Code</a>. So, code to handle exception can be written like follow:
+<p align=left><font face="Courier" color="008080"><b><pre>
+ try
+ ...
+ except on E: Exception <font color="800000"><b>do</b></font>
+   <font color="800000"><b>case</b></font> E.<a href="exception.htm#code"><font color="008080">Code</font></a> <font color="800000"><b>of</b></font>
+   e_DivBy0: HandleDivideByZero;
+   e_Overflow: HandleOverflow;
+   ...
+   <font color="800000"><b>end</b></font>;
+ <font color="800000"><b>end</b></font>;
+</pre></b></font></p>
+To raise an error, create an instance of Exception class object, but
+pass a <a href=#code target="main">Code</a> to its constructor:
+<p align=left><font face="Courier" color="008080"><b><pre>
+ <font color="800000"><b>var</b></font> E: Exception;
+ ...
+ E := Exception.<a href="exception.htm#create"><font color="008080">Create</font></a>( e_Custom, <font color="A08020">'My custom exception'</font> );
+ E.<a href="exception.htm#errorcode"><font color="008080">ErrorCode</font></a> := MY_MAGIC_CODE_FOR_CUSTOM_EXCEPTION;
+ raise E;
+</pre></b></font></p>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

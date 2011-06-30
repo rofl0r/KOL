@@ -1,0 +1,49 @@
+package MirrorKOLPackageD4;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$DESCRIPTION '_KOL_ mirror controls for Delphi 4'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+{$DEFINE INPACKAGE}
+{$DEFINE _NOT_Use_KOLCtrlWrapper}
+
+requires
+  vcl40,
+  Vclx40;
+
+contains
+  mirror in 'mirror.pas',
+  mckObjs in 'mckObjs.pas',
+  mckCtrls in 'mckCtrls.pas',
+  kol in 'Kol.pas',
+  mckAccEditorD4 in 'mckAccEditorD4.pas',
+  mckCtrlDraw in 'mckCtrlDraw.pas',
+  mckActionListEditor in 'mckActionListEditor.pas',
+  mckMenuEditor in 'mckMenuEditor.pas',
+  mckAccEditor in 'mckAccEditor.pas',
+  mckToolbarEditor in 'mckToolbarEditor.pas',
+  mckLVColumnsEditor in 'mckLVColumnsEditor.pas',
+  mckFileFilterEditor in 'mckFileFilterEditor.pas';
+
+end.

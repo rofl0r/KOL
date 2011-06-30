@@ -1,0 +1,40 @@
+package MHTrackBarD6;
+
+{$R *.res}
+{$R 'MCKMHTrackBar.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+{$DESCRIPTION 'MHTrackBar for KOLnMCK by MacroHard Corp. (Zharov Dmitry aka Gandalf)'}
+
+requires
+  rtl,
+  designide,
+  vcl,
+  MirrorKOLPackageD6;
+
+contains
+  MCKMHTrackBar in 'MCKMHTrackBar.pas',
+  KOLMHTrackBar in 'KOLMHTrackBar.pas';
+
+end.

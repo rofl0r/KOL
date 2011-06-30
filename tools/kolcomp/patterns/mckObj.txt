@@ -1,0 +1,106 @@
+unit mck_KC_;
+
+interface
+
+uses
+  Windows, Messages, Classes, Controls, mirror, mckCtrls, KOL, Graphics, KOL_KC_;
+
+type
+
+  TKOL_KC_ = class(TKOLObj)
+  private
+
+    // fOnMyEvent: TOnMyEvent;
+    // procedure SetOnMyEvent(Value: TOnMyEvent);
+
+  protected
+    function TypeName: String; override;
+    function AdditionalUnits: String; override;
+    procedure AssignEvents(SL: TStringList; const AName: String); override;
+    procedure SetupFirst(SL: TStringList; const AName, AParent, Prefix: String); override;
+    procedure SetupLast(SL: TStringList; const AName, AParent, Prefix: String); override;
+
+  public
+    constructor Create(Owner: TComponent); override;
+
+  published
+
+    // property OnMyEvent: TOnMyEvent read fOnMyEvent write SetOnMyEvent;
+
+  end;
+
+procedure Register;
+
+{$R *.dcr}
+
+implementation
+
+procedure Register;
+begin
+RegisterComponents('KOL _PP_', [TKOL_KC_]);
+end;
+
+{ днаюбкемхе лндскъ }
+function TKOL_KC_.AdditionalUnits;
+begin
+Result := ', KOL_KC_';
+end;
+
+function TKOL_KC_.TypeName: String;
+begin
+Result := 'TKOL_KC_';
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{--------------------------}
+{ пецхярпюжхъ напюанрвхйнб }
+{--------------------------}
+procedure TKOL_KC_.AssignEvents;
+begin
+inherited;
+// DoAssignEvents(SL, AName, ['OnMyEvent'], [@OnMyEvent]);
+// DoAssignEvents(SL, AName, ['OnEvent1', 'OnEvent2'], [@OnEvent1, @OnEvent2]);
+end;
+
+{--------------------------}
+{ днаюбкемхе б unitX_X.inc }
+{--------------------------}
+procedure TKOL_KC_.SetupFirst;
+const
+ spc = ', ';
+ Boolean2Str: array [Boolean] of String = ('FALSE', 'TRUE');
+
+begin
+// SL.Add(Prefix + AName + ' := New_KC_{ (  оюпюлерпш  ) } ;');
+
+// Boolean2Str[TRUE]
+// Color2Str(myColor)
+// SL.Add(Prefix + AName + '.myStr := ''' + myStr + ''';');
+end;
+
+{--------------------------}
+{ днаюбкемхе б unitX_X.inc }
+{--------------------------}
+procedure TKOL_KC_.SetupLast;
+begin
+// SL.Add(Prefix + AName + '.myInt := ' + Int2Str(myInt) + ';');
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{-------------}
+{ йнмярпсйрнп }
+{-------------}
+constructor TKOL_KC_.Create;
+begin
+ inherited;
+
+// fmyInt := 10;
+end;
+
+{ procedure TKOL_KC_.SetOnMyEvent;
+begin
+fOnMyEvent := Value;
+Change;
+end; }
+
+end.

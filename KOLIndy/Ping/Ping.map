@@ -1,0 +1,2408 @@
+
+ Start         Length     Name                   Class
+ 0001:00000000 00009338H .text                   CODE
+ 0002:00000000 00000558H .data                   DATA
+ 0002:00000558 00000761H .bss                    BSS
+
+
+Detailed map of segments
+
+ 0001:00000000 00003153 C=CODE     S=.text    G=(none)   M=System   ACBP=A9
+ 0001:00003154 00000140 C=CODE     S=.text    G=(none)   M=SysInit  ACBP=A9
+ 0001:00003294 00000038 C=CODE     S=.text    G=(none)   M=Types    ACBP=A9
+ 0001:000032CC 00000230 C=CODE     S=.text    G=(none)   M=Windows  ACBP=A9
+ 0001:000034FC 00000038 C=CODE     S=.text    G=(none)   M=Messages ACBP=A9
+ 0001:00003534 00000038 C=CODE     S=.text    G=(none)   M=RichEdit ACBP=A9
+ 0001:0000356C 00000038 C=CODE     S=.text    G=(none)   M=ShellAPI ACBP=A9
+ 0001:000035A4 00000038 C=CODE     S=.text    G=(none)   M=ActiveX  ACBP=A9
+ 0001:000035DC 00000038 C=CODE     S=.text    G=(none)   M=CommCtrl ACBP=A9
+ 0001:00003614 00000038 C=CODE     S=.text    G=(none)   M=RegStr   ACBP=A9
+ 0001:0000364C 00000038 C=CODE     S=.text    G=(none)   M=WinInet  ACBP=A9
+ 0001:00003684 00000038 C=CODE     S=.text    G=(none)   M=UrlMon   ACBP=A9
+ 0001:000036BC 00000038 C=CODE     S=.text    G=(none)   M=ShlObj   ACBP=A9
+ 0001:000036F4 00000038 C=CODE     S=.text    G=(none)   M=CommDlg  ACBP=A9
+ 0001:0000372C 000020CC C=CODE     S=.text    G=(none)   M=KOL      ACBP=A9
+ 0001:000057F8 000001A8 C=CODE     S=.text    G=(none)   M=IdResourceStrings ACBP=A9
+ 0001:000059A0 00000038 C=CODE     S=.text    G=(none)   M=IdURI    ACBP=A9
+ 0001:000059D8 00000164 C=CODE     S=.text    G=(none)   M=IndyProcs ACBP=A9
+ 0001:00005B3C 00000357 C=CODE     S=.text    G=(none)   M=IdGlobal ACBP=A9
+ 0001:00005E94 00000044 C=CODE     S=.text    G=(none)   M=IdBaseComponent ACBP=A9
+ 0001:00005ED8 00000038 C=CODE     S=.text    G=(none)   M=IdAntiFreezeBase ACBP=A9
+ 0001:00005F10 000006FC C=CODE     S=.text    G=(none)   M=IdWinsock ACBP=A9
+ 0001:0000660C 00000038 C=CODE     S=.text    G=(none)   M=IdStackConsts ACBP=A9
+ 0001:00006644 00000DBA C=CODE     S=.text    G=(none)   M=IdStackWinsock ACBP=A9
+ 0001:00007400 0000073C C=CODE     S=.text    G=(none)   M=IdStack  ACBP=A9
+ 0001:00007B3C 00000184 C=CODE     S=.text    G=(none)   M=IdComponent ACBP=A9
+ 0001:00007CC0 0000015C C=CODE     S=.text    G=(none)   M=KOLClasses ACBP=A9
+ 0001:00007E1C 000003A4 C=CODE     S=.text    G=(none)   M=IdSocketHandle ACBP=A9
+ 0001:000081C0 000001D0 C=CODE     S=.text    G=(none)   M=IdRawBase ACBP=A9
+ 0001:00008390 00000038 C=CODE     S=.text    G=(none)   M=IdRawClient ACBP=A9
+ 0001:000083C8 00000038 C=CODE     S=.text    G=(none)   M=IdRawHeaders ACBP=A9
+ 0001:00008400 000003EC C=CODE     S=.text    G=(none)   M=IdIcmpClient ACBP=A9
+ 0001:000087EC 00000038 C=CODE     S=.text    G=(none)   M=IdUDPBase ACBP=A9
+ 0001:00008824 00000038 C=CODE     S=.text    G=(none)   M=IdUDPClient ACBP=A9
+ 0001:0000885C 00000038 C=CODE     S=.text    G=(none)   M=IdTrivialFTPBase ACBP=A9
+ 0001:00008894 00000038 C=CODE     S=.text    G=(none)   M=IdTrivialFTP ACBP=A9
+ 0001:000088CC 00000038 C=CODE     S=.text    G=(none)   M=IdSocks  ACBP=A9
+ 0001:00008904 00000038 C=CODE     S=.text    G=(none)   M=IdIntercept ACBP=A9
+ 0001:0000893C 00000038 C=CODE     S=.text    G=(none)   M=IdTCPConnection ACBP=A9
+ 0001:00008974 00000038 C=CODE     S=.text    G=(none)   M=IdTCPClient ACBP=A9
+ 0001:000089AC 00000038 C=CODE     S=.text    G=(none)   M=IdTime   ACBP=A9
+ 0001:000089E4 00000038 C=CODE     S=.text    G=(none)   M=IdThread ACBP=A9
+ 0001:00008A1C 00000038 C=CODE     S=.text    G=(none)   M=IdTelnet ACBP=A9
+ 0001:00008A54 00000038 C=CODE     S=.text    G=(none)   M=IdIPWatch ACBP=A9
+ 0001:00008A8C 00000038 C=CODE     S=.text    G=(none)   M=IdSNTP   ACBP=A9
+ 0001:00008AC4 00000038 C=CODE     S=.text    G=(none)   M=IdSSLIntercept ACBP=A9
+ 0001:00008AFC 00000078 C=CODE     S=.text    G=(none)   M=IdSSLOpenSSLHeaders ACBP=A9
+ 0001:00008B74 00000038 C=CODE     S=.text    G=(none)   M=MySyncObjs ACBP=A9
+ 0001:00008BAC 00000038 C=CODE     S=.text    G=(none)   M=IdThreadMgrDefault ACBP=A9
+ 0001:00008BE4 00000038 C=CODE     S=.text    G=(none)   M=IdThreadMgr ACBP=A9
+ 0001:00008C1C 00000038 C=CODE     S=.text    G=(none)   M=IdTCPServer ACBP=A9
+ 0001:00008C54 00000048 C=CODE     S=.text    G=(none)   M=IdSSLOpenSSL ACBP=A9
+ 0001:00008C9C 0000044C C=CODE     S=.text    G=(none)   M=Unit1    ACBP=A9
+ 0001:000090E8 00000038 C=CODE     S=.text    G=(none)   M=Sysutils ACBP=A9
+ 0001:00009120 00000218 C=CODE     S=.text    G=(none)   M=Ping     ACBP=A9
+ 0002:00000000 0000008C C=DATA     S=.data    G=DGROUP   M=System   ACBP=A9
+ 0002:0000008C 0000001C C=DATA     S=.data    G=DGROUP   M=SysInit  ACBP=A9
+ 0002:000000A8 0000021C C=DATA     S=.data    G=DGROUP   M=KOL      ACBP=A9
+ 0002:000002C4 00000050 C=DATA     S=.data    G=DGROUP   M=IdGlobal ACBP=A9
+ 0002:00000314 00000004 C=DATA     S=.data    G=DGROUP   M=IdAntiFreezeBase ACBP=A9
+ 0002:00000318 000000D0 C=DATA     S=.data    G=DGROUP   M=IdWinsock ACBP=A9
+ 0002:000003E8 00000008 C=DATA     S=.data    G=DGROUP   M=IdStack  ACBP=A9
+ 0002:000003F0 0000001C C=DATA     S=.data    G=DGROUP   M=IdComponent ACBP=A9
+ 0002:0000040C 00000008 C=DATA     S=.data    G=DGROUP   M=IdSSLOpenSSLHeaders ACBP=A9
+ 0002:00001000 00000650 C=BSS      S=.bss     G=DGROUP   M=System   ACBP=A9
+ 0002:00001650 00000010 C=BSS      S=.bss     G=DGROUP   M=SysInit  ACBP=A9
+ 0002:00001660 00000004 C=BSS      S=.bss     G=DGROUP   M=Types    ACBP=A9
+ 0002:00001664 00000004 C=BSS      S=.bss     G=DGROUP   M=Windows  ACBP=A9
+ 0002:00001668 00000004 C=BSS      S=.bss     G=DGROUP   M=Messages ACBP=A9
+ 0002:0000166C 00000004 C=BSS      S=.bss     G=DGROUP   M=RichEdit ACBP=A9
+ 0002:00001670 00000004 C=BSS      S=.bss     G=DGROUP   M=ShellAPI ACBP=A9
+ 0002:00001674 00000004 C=BSS      S=.bss     G=DGROUP   M=ActiveX  ACBP=A9
+ 0002:00001678 00000004 C=BSS      S=.bss     G=DGROUP   M=CommCtrl ACBP=A9
+ 0002:0000167C 00000004 C=BSS      S=.bss     G=DGROUP   M=RegStr   ACBP=A9
+ 0002:00001680 00000004 C=BSS      S=.bss     G=DGROUP   M=WinInet  ACBP=A9
+ 0002:00001684 00000004 C=BSS      S=.bss     G=DGROUP   M=UrlMon   ACBP=A9
+ 0002:00001688 00000004 C=BSS      S=.bss     G=DGROUP   M=ShlObj   ACBP=A9
+ 0002:0000168C 00000004 C=BSS      S=.bss     G=DGROUP   M=CommDlg  ACBP=A9
+ 0002:00001690 00000024 C=BSS      S=.bss     G=DGROUP   M=KOL      ACBP=A9
+ 0002:000016B4 00000004 C=BSS      S=.bss     G=DGROUP   M=IdResourceStrings ACBP=A9
+ 0002:000016B8 00000004 C=BSS      S=.bss     G=DGROUP   M=IdURI    ACBP=A9
+ 0002:000016BC 00000004 C=BSS      S=.bss     G=DGROUP   M=IndyProcs ACBP=A9
+ 0002:000016C0 0000000C C=BSS      S=.bss     G=DGROUP   M=IdGlobal ACBP=A9
+ 0002:000016CC 00000004 C=BSS      S=.bss     G=DGROUP   M=IdBaseComponent ACBP=A9
+ 0002:000016D0 00000004 C=BSS      S=.bss     G=DGROUP   M=IdAntiFreezeBase ACBP=A9
+ 0002:000016D4 00000004 C=BSS      S=.bss     G=DGROUP   M=IdWinsock ACBP=A9
+ 0002:000016D8 00000004 C=BSS      S=.bss     G=DGROUP   M=IdStackConsts ACBP=A9
+ 0002:000016DC 00000004 C=BSS      S=.bss     G=DGROUP   M=IdStackWinsock ACBP=A9
+ 0002:000016E0 00000004 C=BSS      S=.bss     G=DGROUP   M=IdStack  ACBP=A9
+ 0002:000016E4 00000004 C=BSS      S=.bss     G=DGROUP   M=IdComponent ACBP=A9
+ 0002:000016E8 00000004 C=BSS      S=.bss     G=DGROUP   M=KOLClasses ACBP=A9
+ 0002:000016EC 00000004 C=BSS      S=.bss     G=DGROUP   M=IdSocketHandle ACBP=A9
+ 0002:000016F0 00000004 C=BSS      S=.bss     G=DGROUP   M=IdRawBase ACBP=A9
+ 0002:000016F4 00000004 C=BSS      S=.bss     G=DGROUP   M=IdRawClient ACBP=A9
+ 0002:000016F8 00000004 C=BSS      S=.bss     G=DGROUP   M=IdRawHeaders ACBP=A9
+ 0002:000016FC 00000004 C=BSS      S=.bss     G=DGROUP   M=IdIcmpClient ACBP=A9
+ 0002:00001700 00000004 C=BSS      S=.bss     G=DGROUP   M=IdUDPBase ACBP=A9
+ 0002:00001704 00000004 C=BSS      S=.bss     G=DGROUP   M=IdUDPClient ACBP=A9
+ 0002:00001708 00000004 C=BSS      S=.bss     G=DGROUP   M=IdTrivialFTPBase ACBP=A9
+ 0002:0000170C 00000004 C=BSS      S=.bss     G=DGROUP   M=IdTrivialFTP ACBP=A9
+ 0002:00001710 00000004 C=BSS      S=.bss     G=DGROUP   M=IdSocks  ACBP=A9
+ 0002:00001714 00000004 C=BSS      S=.bss     G=DGROUP   M=IdIntercept ACBP=A9
+ 0002:00001718 00000004 C=BSS      S=.bss     G=DGROUP   M=IdTCPConnection ACBP=A9
+ 0002:0000171C 00000004 C=BSS      S=.bss     G=DGROUP   M=IdTCPClient ACBP=A9
+ 0002:00001720 00000004 C=BSS      S=.bss     G=DGROUP   M=IdTime   ACBP=A9
+ 0002:00001724 00000004 C=BSS      S=.bss     G=DGROUP   M=IdThread ACBP=A9
+ 0002:00001728 00000004 C=BSS      S=.bss     G=DGROUP   M=IdTelnet ACBP=A9
+ 0002:0000172C 00000004 C=BSS      S=.bss     G=DGROUP   M=IdIPWatch ACBP=A9
+ 0002:00001730 00000004 C=BSS      S=.bss     G=DGROUP   M=IdSNTP   ACBP=A9
+ 0002:00001734 00000004 C=BSS      S=.bss     G=DGROUP   M=IdSSLIntercept ACBP=A9
+ 0002:00001738 00000004 C=BSS      S=.bss     G=DGROUP   M=IdSSLOpenSSLHeaders ACBP=A9
+ 0002:0000173C 00000004 C=BSS      S=.bss     G=DGROUP   M=MySyncObjs ACBP=A9
+ 0002:00001740 00000004 C=BSS      S=.bss     G=DGROUP   M=IdThreadMgrDefault ACBP=A9
+ 0002:00001744 00000004 C=BSS      S=.bss     G=DGROUP   M=IdThreadMgr ACBP=A9
+ 0002:00001748 00000004 C=BSS      S=.bss     G=DGROUP   M=IdTCPServer ACBP=A9
+ 0002:0000174C 00000004 C=BSS      S=.bss     G=DGROUP   M=IdSSLOpenSSL ACBP=A9
+ 0002:00001750 0000000C C=BSS      S=.bss     G=DGROUP   M=Unit1    ACBP=A9
+ 0002:0000175C 00000004 C=BSS      S=.bss     G=DGROUP   M=Sysutils ACBP=A9
+
+
+  Address         Publics by Name
+
+ 0002:00001688       .1
+ 0002:000016D4       .1
+ 0002:00001668       .1
+ 0002:00001684       .1
+ 0002:00001680       .1
+ 0002:00001738       .1
+ 0002:0000167C       .1
+ 0002:00001658       .1
+ 0002:00001678       .1
+ 0002:0000168C       .1
+ 0002:000016D8       .1
+ 0002:000016B4       .1
+ 0002:00001660       .1
+ 0002:00001670       .1
+ 0002:00001708       .1
+ 0002:000016BC       .1
+ 0002:0000175C       .1
+ 0002:0000166C       .1
+ 0002:00001758       .2
+ 0002:000016CC       .2
+ 0002:00001730       .2
+ 0002:000016D0       .2
+ 0002:000016F4       .2
+ 0002:00001724       .2
+ 0002:00001720       .2
+ 0002:0000170C       .2
+ 0002:000016C0       .2
+ 0002:0000171C       .2
+ 0002:000016F0       .2
+ 0002:000016FC       .2
+ 0002:000016B8       .2
+ 0002:00001700       .2
+ 0002:00001704       .2
+ 0002:00001740       .2
+ 0002:00001710       .2
+ 0002:00001744       .2
+ 0002:00001734       .3
+ 0002:00001728       .3
+ 0002:000016EC       .3
+ 0002:00001714       .3
+ 0002:00001674       .3
+ 0002:000016E4       .3
+ 0002:0000172C       .3
+ 0002:000016DC       .3
+ 0002:00001664       .3
+ 0002:000016F8       .3
+ 0002:00001718       .3
+ 0002:000016E0       .3
+ 0002:000016A8       .33
+ 0002:000015A8       .5
+ 0002:00001748       .5
+ 0002:000016E8       .6
+ 0002:0000173C       .6
+ 0002:0000174C       .8
+ 0001:000015E8       @AbstractError
+ 0001:00001604       @Close
+ 0001:00002834       @CopyArray
+ 0001:00002718       @CopyRecord
+ 0001:00002928       @DispCallByIDError
+ 0001:00001B6C       @DoneExcept
+ 0001:0000296C       @DynArrayAsg
+ 0001:00002930       @DynArrayClear
+ 0001:00001C54       @ExceptionHandler
+ 0001:0000165C       @FillChar
+ 0001:00002614       @FinalizeArray
+ 0001:000025C8       @FinalizeRecord
+ 0001:000018AC       @FpuInit
+ 0001:000017E8       @FpuMaskInit
+ 0001:000014C4       @FreeMem
+ 0001:000014A4       @GetMem
+ 0001:000031CC       @GetTls
+ 0001:00002054       @Halt
+ 0001:00001F7C       @Halt0
+ 0001:000019B4       @HandleAnyException
+ 0001:00001AE0       @HandleFinally
+ 0001:00003218       @InitExe
+ 0001:00001E3C       @InitResStringImports
+ 0001:00002F1C       @IntfClear
+ 0001:00002F34       @IntfCopy
+ 0001:000017B8       @isNECWindows
+ 0001:000023C4       @LStrAddRef
+ 0001:00002090       @LStrArrayClr
+ 0001:000020C0       @LStrAsg
+ 0001:000021DC       @LStrCat
+ 0001:00002220       @LStrCat3
+ 0001:00002294       @LStrCatN
+ 0001:0000206C       @LStrClr
+ 0001:00002320       @LStrCmp
+ 0001:0000242C       @LStrCopy
+ 0001:0000246C       @LStrDelete
+ 0001:000021BC       @LStrFromArray
+ 0001:0000218C       @LStrFromPChar
+ 0001:0000215C       @LStrFromPCharLen
+ 0001:00002104       @LStrLAsg
+ 0001:000021D4       @LStrLen
+ 0001:000024B4       @LStrPos
+ 0001:000024FC       @LStrSetLength
+ 0001:000023D4       @LStrToPChar
+ 0001:00002130       @NewAnsiString
+ 0001:00001750       @ObjSetup
+ 0001:00001B18       @RaiseAgain
+ 0001:000014E4       @ReallocMem
+ 0001:00002060       @RunError
+ 0001:00001DFC       @StartExe
+ 0001:000000B4       @strlen
+ 0001:00001B9C       @TryFinallyExit
+ 0001:0000167C       @ValLong
+ 0001:000025FC       @VarClr
+ 0001:00002700       @VarCopy
+ 0001:00002580       @WStrArrayClr
+ 0001:000025A4       @WStrAsg
+ 0001:00002568       @WStrClr
+ 0002:0000101C       AbstractErrorProc
+ 0002:00000318       Accept
+ 0002:000003DC       AcceptEx
+ 0001:000035D4       ActiveX
+ 0001:000001B0       AddBlockAfter
+ 0002:000015A0       AllocMemCount
+ 0002:000015A4       AllocMemSize
+ 0001:00003174       AllocTlsBuffer
+ 0001:00005B3C       AnsiSameText
+ 0002:00001698       AppButtonUsed
+ 0002:00001694       Applet
+ 0002:00001690       AppletRunning
+ 0002:00001691       AppletTerminated
+ 0002:000016C8       ATempPath
+ 0002:000015F8       avail
+ 0002:0000031C       Bind
+ 0002:000015D0       blockDescBlockList
+ 0002:000015D4       blockDescFreeList
+ 0002:00000144       ButtonActions
+ 0002:0000019C       ButtonClass
+ 0001:00007994       ByteIsOk
+ 0001:00003A2C       CallCtlWndProc
+ 0001:00003B04       CallTControlCreateWindow
+ 0001:00004338       CallTControlInit
+ 0001:0000336C       CallWindowProc
+ 0001:00000034       CharNext
+ 0001:00001930       CheckJmp
+ 0001:00003F68       ClearListbox
+ 0001:00003F60       ClearText
+ 0001:00003374       ClientToScreen
+ 0001:000032CC       CloseHandle
+ 0001:00003F48       CloseMemStream
+ 0002:00000320       CloseSocket
+ 0002:00001030       CmdLine
+ 0002:0000102C       CmdShow
+ 0001:00003BE8       Color2RGB
+ 0001:0000360C       CommCtrl
+ 0001:00003724       CommDlg
+ 0001:00000490       Commit
+ 0002:00001614       committedRoot
+ 0001:00003DD8       CompareMem
+ 0001:000032D4       CompareString
+ 0002:00000324       Connect
+ 0001:0000337C       CopyImage
+ 0001:000032DC       CreateFile
+ 0001:0000332C       CreateFontIndirect
+ 0001:00003334       CreateSolidBrush
+ 0001:00004560       CreateWindowEx
+ 0002:000016A0       CreatingWindow
+ 0002:00000140       CtlIdCount
+ 0002:0000160C       curAlloc
+ 0001:00005DB8       CurrentProcessId
+ 0002:00000018       DebugHook
+ 0001:00000524       Decommit
+ 0001:00000B40       DecommitFree
+ 0002:000015E8       decommittedRoot
+ 0002:00000014       Default8087CW
+ 0002:000015AC       DefaultUserCodePage
+ 0002:000000AC       DefFont
+ 0002:000000E8       DefFontColor
+ 0001:00003384       DefWindowProc
+ 0001:00002994       DelayLoadResourceModule
+ 0001:000001E0       DeleteBlock
+ 0001:00000150       DeleteCriticalSection
+ 0001:00000988       DeleteFree
+ 0001:0000333C       DeleteObject
+ 0001:0000338C       DestroyAcceleratorTable
+ 0001:00003394       DestroyIcon
+ 0001:0000339C       DestroyWindow
+ 0002:0000007C       dig
+ 0001:000033A4       DispatchMessage
+ 0002:00001000       DispCallByIDProc
+ 0001:00003800       DummyObjProc
+ 0001:00003804       DummyObjProcParam
+ 0001:0000379C       EAX2PChar
+ 0002:000001A4       EditActions
+ 0002:0000022C       EditClass
+ 0002:000001FC       Editflags
+ 0001:000037A8       EDX2PChar
+ 0002:00000108       EmptyString
+ 0001:000033AC       EnableWindow
+ 0001:00000140       EnterCriticalSection
+ 0001:00005668       EnumDynHandlers
+ 0002:00000054       errCaption
+ 0001:0000158C       Error
+ 0002:00000004       ErrorAddr
+ 0001:00001540       ErrorAt
+ 0002:00001008       ErrorProc
+ 0002:000013D4       ErrOutput
+ 0002:0000100C       ExceptObjProc
+ 0002:00001004       ExceptProc
+ 0002:00000000       ExitCode
+ 0001:00001EC0       ExitDll
+ 0002:00001034       ExitProc
+ 0001:0000003C       ExitProcess
+ 0002:00001018       ExitProcessProc
+ 0001:00005D20       Fetch
+ 0002:00000110       fGlobalProcKeybd
+ 0002:000016C4       FIdPorts
+ 0002:00000008       FileMode
+ 0001:00000A70       FillAfterGap
+ 0001:00000A1C       FillBeforeGap
+ 0001:00000B08       FillerSizeAfterGap
+ 0001:00000A98       FillerSizeBeforeGap
+ 0001:000033B4       FillRect
+ 0001:00008904       Finalization
+ 0001:0000893C       Finalization
+ 0001:00003614       Finalization
+ 0001:000087B4       Finalization
+ 0001:0000364C       Finalization
+ 0001:00003684       Finalization
+ 0001:000059A0       Finalization
+ 0001:00005B04       Finalization
+ 0001:00003294       Finalization
+ 0001:000090B0       Finalization
+ 0001:00008974       Finalization
+ 0001:0000325C       Finalization
+ 0001:000036BC       Finalization
+ 0001:000036F4       Finalization
+ 0001:000089AC       Finalization
+ 0001:000035DC       Finalization
+ 0001:000035A4       Finalization
+ 0001:000089E4       Finalization
+ 0001:0000302C       Finalization
+ 0001:000083C8       Finalization
+ 0001:00005968       Finalization
+ 0001:0000356C       Finalization
+ 0001:00005798       Finalization
+ 0001:00008A1C       Finalization
+ 0001:00003534       Finalization
+ 0001:000034FC       Finalization
+ 0001:000090E8       Finalization
+ 0001:00005DC8       Finalization
+ 0001:00008BAC       Finalization
+ 0001:00008B74       Finalization
+ 0001:000087EC       Finalization
+ 0001:000034C4       Finalization
+ 0001:000065D4       Finalization
+ 0001:00009120       Finalization
+ 0001:0000660C       Finalization
+ 0001:00008BE4       Finalization
+ 0001:000073B0       Finalization
+ 0001:00008B34       Finalization
+ 0001:00008824       Finalization
+ 0001:00008A54       Finalization
+ 0001:000088CC       Finalization
+ 0001:00008AC4       Finalization
+ 0001:00005EA0       Finalization
+ 0001:00008A8C       Finalization
+ 0001:00008390       Finalization
+ 0001:00005ED8       Finalization
+ 0001:00008894       Finalization
+ 0001:0000885C       Finalization
+ 0001:00008C1C       Finalization
+ 0001:00008358       Finalization
+ 0001:00008188       Finalization
+ 0001:00007B04       Finalization
+ 0001:00007DE4       Finalization
+ 0001:00007C30       Finalization
+ 0001:00008C5C       Finalization
+ 0001:00001D3C       FinalizeUnits
+ 0001:00002A04       FindBS
+ 0001:0000004C       FindClose
+ 0001:000009EC       FindCommitted
+ 0001:00000054       FindFirstFile
+ 0001:000029DC       FindResourceHInstance
+ 0002:000016A4       FMMNotify
+ 0002:00001750       Form1
+ 0001:00003E0C       Format
+ 0002:00000138       FormClass
+ 0001:00005BB8       FreeAndNil
+ 0001:00000758       FreeCommitted
+ 0001:00000C78       FreeCurAlloc
+ 0001:0000005C       FreeLibrary
+ 0001:000032E4       FreeLibrary
+ 0001:000003D8       FreeSpace
+ 0002:000016B0       FRichEditModule
+ 0002:00000314       GAntiFreeze
+ 0002:000003E0       GetAcceptExSockaddrs
+ 0001:00000158       GetBlockDesc
+ 0001:000033BC       GetCapture
+ 0001:000033C4       GetClassInfo
+ 0001:000033CC       GetClientRect
+ 0001:000000F4       GetCmdShow
+ 0001:00000064       GetCommandLine
+ 0001:000005A4       GetCommitted
+ 0001:00000634       GetCommittedAt
+ 0001:000032EC       GetCurrentProcessId
+ 0001:000000E4       GetCurrentThreadId
+ 0001:00006B20       GetFDSet
+ 0001:000032F4       GetFileSize
+ 0001:000033D4       GetFocus
+ 0002:00000374       GetHostByAddr
+ 0002:00000378       GetHostByName
+ 0002:0000037C       GetHostName
+ 0001:000017B0       GetKeyboardType
+ 0001:000033DC       GetKeyState
+ 0001:0000006C       GetLocaleInfo
+ 0001:00000074       GetModuleFileName
+ 0001:0000007C       GetModuleHandle
+ 0001:00003154       GetModuleHandle
+ 0002:0000032C       GetPeerName
+ 0001:000032FC       GetProcAddress
+ 0001:00000084       GetProcAddress
+ 0001:000033E4       GetProp
+ 0002:0000038C       GetProtoByname
+ 0002:00000388       GetProtoByNumber
+ 0002:00000384       GetServByName
+ 0002:00000380       GetServByPort
+ 0001:00003EB4       GetSizeMemStream
+ 0002:00000330       GetSockName
+ 0002:00000334       GetSockOpt
+ 0001:000002FC       GetSpace
+ 0001:00000360       GetSpaceAt
+ 0001:0000008C       GetStartupInfo
+ 0001:0000000C       GetStdHandle
+ 0001:00003344       GetStockObject
+ 0001:000033EC       GetSysColor
+ 0001:00003304       GetTempPath
+ 0001:00000094       GetThreadLocale
+ 0001:00005D18       GetTickCount
+ 0001:0000330C       GetTickCount
+ 0001:00003180       GetTlsSize
+ 0001:000000EC       GetVersion
+ 0001:00003314       GetVersionEx
+ 0001:000033F4       GetWindowRect
+ 0001:000033FC       GetWindowText
+ 0001:00003404       GetWindowTextLength
+ 0002:00000104       Global_Align
+ 0002:000000F8       Global_DblBufCreateWnd
+ 0002:000016AC       Global_DisableParentCursor
+ 0002:00000100       Global_GetCtlBrushHandle
+ 0002:000000FC       Global_Invalidate
+ 0002:000000F4       Global_OnBufferedDraw
+ 0002:000000A8       Global_Synchronized
+ 0002:00000408       gnInstanceCount
+ 0002:000003EC       GServeFileProc
+ 0002:000003E8       GStack
+ 0002:000015B4       heapErrorCode
+ 0002:000015B8       heapLock
+ 0001:00004CE4       HelpGetBoundsRect
+ 0002:0000040C       hIdSSL
+ 0002:00000410       hIdSSLLib
+ 0002:00001654       HInstance
+ 0002:00000338       Htonl
+ 0002:0000033C       Htons
+ 0002:00001754       ICMP
+ 0001:00005F08       IdAntiFreezeBase
+ 0001:00005ED0       IdBaseComponent
+ 0001:00007CAC       IdComponent
+ 0001:00005E38       IdGlobal
+ 0001:000087E4       IdIcmpClient
+ 0001:00008934       IdIntercept
+ 0001:00008A84       IdIPWatch
+ 0001:00008388       IdRawBase
+ 0001:000083C0       IdRawClient
+ 0001:000083F8       IdRawHeaders
+ 0001:00005998       IdResourceStrings
+ 0001:00008ABC       IdSNTP
+ 0001:000081B8       IdSocketHandle
+ 0001:000088FC       IdSocks
+ 0001:00008AF4       IdSSLIntercept
+ 0001:00008C94       IdSSLOpenSSL
+ 0001:00008B6C       IdSSLOpenSSLHeaders
+ 0001:00007B34       IdStack
+ 0001:0000663C       IdStackConsts
+ 0001:000073E0       IdStackWinsock
+ 0002:000003F0       IdStati
+ 0001:000089A4       IdTCPClient
+ 0001:0000896C       IdTCPConnection
+ 0001:00008C4C       IdTCPServer
+ 0001:00008A4C       IdTelnet
+ 0001:00008A14       IdThread
+ 0001:00008C14       IdThreadMgr
+ 0001:00008BDC       IdThreadMgrDefault
+ 0001:000089DC       IdTime
+ 0001:000088C4       IdTrivialFTP
+ 0001:0000888C       IdTrivialFTPBase
+ 0001:0000881C       IdUDPBase
+ 0001:00008854       IdUDPClient
+ 0001:000059D0       IdURI
+ 0001:00006604       IdWinsock
+ 0002:000000EC       ID_SELF
+ 0001:00005B78       IncludeTrailingBackSlash
+ 0002:000002C4       IndyPos
+ 0001:00005B34       IndyProcs
+ 0002:00000340       Inet_Addr
+ 0002:00000344       Inet_Ntoa
+ 0001:000007E4       InitAllocator
+ 0002:00001624       InitContext
+ 0001:00000138       InitializeCriticalSection
+ 0002:000015B0       initialized
+ 0001:0000320C       InitializeModule
+ 0001:00003188       InitThreadTLS
+ 0001:00001D9C       InitUnits
+ 0002:0000103C       Input
+ 0001:00000BF0       InsertFree
+ 0001:00003D28       Int2Str
+ 0001:00000A4C       InternalFreeMem
+ 0001:000023E0       InternalUniqueString
+ 0001:0000340C       InvalidateRect
+ 0002:00000328       IoctlSocket
+ 0002:00001038       IsConsole
+ 0001:00003414       IsIconic
+ 0002:00001028       IsLibrary
+ 0002:00001039       IsMultiThread
+ 0001:00005ADC       IsPathDelimiter
+ 0001:0000341C       IsWindow
+ 0001:00003424       IsWindowEnabled
+ 0001:0000342C       IsZoomed
+ 0002:0000001C       JITEnable
+ 0001:000057F0       KOL
+ 0001:00007E14       KOLClasses
+ 0001:00002FB8       LCIDToCodePage
+ 0001:00000148       LeaveCriticalSection
+ 0002:000003E4       LibHandle
+ 0002:00000024       LibModuleList
+ 0002:00000234       ListActions
+ 0002:000002BC       ListBoxClass
+ 0002:00000348       Listen
+ 0002:0000028C       ListFlags
+ 0001:00003434       LoadCursor
+ 0001:0000343C       LoadIcon
+ 0001:0000331C       LoadLibrary
+ 0001:0000009C       LoadLibraryEx
+ 0001:00002BD0       LoadResourceModule
+ 0001:00002F60       LoadResString
+ 0001:000000A4       LoadString
+ 0001:00005F10       LoadWinsock
+ 0001:00000118       LocalAlloc
+ 0001:0000315C       LocalAlloc
+ 0001:00000120       LocalFree
+ 0001:000000AC       lstrcpyn
+ 0002:00001020       MainInstance
+ 0002:00001024       MainThreadID
+ 0001:000001A8       MakeEmpty
+ 0001:00001E64       MakeErrorMessage
+ 0001:000037D0       MakeFlags
+ 0001:00003D10       MakeFontHandle
+ 0001:00001BB4       MapToRunError
+ 0002:0000002C       MemoryManager
+ 0002:00000118       MemoryMethods
+ 0001:000001F8       MergeBlockAfter
+ 0001:00000CC4       MergeCommit
+ 0001:00000044       MessageBox
+ 0001:0000352C       Messages
+ 0002:00000090       Module
+ 0002:00001650       ModuleIsLib
+ 0002:00000028       ModuleUnloadList
+ 0002:000002E4       monthnames
+ 0001:000015A8       Move
+ 0001:00008BA4       MySyncObjs
+ 0001:000059D8       MyWinVer
+ 0001:00004128       NewButton
+ 0001:00000D50       NewCommit
+ 0001:00000D7C       NewCommitAt
+ 0001:000041D4       NewEditbox
+ 0001:00003BB4       NewFont
+ 0001:00004020       NewForm
+ 0001:00008CB0       NewForm1
+ 0001:00008444       NewIdIcmpClient
+ 0001:00007FF0       NewIdSocketHandle
+ 0001:000074FC       NewIdStack
+ 0001:00007060       NewIdStackVersionWinsock
+ 0001:000066E8       NewIdStackWinsock
+ 0001:000038CC       NewList
+ 0001:00004250       NewListbox
+ 0001:00003F54       NewMemoryStream
+ 0001:00005564       NewStrList
+ 0002:00000020       NoErrMsg
+ 0001:0000191C       NotifyAnyExcept
+ 0001:00001904       NotifyExcept
+ 0001:00001950       NotifyExceptFinally
+ 0001:00002E40       NotifyModuleUnload
+ 0001:000018E0       NotifyNonDelphiException
+ 0001:000018C4       NotifyReRaise
+ 0001:00001978       NotifyTerminate
+ 0001:00001994       NotifyUnhandled
+ 0002:0000034C       Ntohl
+ 0002:00000350       Ntohs
+ 0001:00003444       OffsetRect
+ 0002:00001208       Output
+ 0001:0000344C       PeekMessage
+ 0001:00009308       Ping
+ 0001:00003454       PostMessage
+ 0001:0000345C       PostQuitMessage
+ 0002:0000010C       ProcessIdle
+ 0001:00000014       RaiseException
+ 0002:00001010       RaiseExceptionProc
+ 0001:00003EF8       ReadMemStream
+ 0001:000037C4       RectsEqual
+ 0002:00000354       Recv
+ 0002:00000358       RecvFrom
+ 0001:000000BC       RegCloseKey
+ 0001:00003464       RegisterClass
+ 0001:00002E9C       RegisterModule
+ 0001:000000C4       RegOpenKeyEx
+ 0001:000000CC       RegQueryValueEx
+ 0001:00003644       RegStr
+ 0002:00000038       reMap
+ 0002:00001608       remBytes
+ 0001:00000268       RemoveBlock
+ 0001:0000346C       RemoveProp
+ 0001:000037B4       RemoveStr
+ 0001:00001204       ResizeInPlace
+ 0001:00003564       RichEdit
+ 0002:00000114       RomeDigs
+ 0002:00001604       rover
+ 0001:0000001C       RtlUnwind
+ 0002:00001014       RTLUnwindProc
+ 0001:00003B0C       Run
+ 0002:0000005C       runErrMsg
+ 0001:00001534       RunErrorAt
+ 0001:00003D74       S2Int
+ 0001:00005DC0       SBPos
+ 0002:0000169C       ScreenCursor
+ 0001:00000DB0       SearchSmallBlocks
+ 0001:00003E8C       SeekMemStream
+ 0002:0000035C       Select
+ 0002:00000360       Send
+ 0001:00003474       SendMessage
+ 0002:00000364       SendTo
+ 0001:000070C8       ServeFile
+ 0001:0000334C       SetBkColor
+ 0001:00003354       SetBkMode
+ 0001:0000335C       SetBrushOrgEx
+ 0001:0000347C       SetCursor
+ 0001:00001CF4       SetExceptionHandler
+ 0001:00006B5C       SetFDSet
+ 0001:00003484       SetFocus
+ 0001:00001598       SetInOutRes
+ 0001:0000348C       SetProp
+ 0001:00007040       SetProp
+ 0001:00003EB8       SetSizeMemStream
+ 0002:00000368       SetSockOpt
+ 0001:00003364       SetTextColor
+ 0001:00003494       SetWindowPos
+ 0001:0000349C       SetWindowText
+ 0001:0000359C       ShellAPI
+ 0001:000036EC       ShlObj
+ 0001:000034A4       ShowWindow
+ 0002:0000036C       ShutDown
+ 0001:00003B5C       SimpleGetCtlBrushHandle
+ 0001:00003324       Sleep
+ 0002:00001610       smallTab
+ 0002:00000370       Socket
+ 0002:000015D8       spaceRoot
+ 0001:00003DA4       Str2Int
+ 0001:00003DB0       StrCopy
+ 0001:00003DF8       StrLen
+ 0001:00005A9C       StrToIntDef
+ 0001:00001060       SysFreeMem
+ 0001:000000DC       SysFreeString
+ 0001:00000ED0       SysGetMem
+ 0001:0000328C       SysInit
+ 0001:000013E0       SysReallocMem
+ 0001:000000D4       SysReAllocStringLen
+ 0001:00003080       System
+ 0001:00009118       Sysutils
+ 0001:00007D84       TCollection.Changed
+ 0001:00007D94       TCollection.InsertItem
+ 0001:00007DC4       TCollection.RemoveItem
+ 0001:00007CE4       TCollectionItem.Changed
+ 0001:00007CCC       TCollectionItem.Destroy
+ 0001:00007D20       TCollectionItem.GetDisplayName
+ 0001:00007D08       TCollectionItem.GetIndex
+ 0001:00007CC0       TCollectionItem.Init
+ 0001:00007D24       TCollectionItem.SetCollection
+ 0001:00007D4C       TCollectionItem.SetDisplayName
+ 0001:00007D54       TCollectionItem.SetIndex
+ 0001:00005470       TControl.Add
+ 0001:000053A8       TControl.ApplyFont2Wnd
+ 0001:00005720       TControl.AttachProc
+ 0001:000056D4       TControl.AttachProcEx
+ 0001:00005388       TControl.BrushChanged
+ 0001:00004E5C       TControl.CallDefWndProc
+ 0001:00004D7C       TControl.Client2Screen
+ 0001:00004D98       TControl.ClientRect
+ 0001:000050A0       TControl.CreateChildWindows
+ 0001:00004F7C       TControl.CreateParented
+ 0001:00004568       TControl.CreateWindow
+ 0001:00004360       TControl.Destroy
+ 0001:000050B8       TControl.DestroyChildren
+ 0001:00005314       TControl.DoClick
+ 0001:00005740       TControl.DoSelChange
+ 0001:00004E7C       TControl.DoSetFocus
+ 0001:00005370       TControl.FontChanged
+ 0001:00004C88       TControl.GetBoundsRect
+ 0001:00004BA8       TControl.GetCaption
+ 0001:000053F0       TControl.GetClientHeight
+ 0001:00005404       TControl.GetClientWidth
+ 0001:00004EA8       TControl.GetEnabled
+ 0001:00005344       TControl.GetFont
+ 0001:00005000       TControl.GetHeight
+ 0001:00004E0C       TControl.GetIcon
+ 0001:00005458       TControl.GetItemsCount
+ 0001:00005088       TControl.GetParentWnd
+ 0001:00004FD8       TControl.GetWidth
+ 0001:0000452C       TControl.GetWindowHandle
+ 0001:00004EFC       TControl.get_ClassName
+ 0001:000042A0       TControl.Init
+ 0001:00004340       TControl.InitParented
+ 0001:00004DE8       TControl.Invalidate
+ 0001:00004EBC       TControl.IsMainWindow
+ 0001:00005728       TControl.IsProcAttached
+ 0001:00005330       TControl.ParentForm
+ 0001:00005648       TControl.Perform
+ 0001:000050E0       TControl.ProcessMessage
+ 0001:00005138       TControl.ProcessMessages
+ 0001:00004CF4       TControl.SetBoundsRect
+ 0001:00004BE4       TControl.SetCaption
+ 0001:00005418       TControl.SetClientHeight
+ 0001:000051D0       TControl.SetClientSize
+ 0001:00005438       TControl.SetClientWidth
+ 0001:0000502C       TControl.SetCtlColor
+ 0001:00005528       TControl.SetCurIndex
+ 0001:000044FC       TControl.SetEnabled
+ 0001:0000500C       TControl.SetHeight
+ 0001:000054D4       TControl.SetItemSelected
+ 0001:00004F90       TControl.SetLeft
+ 0001:00004F34       TControl.SetParent
+ 0001:0000577C       TControl.SetPosition
+ 0001:000051B4       TControl.SetSize
+ 0001:00004FB4       TControl.SetTop
+ 0001:00004FE4       TControl.SetWidth
+ 0001:00004C30       TControl.Set_Visible
+ 0001:00004780       TControl.WndProc
+ 0001:00005CAC       TempPath
+ 0001:00003AA4       TerminateExecution
+ 0002:0000103A       Test8086
+ 0001:00008F98       TForm1.btnPingClick
+ 0001:00008E78       TForm1.ICMPReply
+ 0001:0000907C       TForm1.KOLForm1FormCreate
+ 0001:00003BF8       TGraphicTool.Assign
+ 0001:00003C48       TGraphicTool.Changed
+ 0001:00003C6C       TGraphicTool.Destroy
+ 0001:00003CB4       TGraphicTool.GetHandle
+ 0001:00003C94       TGraphicTool.ReleaseHandle
+ 0001:00003CA4       TGraphicTool.SetInt
+ 0001:00005E94       TIdBaseComponent.Init
+ 0001:00007B98       TIdComponent.BeginWork
+ 0001:00007B64       TIdComponent.Destroy
+ 0001:00007BD0       TIdComponent.DoWork
+ 0001:00007C00       TIdComponent.EndWork
+ 0001:00007B3C       TIdComponent.Init
+ 0001:00008484       TIdIcmpClient.CalcCheckSum
+ 0001:00008590       TIdIcmpClient.DecodeResponse
+ 0001:00008794       TIdIcmpClient.DoReply
+ 0001:000086C0       TIdIcmpClient.GetEchoReply
+ 0001:00008460       TIdIcmpClient.Init
+ 0001:00008724       TIdIcmpClient.Ping
+ 0001:000084FC       TIdIcmpClient.PrepareEchoRequest
+ 0001:0000874C       TIdIcmpClient.Receive
+ 0001:00008574       TIdIcmpClient.SendEchoRequest
+ 0001:000081FC       TIdRawBase.Destroy
+ 0001:0000821C       TIdRawBase.GetBinding
+ 0001:000081C0       TIdRawBase.Init
+ 0001:00008274       TIdRawBase.ReceiveBuffer
+ 0001:000082CC       TIdRawBase.Send
+ 0001:00008250       TIdRawBase.SetBufferSize
+ 0001:00007E48       TIdSocketHandle.AllocateSocket
+ 0001:00007E78       TIdSocketHandle.CloseSocket
+ 0001:00007EBC       TIdSocketHandle.Connect
+ 0001:00007EF4       TIdSocketHandle.Destroy
+ 0001:00008014       TIdSocketHandle.Init
+ 0001:00008038       TIdSocketHandle.Readable
+ 0001:00007F0C       TIdSocketHandle.Recv
+ 0001:00007FC4       TIdSocketHandle.RecvFrom
+ 0001:00008158       TIdSocketHandle.Reset
+ 0001:00007F70       TIdSocketHandle.SendTo
+ 0001:00007F30       TIdSocketHandle.SetSockOpt
+ 0001:00008118       TIdSocketHandle.UpdateBindingLocal
+ 0001:00008138       TIdSocketHandle.UpdateBindingPeer
+ 0001:0000749C       TIdStack.CheckForSocketError
+ 0001:00007490       TIdStack.CheckForSocketError
+ 0001:000074E4       TIdStack.CreateSocketHandle
+ 0001:0000750C       TIdStack.CreateStack
+ 0001:00007A94       TIdStack.Destroy
+ 0001:000079C0       TIdStack.IsIP
+ 0001:000074F8       TIdStack.RaiseSocketError
+ 0001:00007514       TIdStack.ResolveHost
+ 0001:00007AAC       TIdStack.StringToTInAddr
+ 0001:0000758C       TIdStack.WSTranslateSocketErrorMsg
+ 0001:0000673C       TIdStackWinsock.Destroy
+ 0001:00006704       TIdStackWinsock.Init
+ 0001:00006F7C       TIdStackWinsock.PopulateLocalAddresses
+ 0001:0000676C       TIdStackWinsock.TInAddrToString
+ 0001:00007190       TIdStackWinsock.TranslateStringToTInAddr
+ 0001:0000681C       TIdStackWinsock.WSAccept
+ 0001:000068AC       TIdStackWinsock.WSBind
+ 0001:00006918       TIdStackWinsock.WSCloseSocket
+ 0001:00006924       TIdStackWinsock.WSConnect
+ 0001:000069D0       TIdStackWinsock.WSGetHostByAddr
+ 0001:00006974       TIdStackWinsock.WSGetHostByName
+ 0001:00006A20       TIdStackWinsock.WSGetHostName
+ 0001:00006D90       TIdStackWinsock.WSGetLastError
+ 0001:00007024       TIdStackWinsock.WSGetLocalAddress
+ 0001:00006D70       TIdStackWinsock.WSGetLocalAddresses
+ 0001:00007270       TIdStackWinsock.WSGetPeerName
+ 0001:00006DCC       TIdStackWinsock.WSGetServByName
+ 0001:00006E64       TIdStackWinsock.WSGetServByPort
+ 0001:00007310       TIdStackWinsock.WSGetSockName
+ 0001:00006F64       TIdStackWinsock.WSHToNL
+ 0001:00006DB4       TIdStackWinsock.WSHToNs
+ 0001:00006A5C       TIdStackWinsock.WSListen
+ 0001:00006F70       TIdStackWinsock.WSNToHL
+ 0001:00006DC0       TIdStackWinsock.WSNToHs
+ 0001:00006A68       TIdStackWinsock.WSRecv
+ 0001:00006A84       TIdStackWinsock.WSRecvFrom
+ 0001:00006BB0       TIdStackWinsock.WSSelect
+ 0001:00006CC8       TIdStackWinsock.WSSend
+ 0001:00006CE4       TIdStackWinsock.WSSendTo
+ 0001:00006D50       TIdStackWinsock.WSSetSockOpt
+ 0001:00007264       TIdStackWinsock.WSShutdown
+ 0001:00006D9C       TIdStackWinsock.WSSocket
+ 0001:00003928       TList.Add
+ 0001:00003910       TList.Clear
+ 0001:00003958       TList.Delete
+ 0001:00003964       TList.DeleteRange
+ 0001:000038E4       TList.Destroy
+ 0001:000039B0       TList.Get
+ 0001:000039C4       TList.IndexOf
+ 0001:000039E0       TList.Insert
+ 0001:00003A08       TList.MoveItem
+ 0001:00003998       TList.Remove
+ 0001:000038F4       TList.SetCapacity
+ 0002:0000165C       tlsBuffer
+ 0001:00003164       TlsGetValue
+ 0002:0000008C       TlsIndex
+ 0002:FFBF5008       TlsLast
+ 0001:0000316C       TlsSetValue
+ 0001:000038A0       TObj.Add2AutoFree
+ 0001:0000380C       TObj.Create
+ 0001:00003860       TObj.Destroy
+ 0001:0000381C       TObj.DoDestroy
+ 0001:00003870       TObj.Final
+ 0001:00003854       TObj.Free
+ 0001:00003834       TObj.RefDec
+ 0001:0000384C       TObj.RefInc
+ 0001:000018B8       TObject.Free
+ 0001:00002A18       ToLongPath
+ 0001:000034AC       TranslateMessage
+ 0002:000003D8       TransmitFile
+ 0001:00000DDC       TryHarder
+ 0001:00003E48       TStream.Destroy
+ 0001:00003E44       TStream.SetSize
+ 0001:00005584       TStrList.Add
+ 0001:00005594       TStrList.Clear
+ 0001:000055C4       TStrList.Delete
+ 0001:00005574       TStrList.Destroy
+ 0001:000055F0       TStrList.Get
+ 0001:00005608       TStrList.Insert
+ 0001:000032C4       Types
+ 0001:00000024       UnhandledExceptionFilter
+ 0001:000008A8       UninitAllocator
+ 0001:00002424       UniqueString
+ 0001:000090E0       Unit1
+ 0001:00008AFC       Unload
+ 0001:00008C54       UnLoadOpenSLLibrary
+ 0001:000065B8       UnloadWinsock
+ 0001:00002EAC       UnregisterModule
+ 0001:00001D14       UnsetExceptionHandler
+ 0001:000036B4       UrlMon
+ 0002:0000000C       VarClearProc
+ 0002:00000010       VarCopyProc
+ 0001:00000128       VirtualAlloc
+ 0001:00000130       VirtualFree
+ 0001:000034B4       WaitMessage
+ 0002:000002C8       wdays
+ 0001:000034F4       Windows
+ 0001:0000367C       WinInet
+ 0001:00003A34       WndFunc
+ 0001:000051F4       WndProcCtrl
+ 0001:00004168       WndProcDoEraseBkgnd
+ 0001:0000477C       WndProcDummy
+ 0001:00005144       WndProcForm
+ 0001:00001EF0       WriteErrorMessage
+ 0001:0000002C       WriteFile
+ 0001:00003F1C       WriteMemStream
+ 0002:000003C4       WSAAsyncGetHostByAddr
+ 0002:000003C0       WSAAsyncGetHostByName
+ 0002:000003B8       WSAAsyncGetProtoByName
+ 0002:000003BC       WSAAsyncGetProtoByNumber
+ 0002:000003B0       WSAAsyncGetServByName
+ 0002:000003B4       WSAAsyncGetServByPort
+ 0002:000003CC       WSAAsyncSelect
+ 0002:000003C8       WSACancelAsyncRequest
+ 0002:000003AC       WSACancelBlockingCall
+ 0002:00000394       WSACleanup
+ 0002:0000039C       WSAGetLastError
+ 0002:000003A0       WSAIsBlocking
+ 0002:000003D0       WSARecvEx
+ 0002:000003A8       WSASetBlockingHook
+ 0002:00000398       WSASetLastError
+ 0002:00000390       WSAStartup
+ 0002:000003A4       WSAUnhookBlockingHook
+ 0001:00002560       WStrError
+ 0001:000034BC       wvsprintf
+ 0001:00004068       _NewControl
+ 0001:00003B4C       _NewGraphicTool
+ 0001:00003E5C       _NewStream
+ 0001:00003F78       _NewTControl
+ 0001:00003F88       _NewWindowed
+ 0001:00003808       _TObj.Init
+ 0002:000003D4       __WSAFDIsSet
+
+
+  Address         Publics by Value
+
+ 0002:FFBF5008       TlsLast
+ 0001:0000000C       GetStdHandle
+ 0001:00000014       RaiseException
+ 0001:0000001C       RtlUnwind
+ 0001:00000024       UnhandledExceptionFilter
+ 0001:0000002C       WriteFile
+ 0001:00000034       CharNext
+ 0001:0000003C       ExitProcess
+ 0001:00000044       MessageBox
+ 0001:0000004C       FindClose
+ 0001:00000054       FindFirstFile
+ 0001:0000005C       FreeLibrary
+ 0001:00000064       GetCommandLine
+ 0001:0000006C       GetLocaleInfo
+ 0001:00000074       GetModuleFileName
+ 0001:0000007C       GetModuleHandle
+ 0001:00000084       GetProcAddress
+ 0001:0000008C       GetStartupInfo
+ 0001:00000094       GetThreadLocale
+ 0001:0000009C       LoadLibraryEx
+ 0001:000000A4       LoadString
+ 0001:000000AC       lstrcpyn
+ 0001:000000B4       @strlen
+ 0001:000000BC       RegCloseKey
+ 0001:000000C4       RegOpenKeyEx
+ 0001:000000CC       RegQueryValueEx
+ 0001:000000D4       SysReAllocStringLen
+ 0001:000000DC       SysFreeString
+ 0001:000000E4       GetCurrentThreadId
+ 0001:000000EC       GetVersion
+ 0001:000000F4       GetCmdShow
+ 0001:00000118       LocalAlloc
+ 0001:00000120       LocalFree
+ 0001:00000128       VirtualAlloc
+ 0001:00000130       VirtualFree
+ 0001:00000138       InitializeCriticalSection
+ 0001:00000140       EnterCriticalSection
+ 0001:00000148       LeaveCriticalSection
+ 0001:00000150       DeleteCriticalSection
+ 0001:00000158       GetBlockDesc
+ 0001:000001A8       MakeEmpty
+ 0001:000001B0       AddBlockAfter
+ 0001:000001E0       DeleteBlock
+ 0001:000001F8       MergeBlockAfter
+ 0001:00000268       RemoveBlock
+ 0001:000002FC       GetSpace
+ 0001:00000360       GetSpaceAt
+ 0001:000003D8       FreeSpace
+ 0001:00000490       Commit
+ 0001:00000524       Decommit
+ 0001:000005A4       GetCommitted
+ 0001:00000634       GetCommittedAt
+ 0001:00000758       FreeCommitted
+ 0001:000007E4       InitAllocator
+ 0001:000008A8       UninitAllocator
+ 0001:00000988       DeleteFree
+ 0001:000009EC       FindCommitted
+ 0001:00000A1C       FillBeforeGap
+ 0001:00000A4C       InternalFreeMem
+ 0001:00000A70       FillAfterGap
+ 0001:00000A98       FillerSizeBeforeGap
+ 0001:00000B08       FillerSizeAfterGap
+ 0001:00000B40       DecommitFree
+ 0001:00000BF0       InsertFree
+ 0001:00000C78       FreeCurAlloc
+ 0001:00000CC4       MergeCommit
+ 0001:00000D50       NewCommit
+ 0001:00000D7C       NewCommitAt
+ 0001:00000DB0       SearchSmallBlocks
+ 0001:00000DDC       TryHarder
+ 0001:00000ED0       SysGetMem
+ 0001:00001060       SysFreeMem
+ 0001:00001204       ResizeInPlace
+ 0001:000013E0       SysReallocMem
+ 0001:000014A4       @GetMem
+ 0001:000014C4       @FreeMem
+ 0001:000014E4       @ReallocMem
+ 0001:00001534       RunErrorAt
+ 0001:00001540       ErrorAt
+ 0001:0000158C       Error
+ 0001:00001598       SetInOutRes
+ 0001:000015A8       Move
+ 0001:000015E8       @AbstractError
+ 0001:00001604       @Close
+ 0001:0000165C       @FillChar
+ 0001:0000167C       @ValLong
+ 0001:00001750       @ObjSetup
+ 0001:000017B0       GetKeyboardType
+ 0001:000017B8       @isNECWindows
+ 0001:000017E8       @FpuMaskInit
+ 0001:000018AC       @FpuInit
+ 0001:000018B8       TObject.Free
+ 0001:000018C4       NotifyReRaise
+ 0001:000018E0       NotifyNonDelphiException
+ 0001:00001904       NotifyExcept
+ 0001:0000191C       NotifyAnyExcept
+ 0001:00001930       CheckJmp
+ 0001:00001950       NotifyExceptFinally
+ 0001:00001978       NotifyTerminate
+ 0001:00001994       NotifyUnhandled
+ 0001:000019B4       @HandleAnyException
+ 0001:00001AE0       @HandleFinally
+ 0001:00001B18       @RaiseAgain
+ 0001:00001B6C       @DoneExcept
+ 0001:00001B9C       @TryFinallyExit
+ 0001:00001BB4       MapToRunError
+ 0001:00001C54       @ExceptionHandler
+ 0001:00001CF4       SetExceptionHandler
+ 0001:00001D14       UnsetExceptionHandler
+ 0001:00001D3C       FinalizeUnits
+ 0001:00001D9C       InitUnits
+ 0001:00001DFC       @StartExe
+ 0001:00001E3C       @InitResStringImports
+ 0001:00001E64       MakeErrorMessage
+ 0001:00001EC0       ExitDll
+ 0001:00001EF0       WriteErrorMessage
+ 0001:00001F7C       @Halt0
+ 0001:00002054       @Halt
+ 0001:00002060       @RunError
+ 0001:0000206C       @LStrClr
+ 0001:00002090       @LStrArrayClr
+ 0001:000020C0       @LStrAsg
+ 0001:00002104       @LStrLAsg
+ 0001:00002130       @NewAnsiString
+ 0001:0000215C       @LStrFromPCharLen
+ 0001:0000218C       @LStrFromPChar
+ 0001:000021BC       @LStrFromArray
+ 0001:000021D4       @LStrLen
+ 0001:000021DC       @LStrCat
+ 0001:00002220       @LStrCat3
+ 0001:00002294       @LStrCatN
+ 0001:00002320       @LStrCmp
+ 0001:000023C4       @LStrAddRef
+ 0001:000023D4       @LStrToPChar
+ 0001:000023E0       InternalUniqueString
+ 0001:00002424       UniqueString
+ 0001:0000242C       @LStrCopy
+ 0001:0000246C       @LStrDelete
+ 0001:000024B4       @LStrPos
+ 0001:000024FC       @LStrSetLength
+ 0001:00002560       WStrError
+ 0001:00002568       @WStrClr
+ 0001:00002580       @WStrArrayClr
+ 0001:000025A4       @WStrAsg
+ 0001:000025C8       @FinalizeRecord
+ 0001:000025FC       @VarClr
+ 0001:00002614       @FinalizeArray
+ 0001:00002700       @VarCopy
+ 0001:00002718       @CopyRecord
+ 0001:00002834       @CopyArray
+ 0001:00002928       @DispCallByIDError
+ 0001:00002930       @DynArrayClear
+ 0001:0000296C       @DynArrayAsg
+ 0001:00002994       DelayLoadResourceModule
+ 0001:000029DC       FindResourceHInstance
+ 0001:00002A04       FindBS
+ 0001:00002A18       ToLongPath
+ 0001:00002BD0       LoadResourceModule
+ 0001:00002E40       NotifyModuleUnload
+ 0001:00002E9C       RegisterModule
+ 0001:00002EAC       UnregisterModule
+ 0001:00002F1C       @IntfClear
+ 0001:00002F34       @IntfCopy
+ 0001:00002F60       LoadResString
+ 0001:00002FB8       LCIDToCodePage
+ 0001:0000302C       Finalization
+ 0001:00003080       System
+ 0001:00003154       GetModuleHandle
+ 0001:0000315C       LocalAlloc
+ 0001:00003164       TlsGetValue
+ 0001:0000316C       TlsSetValue
+ 0001:00003174       AllocTlsBuffer
+ 0001:00003180       GetTlsSize
+ 0001:00003188       InitThreadTLS
+ 0001:000031CC       @GetTls
+ 0001:0000320C       InitializeModule
+ 0001:00003218       @InitExe
+ 0001:0000325C       Finalization
+ 0001:0000328C       SysInit
+ 0001:00003294       Finalization
+ 0001:000032C4       Types
+ 0001:000032CC       CloseHandle
+ 0001:000032D4       CompareString
+ 0001:000032DC       CreateFile
+ 0001:000032E4       FreeLibrary
+ 0001:000032EC       GetCurrentProcessId
+ 0001:000032F4       GetFileSize
+ 0001:000032FC       GetProcAddress
+ 0001:00003304       GetTempPath
+ 0001:0000330C       GetTickCount
+ 0001:00003314       GetVersionEx
+ 0001:0000331C       LoadLibrary
+ 0001:00003324       Sleep
+ 0001:0000332C       CreateFontIndirect
+ 0001:00003334       CreateSolidBrush
+ 0001:0000333C       DeleteObject
+ 0001:00003344       GetStockObject
+ 0001:0000334C       SetBkColor
+ 0001:00003354       SetBkMode
+ 0001:0000335C       SetBrushOrgEx
+ 0001:00003364       SetTextColor
+ 0001:0000336C       CallWindowProc
+ 0001:00003374       ClientToScreen
+ 0001:0000337C       CopyImage
+ 0001:00003384       DefWindowProc
+ 0001:0000338C       DestroyAcceleratorTable
+ 0001:00003394       DestroyIcon
+ 0001:0000339C       DestroyWindow
+ 0001:000033A4       DispatchMessage
+ 0001:000033AC       EnableWindow
+ 0001:000033B4       FillRect
+ 0001:000033BC       GetCapture
+ 0001:000033C4       GetClassInfo
+ 0001:000033CC       GetClientRect
+ 0001:000033D4       GetFocus
+ 0001:000033DC       GetKeyState
+ 0001:000033E4       GetProp
+ 0001:000033EC       GetSysColor
+ 0001:000033F4       GetWindowRect
+ 0001:000033FC       GetWindowText
+ 0001:00003404       GetWindowTextLength
+ 0001:0000340C       InvalidateRect
+ 0001:00003414       IsIconic
+ 0001:0000341C       IsWindow
+ 0001:00003424       IsWindowEnabled
+ 0001:0000342C       IsZoomed
+ 0001:00003434       LoadCursor
+ 0001:0000343C       LoadIcon
+ 0001:00003444       OffsetRect
+ 0001:0000344C       PeekMessage
+ 0001:00003454       PostMessage
+ 0001:0000345C       PostQuitMessage
+ 0001:00003464       RegisterClass
+ 0001:0000346C       RemoveProp
+ 0001:00003474       SendMessage
+ 0001:0000347C       SetCursor
+ 0001:00003484       SetFocus
+ 0001:0000348C       SetProp
+ 0001:00003494       SetWindowPos
+ 0001:0000349C       SetWindowText
+ 0001:000034A4       ShowWindow
+ 0001:000034AC       TranslateMessage
+ 0001:000034B4       WaitMessage
+ 0001:000034BC       wvsprintf
+ 0001:000034C4       Finalization
+ 0001:000034F4       Windows
+ 0001:000034FC       Finalization
+ 0001:0000352C       Messages
+ 0001:00003534       Finalization
+ 0001:00003564       RichEdit
+ 0001:0000356C       Finalization
+ 0001:0000359C       ShellAPI
+ 0001:000035A4       Finalization
+ 0001:000035D4       ActiveX
+ 0001:000035DC       Finalization
+ 0001:0000360C       CommCtrl
+ 0001:00003614       Finalization
+ 0001:00003644       RegStr
+ 0001:0000364C       Finalization
+ 0001:0000367C       WinInet
+ 0001:00003684       Finalization
+ 0001:000036B4       UrlMon
+ 0001:000036BC       Finalization
+ 0001:000036EC       ShlObj
+ 0001:000036F4       Finalization
+ 0001:00003724       CommDlg
+ 0001:0000379C       EAX2PChar
+ 0001:000037A8       EDX2PChar
+ 0001:000037B4       RemoveStr
+ 0001:000037C4       RectsEqual
+ 0001:000037D0       MakeFlags
+ 0001:00003800       DummyObjProc
+ 0001:00003804       DummyObjProcParam
+ 0001:00003808       _TObj.Init
+ 0001:0000380C       TObj.Create
+ 0001:0000381C       TObj.DoDestroy
+ 0001:00003834       TObj.RefDec
+ 0001:0000384C       TObj.RefInc
+ 0001:00003854       TObj.Free
+ 0001:00003860       TObj.Destroy
+ 0001:00003870       TObj.Final
+ 0001:000038A0       TObj.Add2AutoFree
+ 0001:000038CC       NewList
+ 0001:000038E4       TList.Destroy
+ 0001:000038F4       TList.SetCapacity
+ 0001:00003910       TList.Clear
+ 0001:00003928       TList.Add
+ 0001:00003958       TList.Delete
+ 0001:00003964       TList.DeleteRange
+ 0001:00003998       TList.Remove
+ 0001:000039B0       TList.Get
+ 0001:000039C4       TList.IndexOf
+ 0001:000039E0       TList.Insert
+ 0001:00003A08       TList.MoveItem
+ 0001:00003A2C       CallCtlWndProc
+ 0001:00003A34       WndFunc
+ 0001:00003AA4       TerminateExecution
+ 0001:00003B04       CallTControlCreateWindow
+ 0001:00003B0C       Run
+ 0001:00003B4C       _NewGraphicTool
+ 0001:00003B5C       SimpleGetCtlBrushHandle
+ 0001:00003BB4       NewFont
+ 0001:00003BE8       Color2RGB
+ 0001:00003BF8       TGraphicTool.Assign
+ 0001:00003C48       TGraphicTool.Changed
+ 0001:00003C6C       TGraphicTool.Destroy
+ 0001:00003C94       TGraphicTool.ReleaseHandle
+ 0001:00003CA4       TGraphicTool.SetInt
+ 0001:00003CB4       TGraphicTool.GetHandle
+ 0001:00003D10       MakeFontHandle
+ 0001:00003D28       Int2Str
+ 0001:00003D74       S2Int
+ 0001:00003DA4       Str2Int
+ 0001:00003DB0       StrCopy
+ 0001:00003DD8       CompareMem
+ 0001:00003DF8       StrLen
+ 0001:00003E0C       Format
+ 0001:00003E44       TStream.SetSize
+ 0001:00003E48       TStream.Destroy
+ 0001:00003E5C       _NewStream
+ 0001:00003E8C       SeekMemStream
+ 0001:00003EB4       GetSizeMemStream
+ 0001:00003EB8       SetSizeMemStream
+ 0001:00003EF8       ReadMemStream
+ 0001:00003F1C       WriteMemStream
+ 0001:00003F48       CloseMemStream
+ 0001:00003F54       NewMemoryStream
+ 0001:00003F60       ClearText
+ 0001:00003F68       ClearListbox
+ 0001:00003F78       _NewTControl
+ 0001:00003F88       _NewWindowed
+ 0001:00004020       NewForm
+ 0001:00004068       _NewControl
+ 0001:00004128       NewButton
+ 0001:00004168       WndProcDoEraseBkgnd
+ 0001:000041D4       NewEditbox
+ 0001:00004250       NewListbox
+ 0001:000042A0       TControl.Init
+ 0001:00004338       CallTControlInit
+ 0001:00004340       TControl.InitParented
+ 0001:00004360       TControl.Destroy
+ 0001:000044FC       TControl.SetEnabled
+ 0001:0000452C       TControl.GetWindowHandle
+ 0001:00004560       CreateWindowEx
+ 0001:00004568       TControl.CreateWindow
+ 0001:0000477C       WndProcDummy
+ 0001:00004780       TControl.WndProc
+ 0001:00004BA8       TControl.GetCaption
+ 0001:00004BE4       TControl.SetCaption
+ 0001:00004C30       TControl.Set_Visible
+ 0001:00004C88       TControl.GetBoundsRect
+ 0001:00004CE4       HelpGetBoundsRect
+ 0001:00004CF4       TControl.SetBoundsRect
+ 0001:00004D7C       TControl.Client2Screen
+ 0001:00004D98       TControl.ClientRect
+ 0001:00004DE8       TControl.Invalidate
+ 0001:00004E0C       TControl.GetIcon
+ 0001:00004E5C       TControl.CallDefWndProc
+ 0001:00004E7C       TControl.DoSetFocus
+ 0001:00004EA8       TControl.GetEnabled
+ 0001:00004EBC       TControl.IsMainWindow
+ 0001:00004EFC       TControl.get_ClassName
+ 0001:00004F34       TControl.SetParent
+ 0001:00004F7C       TControl.CreateParented
+ 0001:00004F90       TControl.SetLeft
+ 0001:00004FB4       TControl.SetTop
+ 0001:00004FD8       TControl.GetWidth
+ 0001:00004FE4       TControl.SetWidth
+ 0001:00005000       TControl.GetHeight
+ 0001:0000500C       TControl.SetHeight
+ 0001:0000502C       TControl.SetCtlColor
+ 0001:00005088       TControl.GetParentWnd
+ 0001:000050A0       TControl.CreateChildWindows
+ 0001:000050B8       TControl.DestroyChildren
+ 0001:000050E0       TControl.ProcessMessage
+ 0001:00005138       TControl.ProcessMessages
+ 0001:00005144       WndProcForm
+ 0001:000051B4       TControl.SetSize
+ 0001:000051D0       TControl.SetClientSize
+ 0001:000051F4       WndProcCtrl
+ 0001:00005314       TControl.DoClick
+ 0001:00005330       TControl.ParentForm
+ 0001:00005344       TControl.GetFont
+ 0001:00005370       TControl.FontChanged
+ 0001:00005388       TControl.BrushChanged
+ 0001:000053A8       TControl.ApplyFont2Wnd
+ 0001:000053F0       TControl.GetClientHeight
+ 0001:00005404       TControl.GetClientWidth
+ 0001:00005418       TControl.SetClientHeight
+ 0001:00005438       TControl.SetClientWidth
+ 0001:00005458       TControl.GetItemsCount
+ 0001:00005470       TControl.Add
+ 0001:000054D4       TControl.SetItemSelected
+ 0001:00005528       TControl.SetCurIndex
+ 0001:00005564       NewStrList
+ 0001:00005574       TStrList.Destroy
+ 0001:00005584       TStrList.Add
+ 0001:00005594       TStrList.Clear
+ 0001:000055C4       TStrList.Delete
+ 0001:000055F0       TStrList.Get
+ 0001:00005608       TStrList.Insert
+ 0001:00005648       TControl.Perform
+ 0001:00005668       EnumDynHandlers
+ 0001:000056D4       TControl.AttachProcEx
+ 0001:00005720       TControl.AttachProc
+ 0001:00005728       TControl.IsProcAttached
+ 0001:00005740       TControl.DoSelChange
+ 0001:0000577C       TControl.SetPosition
+ 0001:00005798       Finalization
+ 0001:000057F0       KOL
+ 0001:00005968       Finalization
+ 0001:00005998       IdResourceStrings
+ 0001:000059A0       Finalization
+ 0001:000059D0       IdURI
+ 0001:000059D8       MyWinVer
+ 0001:00005A9C       StrToIntDef
+ 0001:00005ADC       IsPathDelimiter
+ 0001:00005B04       Finalization
+ 0001:00005B34       IndyProcs
+ 0001:00005B3C       AnsiSameText
+ 0001:00005B78       IncludeTrailingBackSlash
+ 0001:00005BB8       FreeAndNil
+ 0001:00005CAC       TempPath
+ 0001:00005D18       GetTickCount
+ 0001:00005D20       Fetch
+ 0001:00005DB8       CurrentProcessId
+ 0001:00005DC0       SBPos
+ 0001:00005DC8       Finalization
+ 0001:00005E38       IdGlobal
+ 0001:00005E94       TIdBaseComponent.Init
+ 0001:00005EA0       Finalization
+ 0001:00005ED0       IdBaseComponent
+ 0001:00005ED8       Finalization
+ 0001:00005F08       IdAntiFreezeBase
+ 0001:00005F10       LoadWinsock
+ 0001:000065B8       UnloadWinsock
+ 0001:000065D4       Finalization
+ 0001:00006604       IdWinsock
+ 0001:0000660C       Finalization
+ 0001:0000663C       IdStackConsts
+ 0001:000066E8       NewIdStackWinsock
+ 0001:00006704       TIdStackWinsock.Init
+ 0001:0000673C       TIdStackWinsock.Destroy
+ 0001:0000676C       TIdStackWinsock.TInAddrToString
+ 0001:0000681C       TIdStackWinsock.WSAccept
+ 0001:000068AC       TIdStackWinsock.WSBind
+ 0001:00006918       TIdStackWinsock.WSCloseSocket
+ 0001:00006924       TIdStackWinsock.WSConnect
+ 0001:00006974       TIdStackWinsock.WSGetHostByName
+ 0001:000069D0       TIdStackWinsock.WSGetHostByAddr
+ 0001:00006A20       TIdStackWinsock.WSGetHostName
+ 0001:00006A5C       TIdStackWinsock.WSListen
+ 0001:00006A68       TIdStackWinsock.WSRecv
+ 0001:00006A84       TIdStackWinsock.WSRecvFrom
+ 0001:00006B20       GetFDSet
+ 0001:00006B5C       SetFDSet
+ 0001:00006BB0       TIdStackWinsock.WSSelect
+ 0001:00006CC8       TIdStackWinsock.WSSend
+ 0001:00006CE4       TIdStackWinsock.WSSendTo
+ 0001:00006D50       TIdStackWinsock.WSSetSockOpt
+ 0001:00006D70       TIdStackWinsock.WSGetLocalAddresses
+ 0001:00006D90       TIdStackWinsock.WSGetLastError
+ 0001:00006D9C       TIdStackWinsock.WSSocket
+ 0001:00006DB4       TIdStackWinsock.WSHToNs
+ 0001:00006DC0       TIdStackWinsock.WSNToHs
+ 0001:00006DCC       TIdStackWinsock.WSGetServByName
+ 0001:00006E64       TIdStackWinsock.WSGetServByPort
+ 0001:00006F64       TIdStackWinsock.WSHToNL
+ 0001:00006F70       TIdStackWinsock.WSNToHL
+ 0001:00006F7C       TIdStackWinsock.PopulateLocalAddresses
+ 0001:00007024       TIdStackWinsock.WSGetLocalAddress
+ 0001:00007040       SetProp
+ 0001:00007060       NewIdStackVersionWinsock
+ 0001:000070C8       ServeFile
+ 0001:00007190       TIdStackWinsock.TranslateStringToTInAddr
+ 0001:00007264       TIdStackWinsock.WSShutdown
+ 0001:00007270       TIdStackWinsock.WSGetPeerName
+ 0001:00007310       TIdStackWinsock.WSGetSockName
+ 0001:000073B0       Finalization
+ 0001:000073E0       IdStackWinsock
+ 0001:00007490       TIdStack.CheckForSocketError
+ 0001:0000749C       TIdStack.CheckForSocketError
+ 0001:000074E4       TIdStack.CreateSocketHandle
+ 0001:000074F8       TIdStack.RaiseSocketError
+ 0001:000074FC       NewIdStack
+ 0001:0000750C       TIdStack.CreateStack
+ 0001:00007514       TIdStack.ResolveHost
+ 0001:0000758C       TIdStack.WSTranslateSocketErrorMsg
+ 0001:00007994       ByteIsOk
+ 0001:000079C0       TIdStack.IsIP
+ 0001:00007A94       TIdStack.Destroy
+ 0001:00007AAC       TIdStack.StringToTInAddr
+ 0001:00007B04       Finalization
+ 0001:00007B34       IdStack
+ 0001:00007B3C       TIdComponent.Init
+ 0001:00007B64       TIdComponent.Destroy
+ 0001:00007B98       TIdComponent.BeginWork
+ 0001:00007BD0       TIdComponent.DoWork
+ 0001:00007C00       TIdComponent.EndWork
+ 0001:00007C30       Finalization
+ 0001:00007CAC       IdComponent
+ 0001:00007CC0       TCollectionItem.Init
+ 0001:00007CCC       TCollectionItem.Destroy
+ 0001:00007CE4       TCollectionItem.Changed
+ 0001:00007D08       TCollectionItem.GetIndex
+ 0001:00007D20       TCollectionItem.GetDisplayName
+ 0001:00007D24       TCollectionItem.SetCollection
+ 0001:00007D4C       TCollectionItem.SetDisplayName
+ 0001:00007D54       TCollectionItem.SetIndex
+ 0001:00007D84       TCollection.Changed
+ 0001:00007D94       TCollection.InsertItem
+ 0001:00007DC4       TCollection.RemoveItem
+ 0001:00007DE4       Finalization
+ 0001:00007E14       KOLClasses
+ 0001:00007E48       TIdSocketHandle.AllocateSocket
+ 0001:00007E78       TIdSocketHandle.CloseSocket
+ 0001:00007EBC       TIdSocketHandle.Connect
+ 0001:00007EF4       TIdSocketHandle.Destroy
+ 0001:00007F0C       TIdSocketHandle.Recv
+ 0001:00007F30       TIdSocketHandle.SetSockOpt
+ 0001:00007F70       TIdSocketHandle.SendTo
+ 0001:00007FC4       TIdSocketHandle.RecvFrom
+ 0001:00007FF0       NewIdSocketHandle
+ 0001:00008014       TIdSocketHandle.Init
+ 0001:00008038       TIdSocketHandle.Readable
+ 0001:00008118       TIdSocketHandle.UpdateBindingLocal
+ 0001:00008138       TIdSocketHandle.UpdateBindingPeer
+ 0001:00008158       TIdSocketHandle.Reset
+ 0001:00008188       Finalization
+ 0001:000081B8       IdSocketHandle
+ 0001:000081C0       TIdRawBase.Init
+ 0001:000081FC       TIdRawBase.Destroy
+ 0001:0000821C       TIdRawBase.GetBinding
+ 0001:00008250       TIdRawBase.SetBufferSize
+ 0001:00008274       TIdRawBase.ReceiveBuffer
+ 0001:000082CC       TIdRawBase.Send
+ 0001:00008358       Finalization
+ 0001:00008388       IdRawBase
+ 0001:00008390       Finalization
+ 0001:000083C0       IdRawClient
+ 0001:000083C8       Finalization
+ 0001:000083F8       IdRawHeaders
+ 0001:00008444       NewIdIcmpClient
+ 0001:00008460       TIdIcmpClient.Init
+ 0001:00008484       TIdIcmpClient.CalcCheckSum
+ 0001:000084FC       TIdIcmpClient.PrepareEchoRequest
+ 0001:00008574       TIdIcmpClient.SendEchoRequest
+ 0001:00008590       TIdIcmpClient.DecodeResponse
+ 0001:000086C0       TIdIcmpClient.GetEchoReply
+ 0001:00008724       TIdIcmpClient.Ping
+ 0001:0000874C       TIdIcmpClient.Receive
+ 0001:00008794       TIdIcmpClient.DoReply
+ 0001:000087B4       Finalization
+ 0001:000087E4       IdIcmpClient
+ 0001:000087EC       Finalization
+ 0001:0000881C       IdUDPBase
+ 0001:00008824       Finalization
+ 0001:00008854       IdUDPClient
+ 0001:0000885C       Finalization
+ 0001:0000888C       IdTrivialFTPBase
+ 0001:00008894       Finalization
+ 0001:000088C4       IdTrivialFTP
+ 0001:000088CC       Finalization
+ 0001:000088FC       IdSocks
+ 0001:00008904       Finalization
+ 0001:00008934       IdIntercept
+ 0001:0000893C       Finalization
+ 0001:0000896C       IdTCPConnection
+ 0001:00008974       Finalization
+ 0001:000089A4       IdTCPClient
+ 0001:000089AC       Finalization
+ 0001:000089DC       IdTime
+ 0001:000089E4       Finalization
+ 0001:00008A14       IdThread
+ 0001:00008A1C       Finalization
+ 0001:00008A4C       IdTelnet
+ 0001:00008A54       Finalization
+ 0001:00008A84       IdIPWatch
+ 0001:00008A8C       Finalization
+ 0001:00008ABC       IdSNTP
+ 0001:00008AC4       Finalization
+ 0001:00008AF4       IdSSLIntercept
+ 0001:00008AFC       Unload
+ 0001:00008B34       Finalization
+ 0001:00008B6C       IdSSLOpenSSLHeaders
+ 0001:00008B74       Finalization
+ 0001:00008BA4       MySyncObjs
+ 0001:00008BAC       Finalization
+ 0001:00008BDC       IdThreadMgrDefault
+ 0001:00008BE4       Finalization
+ 0001:00008C14       IdThreadMgr
+ 0001:00008C1C       Finalization
+ 0001:00008C4C       IdTCPServer
+ 0001:00008C54       UnLoadOpenSLLibrary
+ 0001:00008C5C       Finalization
+ 0001:00008C94       IdSSLOpenSSL
+ 0001:00008CB0       NewForm1
+ 0001:00008E78       TForm1.ICMPReply
+ 0001:00008F98       TForm1.btnPingClick
+ 0001:0000907C       TForm1.KOLForm1FormCreate
+ 0001:000090B0       Finalization
+ 0001:000090E0       Unit1
+ 0001:000090E8       Finalization
+ 0001:00009118       Sysutils
+ 0001:00009120       Finalization
+ 0001:00009308       Ping
+ 0002:00000000       ExitCode
+ 0002:00000004       ErrorAddr
+ 0002:00000008       FileMode
+ 0002:0000000C       VarClearProc
+ 0002:00000010       VarCopyProc
+ 0002:00000014       Default8087CW
+ 0002:00000018       DebugHook
+ 0002:0000001C       JITEnable
+ 0002:00000020       NoErrMsg
+ 0002:00000024       LibModuleList
+ 0002:00000028       ModuleUnloadList
+ 0002:0000002C       MemoryManager
+ 0002:00000038       reMap
+ 0002:00000054       errCaption
+ 0002:0000005C       runErrMsg
+ 0002:0000007C       dig
+ 0002:0000008C       TlsIndex
+ 0002:00000090       Module
+ 0002:000000A8       Global_Synchronized
+ 0002:000000AC       DefFont
+ 0002:000000E8       DefFontColor
+ 0002:000000EC       ID_SELF
+ 0002:000000F4       Global_OnBufferedDraw
+ 0002:000000F8       Global_DblBufCreateWnd
+ 0002:000000FC       Global_Invalidate
+ 0002:00000100       Global_GetCtlBrushHandle
+ 0002:00000104       Global_Align
+ 0002:00000108       EmptyString
+ 0002:0000010C       ProcessIdle
+ 0002:00000110       fGlobalProcKeybd
+ 0002:00000114       RomeDigs
+ 0002:00000118       MemoryMethods
+ 0002:00000138       FormClass
+ 0002:00000140       CtlIdCount
+ 0002:00000144       ButtonActions
+ 0002:0000019C       ButtonClass
+ 0002:000001A4       EditActions
+ 0002:000001FC       Editflags
+ 0002:0000022C       EditClass
+ 0002:00000234       ListActions
+ 0002:0000028C       ListFlags
+ 0002:000002BC       ListBoxClass
+ 0002:000002C4       IndyPos
+ 0002:000002C8       wdays
+ 0002:000002E4       monthnames
+ 0002:00000314       GAntiFreeze
+ 0002:00000318       Accept
+ 0002:0000031C       Bind
+ 0002:00000320       CloseSocket
+ 0002:00000324       Connect
+ 0002:00000328       IoctlSocket
+ 0002:0000032C       GetPeerName
+ 0002:00000330       GetSockName
+ 0002:00000334       GetSockOpt
+ 0002:00000338       Htonl
+ 0002:0000033C       Htons
+ 0002:00000340       Inet_Addr
+ 0002:00000344       Inet_Ntoa
+ 0002:00000348       Listen
+ 0002:0000034C       Ntohl
+ 0002:00000350       Ntohs
+ 0002:00000354       Recv
+ 0002:00000358       RecvFrom
+ 0002:0000035C       Select
+ 0002:00000360       Send
+ 0002:00000364       SendTo
+ 0002:00000368       SetSockOpt
+ 0002:0000036C       ShutDown
+ 0002:00000370       Socket
+ 0002:00000374       GetHostByAddr
+ 0002:00000378       GetHostByName
+ 0002:0000037C       GetHostName
+ 0002:00000380       GetServByPort
+ 0002:00000384       GetServByName
+ 0002:00000388       GetProtoByNumber
+ 0002:0000038C       GetProtoByname
+ 0002:00000390       WSAStartup
+ 0002:00000394       WSACleanup
+ 0002:00000398       WSASetLastError
+ 0002:0000039C       WSAGetLastError
+ 0002:000003A0       WSAIsBlocking
+ 0002:000003A4       WSAUnhookBlockingHook
+ 0002:000003A8       WSASetBlockingHook
+ 0002:000003AC       WSACancelBlockingCall
+ 0002:000003B0       WSAAsyncGetServByName
+ 0002:000003B4       WSAAsyncGetServByPort
+ 0002:000003B8       WSAAsyncGetProtoByName
+ 0002:000003BC       WSAAsyncGetProtoByNumber
+ 0002:000003C0       WSAAsyncGetHostByName
+ 0002:000003C4       WSAAsyncGetHostByAddr
+ 0002:000003C8       WSACancelAsyncRequest
+ 0002:000003CC       WSAAsyncSelect
+ 0002:000003D0       WSARecvEx
+ 0002:000003D4       __WSAFDIsSet
+ 0002:000003D8       TransmitFile
+ 0002:000003DC       AcceptEx
+ 0002:000003E0       GetAcceptExSockaddrs
+ 0002:000003E4       LibHandle
+ 0002:000003E8       GStack
+ 0002:000003EC       GServeFileProc
+ 0002:000003F0       IdStati
+ 0002:00000408       gnInstanceCount
+ 0002:0000040C       hIdSSL
+ 0002:00000410       hIdSSLLib
+ 0002:00001000       DispCallByIDProc
+ 0002:00001004       ExceptProc
+ 0002:00001008       ErrorProc
+ 0002:0000100C       ExceptObjProc
+ 0002:00001010       RaiseExceptionProc
+ 0002:00001014       RTLUnwindProc
+ 0002:00001018       ExitProcessProc
+ 0002:0000101C       AbstractErrorProc
+ 0002:00001020       MainInstance
+ 0002:00001024       MainThreadID
+ 0002:00001028       IsLibrary
+ 0002:0000102C       CmdShow
+ 0002:00001030       CmdLine
+ 0002:00001034       ExitProc
+ 0002:00001038       IsConsole
+ 0002:00001039       IsMultiThread
+ 0002:0000103A       Test8086
+ 0002:0000103C       Input
+ 0002:00001208       Output
+ 0002:000013D4       ErrOutput
+ 0002:000015A0       AllocMemCount
+ 0002:000015A4       AllocMemSize
+ 0002:000015A8       .5
+ 0002:000015AC       DefaultUserCodePage
+ 0002:000015B0       initialized
+ 0002:000015B4       heapErrorCode
+ 0002:000015B8       heapLock
+ 0002:000015D0       blockDescBlockList
+ 0002:000015D4       blockDescFreeList
+ 0002:000015D8       spaceRoot
+ 0002:000015E8       decommittedRoot
+ 0002:000015F8       avail
+ 0002:00001604       rover
+ 0002:00001608       remBytes
+ 0002:0000160C       curAlloc
+ 0002:00001610       smallTab
+ 0002:00001614       committedRoot
+ 0002:00001624       InitContext
+ 0002:00001650       ModuleIsLib
+ 0002:00001654       HInstance
+ 0002:00001658       .1
+ 0002:0000165C       tlsBuffer
+ 0002:00001660       .1
+ 0002:00001664       .3
+ 0002:00001668       .1
+ 0002:0000166C       .1
+ 0002:00001670       .1
+ 0002:00001674       .3
+ 0002:00001678       .1
+ 0002:0000167C       .1
+ 0002:00001680       .1
+ 0002:00001684       .1
+ 0002:00001688       .1
+ 0002:0000168C       .1
+ 0002:00001690       AppletRunning
+ 0002:00001691       AppletTerminated
+ 0002:00001694       Applet
+ 0002:00001698       AppButtonUsed
+ 0002:0000169C       ScreenCursor
+ 0002:000016A0       CreatingWindow
+ 0002:000016A4       FMMNotify
+ 0002:000016A8       .33
+ 0002:000016AC       Global_DisableParentCursor
+ 0002:000016B0       FRichEditModule
+ 0002:000016B4       .1
+ 0002:000016B8       .2
+ 0002:000016BC       .1
+ 0002:000016C0       .2
+ 0002:000016C4       FIdPorts
+ 0002:000016C8       ATempPath
+ 0002:000016CC       .2
+ 0002:000016D0       .2
+ 0002:000016D4       .1
+ 0002:000016D8       .1
+ 0002:000016DC       .3
+ 0002:000016E0       .3
+ 0002:000016E4       .3
+ 0002:000016E8       .6
+ 0002:000016EC       .3
+ 0002:000016F0       .2
+ 0002:000016F4       .2
+ 0002:000016F8       .3
+ 0002:000016FC       .2
+ 0002:00001700       .2
+ 0002:00001704       .2
+ 0002:00001708       .1
+ 0002:0000170C       .2
+ 0002:00001710       .2
+ 0002:00001714       .3
+ 0002:00001718       .3
+ 0002:0000171C       .2
+ 0002:00001720       .2
+ 0002:00001724       .2
+ 0002:00001728       .3
+ 0002:0000172C       .3
+ 0002:00001730       .2
+ 0002:00001734       .3
+ 0002:00001738       .1
+ 0002:0000173C       .6
+ 0002:00001740       .2
+ 0002:00001744       .2
+ 0002:00001748       .5
+ 0002:0000174C       .8
+ 0002:00001750       Form1
+ 0002:00001754       ICMP
+ 0002:00001758       .2
+ 0002:0000175C       .1
+
+
+Line numbers for KOL(KOLDEF.INC) segment .text
+
+    44 0001:00005798    45 0001:000057BA    49 0001:000057EE    40 0001:000057F0
+    42 0001:000057F7
+
+Line numbers for KOL(KOL.pas) segment .text
+
+ 11724 0001:0000379C 11725 0001:0000379E 11726 0001:000037A0 11728 0001:000037A5
+ 11733 0001:000037A8 11734 0001:000037AA 11735 0001:000037AC 11737 0001:000037B1
+ 11756 0001:000037B4 11757 0001:000037B5 11758 0001:000037B8 11759 0001:000037B9
+ 11760 0001:000037BB 11761 0001:000037C0 11762 0001:000037C1 12103 0001:000037C4
+ 12104 0001:000037C9 12105 0001:000037CE 12178 0001:000037D0 12179 0001:000037D3
+ 12180 0001:000037D4 12181 0001:000037D5 12182 0001:000037D7 12183 0001:000037D9
+ 12184 0001:000037DB 12185 0001:000037DC 12187 0001:000037DE 12188 0001:000037DF
+ 12189 0001:000037E1 12190 0001:000037E3 12191 0001:000037E5 12192 0001:000037E8
+ 12193 0001:000037EA 12195 0001:000037EB 12196 0001:000037EE 12198 0001:000037F0
+ 12200 0001:000037F2 12201 0001:000037F4 12204 0001:000037F6 12205 0001:000037F7
+ 12206 0001:000037F8 12207 0001:000037F9 12371 0001:00003800 12376 0001:00003804
+ 12408 0001:00003808 12440 0001:0000380C 12444 0001:00003813 12445 0001:00003814
+ 12446 0001:00003816 12447 0001:00003818 12450 0001:00003819 12463 0001:0000381C
+ 12464 0001:0000381F 12465 0001:00003821 12466 0001:00003823 12467 0001:00003825
+ 12468 0001:00003828 12470 0001:00003829 12471 0001:0000382B 12472 0001:0000382D
+ 12474 0001:00003830 12492 0001:00003834 12493 0001:00003838 12494 0001:0000383A
+ 12495 0001:00003841 12496 0001:00003843 12497 0001:00003845 12499 0001:00003848
+ 12512 0001:0000384C 12513 0001:00003850 12539 0001:00003854 12540 0001:00003856
+ 12541 0001:0000385C 12547 0001:00003860 12548 0001:00003861 12549 0001:00003866
+ 12550 0001:00003867 12551 0001:00003869 12553 0001:0000386E 12582 0001:00003870
+ 12583 0001:00003872 12584 0001:00003875 12585 0001:00003877 12586 0001:00003878
+ 12587 0001:00003879 12588 0001:0000387C 12589 0001:0000387E 12591 0001:0000387F
+ 12592 0001:00003881 12593 0001:00003884 12594 0001:00003886 12595 0001:00003887
+ 12596 0001:00003888 12597 0001:0000388B 12599 0001:0000388E 12600 0001:0000388F
+ 12601 0001:00003890 12602 0001:00003891 12603 0001:00003892 12604 0001:00003894
+ 12605 0001:00003895 12606 0001:00003896 12607 0001:00003898 12608 0001:00003899
+ 12609 0001:0000389E 12611 0001:0000389F 12652 0001:000038A0 12653 0001:000038A1
+ 12654 0001:000038A2 12655 0001:000038A3 12656 0001:000038A6 12657 0001:000038A8
+ 12658 0001:000038AA 12659 0001:000038AF 12660 0001:000038B2 12661 0001:000038B4
+ 12662 0001:000038B6 12663 0001:000038B7 12664 0001:000038BC 12665 0001:000038BD
+ 12666 0001:000038BF 12668 0001:000038C4 12669 0001:000038C9 12670 0001:000038CA
+ 12762 0001:000038CC 12764 0001:000038D9 12765 0001:000038E0 12772 0001:000038E4
+ 12773 0001:000038E5 12774 0001:000038EA 12775 0001:000038EB 12776 0001:000038F0
+ 12834 0001:000038F4 12835 0001:000038F7 12836 0001:000038F9 12838 0001:000038FC
+ 12839 0001:000038FF 12841 0001:00003901 12842 0001:00003904 12843 0001:00003907
+ 12844 0001:0000390A 12846 0001:0000390F 12867 0001:00003910 12868 0001:00003913
+ 12869 0001:00003915 12870 0001:00003918 12871 0001:0000391B 12872 0001:0000391E
+ 12873 0001:0000391F 12874 0001:00003924 12897 0001:00003928 12898 0001:00003929
+ 12899 0001:0000392C 12900 0001:0000392E 12901 0001:00003930 12902 0001:00003931
+ 12903 0001:00003934 12904 0001:00003935 12906 0001:00003937 12907 0001:0000393B
+ 12908 0001:0000393D 12910 0001:00003944 12911 0001:00003947 12913 0001:0000394C
+ 12914 0001:0000394D 12915 0001:0000394E 12917 0001:0000394F 12918 0001:00003952
+ 12919 0001:00003955 12937 0001:00003958 12938 0001:00003962 12944 0001:00003964
+ 12945 0001:00003966 12946 0001:00003968 12947 0001:00003969 12948 0001:0000396A
+ 12949 0001:0000396D 12950 0001:00003970 12951 0001:00003972 12952 0001:00003975
+ 12954 0001:00003977 12955 0001:0000397A 12956 0001:0000397D 12957 0001:00003980
+ 12958 0001:00003982 12959 0001:00003985 12960 0001:00003988 12961 0001:0000398A
+ 12962 0001:0000398B 12963 0001:0000398D 12964 0001:00003990 12965 0001:00003995
+ 12967 0001:00003996 12983 0001:00003998 12984 0001:0000399B 12985 0001:000039A2
+ 12986 0001:000039A6 12987 0001:000039AE 13001 0001:000039B0 13002 0001:000039B2
+ 13003 0001:000039B6 13005 0001:000039BB 13006 0001:000039C3 13012 0001:000039C4
+ 13014 0001:000039C5 13015 0001:000039C8 13016 0001:000039CB 13017 0001:000039CC
+ 13018 0001:000039CD 13019 0001:000039CF 13020 0001:000039D1 13021 0001:000039D2
+ 13022 0001:000039D4 13024 0001:000039D6 13025 0001:000039D8 13026 0001:000039D9
+ 13027 0001:000039DB 13029 0001:000039DE 13030 0001:000039DF 13051 0001:000039E0
+ 13052 0001:000039E1 13053 0001:000039E2 13054 0001:000039E3 13055 0001:000039E8
+ 13056 0001:000039E9 13058 0001:000039EB 13059 0001:000039EE 13060 0001:000039F0
+ 13061 0001:000039F1 13062 0001:000039F4 13063 0001:000039F7 13064 0001:000039F9
+ 13065 0001:000039FA 13066 0001:000039FD 13068 0001:00003A02 13070 0001:00003A03
+ 13071 0001:00003A04 13072 0001:00003A06 13088 0001:00003A08 13089 0001:00003A0A
+ 13091 0001:00003A0C 13092 0001:00003A0F 13094 0001:00003A11 13096 0001:00003A12
+ 13097 0001:00003A15 13098 0001:00003A18 13099 0001:00003A19 13100 0001:00003A1A
+ 13101 0001:00003A1F 13102 0001:00003A20 13103 0001:00003A21 13105 0001:00003A22
+ 13106 0001:00003A23 13108 0001:00003A28 13346 0001:00003A2C 13347 0001:00003A31
+ 13354 0001:00003A34 13355 0001:00003A37 13356 0001:00003A3A 13358 0001:00003A3C
+ 13359 0001:00003A3D 13361 0001:00003A3E 13362 0001:00003A40 13364 0001:00003A43
+ 13365 0001:00003A44 13366 0001:00003A45 13367 0001:00003A46 13369 0001:00003A47
+ 13370 0001:00003A49 13371 0001:00003A4B 13372 0001:00003A4D 13374 0001:00003A4F
+ 13375 0001:00003A55 13377 0001:00003A57 13380 0001:00003A5A 13381 0001:00003A5B
+ 13382 0001:00003A5C 13383 0001:00003A61 13384 0001:00003A62 13386 0001:00003A67
+ 13387 0001:00003A69 13388 0001:00003A6F 13389 0001:00003A70 13392 0001:00003A72
+ 13393 0001:00003A77 13394 0001:00003A78 13395 0001:00003A7D 13396 0001:00003A7F
+ 13399 0001:00003A81 13400 0001:00003A87 13403 0001:00003A89 13404 0001:00003A8A
+ 13405 0001:00003A8B 13406 0001:00003A8D 13407 0001:00003A8E 13413 0001:00003A93
+ 13415 0001:00003A95 13417 0001:00003A9A 13418 0001:00003A9B 13420 0001:00003A9C
+ 13421 0001:00003A9E 13559 0001:00003AA4 13560 0001:00003AA9 13561 0001:00003AAF
+ 13562 0001:00003AB6 13563 0001:00003ABD 13564 0001:00003AC3 13565 0001:00003ACA
+ 13567 0001:00003ACE 13568 0001:00003AD5 13570 0001:00003AD9 13571 0001:00003AE0
+ 13573 0001:00003AEC 13574 0001:00003AF0 13575 0001:00003AF7 13577 0001:00003AFE
+ 13583 0001:00003B04 13584 0001:00003B09 13590 0001:00003B0C 13591 0001:00003B0D
+ 13593 0001:00003B0E 13594 0001:00003B14 13595 0001:00003B16 13596 0001:00003B1C
+ 13597 0001:00003B21 13599 0001:00003B23 13600 0001:00003B28 13601 0001:00003B2A
+ 13603 0001:00003B2F 13604 0001:00003B31 13607 0001:00003B37 13608 0001:00003B3E
+ 13610 0001:00003B40 13612 0001:00003B41 13613 0001:00003B42 13614 0001:00003B44
+ 13615 0001:00003B4A 13729 0001:00003B4C 13732 0001:00003B59 13739 0001:00003B5C
+ 13740 0001:00003B5F 13741 0001:00003B61 13742 0001:00003B67 13743 0001:00003B6D
+ 13744 0001:00003B6E 13745 0001:00003B70 13746 0001:00003B71 13747 0001:00003B72
+ 13748 0001:00003B73 13749 0001:00003B76 13750 0001:00003B78 13751 0001:00003B7E
+ 13752 0001:00003B83 13753 0001:00003B86 13754 0001:00003B88 13755 0001:00003B8A
+ 13756 0001:00003B8D 13757 0001:00003B8E 13758 0001:00003B93 13759 0001:00003B96
+ 13760 0001:00003B98 13761 0001:00003B9A 13762 0001:00003BA0 13763 0001:00003BA5
+ 13764 0001:00003BA8 13765 0001:00003BA9 13766 0001:00003BAE 13767 0001:00003BB1
+ 13768 0001:00003BB2 13856 0001:00003BB4 13857 0001:00003BB9 13858 0001:00003BC0
+ 13859 0001:00003BC4 13860 0001:00003BCB 13861 0001:00003BD1 13863 0001:00003BD4
+ 13864 0001:00003BD5 13865 0001:00003BD8 13866 0001:00003BDD 13867 0001:00003BDF
+ 13868 0001:00003BE1 13869 0001:00003BE6 13870 0001:00003BE7 13916 0001:00003BE8
+ 13917 0001:00003BEC 13919 0001:00003BF7 14002 0001:00003BF8 14003 0001:00003BFA
+ 14004 0001:00003BFC 14005 0001:00003BFE 14006 0001:00003C00 14007 0001:00003C05
+ 14008 0001:00003C07 14009 0001:00003C08 14010 0001:00003C09 14011 0001:00003C0B
+ 14012 0001:00003C0D 14013 0001:00003C0F 14014 0001:00003C10 14015 0001:00003C13
+ 14016 0001:00003C15 14017 0001:00003C17 14018 0001:00003C18 14020 0001:00003C19
+ 14021 0001:00003C1C 14022 0001:00003C1E 14023 0001:00003C21 14025 0001:00003C23
+ 14026 0001:00003C25 14027 0001:00003C2A 14028 0001:00003C2D 14029 0001:00003C30
+ 14030 0001:00003C35 14031 0001:00003C3A 14032 0001:00003C3C 14035 0001:00003C41
+ 14036 0001:00003C42 14037 0001:00003C43 14038 0001:00003C44 14082 0001:00003C48
+ 14083 0001:00003C4A 14084 0001:00003C4D 14085 0001:00003C4F 14086 0001:00003C50
+ 14088 0001:00003C51 14090 0001:00003C56 14091 0001:00003C5B 14095 0001:00003C5C
+ 14096 0001:00003C5F 14097 0001:00003C61 14098 0001:00003C62 14099 0001:00003C63
+ 14100 0001:00003C66 14101 0001:00003C68 14103 0001:00003C69 14136 0001:00003C6C
+ 14137 0001:00003C6D 14138 0001:00003C71 14139 0001:00003C73 14140 0001:00003C76
+ 14141 0001:00003C78 14142 0001:00003C79 14143 0001:00003C7E 14144 0001:00003C7F
+ 14146 0001:00003C80 14147 0001:00003C83 14148 0001:00003C85 14149 0001:00003C86
+ 14151 0001:00003C8B 14152 0001:00003C8C 14153 0001:00003C91 14189 0001:00003C94
+ 14190 0001:00003C95 14191 0001:00003C9A 14192 0001:00003C9B 14193 0001:00003C9D
+ 14194 0001:00003CA0 14208 0001:00003CA4 14209 0001:00003CA8 14210 0001:00003CAA
+ 14211 0001:00003CAC 14212 0001:00003CAE 14214 0001:00003CB3 14687 0001:00003CB4
+ 14689 0001:00003CB5 14690 0001:00003CB6 14691 0001:00003CB9 14693 0001:00003CBB
+ 14694 0001:00003CBE 14695 0001:00003CC3 14696 0001:00003CC6 14698 0001:00003CC8
+ 14699 0001:00003CCA 14700 0001:00003CCF 14701 0001:00003CD0 14703 0001:00003CD5
+ 14704 0001:00003CD8 14705 0001:00003CD9 14707 0001:00003CDB 14708 0001:00003CDE
+ 14709 0001:00003CE0 14710 0001:00003CE3 14711 0001:00003CE6 14712 0001:00003CEB
+ 14713 0001:00003CF0 14714 0001:00003CF2 14715 0001:00003CF5 14717 0001:00003CF7
+ 14718 0001:00003CFA 14719 0001:00003CFB 14721 0001:00003CFD 14722 0001:00003D00
+ 14723 0001:00003D05 14724 0001:00003D08 14725 0001:00003D09 14726 0001:00003D0C
+ 14728 0001:00003D0D 14729 0001:00003D0E 14730 0001:00003D0F 14850 0001:00003D10
+ 14851 0001:00003D11 14852 0001:00003D14 14853 0001:00003D16 14854 0001:00003D18
+ 14855 0001:00003D19 14856 0001:00003D1C 14857 0001:00003D1D 14858 0001:00003D22
+ 14859 0001:00003D23 14861 0001:00003D26 17812 0001:00003D28 17813 0001:00003D2A
+ 17814 0001:00003D2B 17816 0001:00003D2E 17817 0001:00003D2F 17818 0001:00003D33
+ 17819 0001:00003D34 17820 0001:00003D36 17821 0001:00003D37 17822 0001:00003D39
+ 17824 0001:00003D3B 17827 0001:00003D3D 17828 0001:00003D3E 17829 0001:00003D40
+ 17830 0001:00003D42 17831 0001:00003D45 17832 0001:00003D47 17833 0001:00003D49
+ 17835 0001:00003D4B 17836 0001:00003D4C 17838 0001:00003D4E 17839 0001:00003D4F
+ 17841 0001:00003D52 17842 0001:00003D53 17843 0001:00003D55 17845 0001:00003D5A
+ 17846 0001:00003D5B 17847 0001:00003D5E 18210 0001:00003D74 18211 0001:00003D75
+ 18212 0001:00003D77 18213 0001:00003D79 18215 0001:00003D7B 18216 0001:00003D7D
+ 18217 0001:00003D7F 18218 0001:00003D80 18219 0001:00003D83 18220 0001:00003D84
+ 18221 0001:00003D86 18222 0001:00003D89 18223 0001:00003D8B 18224 0001:00003D8D
+ 18225 0001:00003D8E 18226 0001:00003D91 18227 0001:00003D94 18228 0001:00003D96
+ 18229 0001:00003D99 18230 0001:00003D9C 18231 0001:00003D9E 18232 0001:00003D9F
+ 18233 0001:00003DA1 18235 0001:00003DA3 18266 0001:00003DA4 18267 0001:00003DA9
+ 18268 0001:00003DAE 18284 0001:00003DB0 18285 0001:00003DB1 18286 0001:00003DB2
+ 18287 0001:00003DB4 18288 0001:00003DB6 18289 0001:00003DB9 18290 0001:00003DBB
+ 18291 0001:00003DBD 18292 0001:00003DBF 18293 0001:00003DC1 18294 0001:00003DC3
+ 18295 0001:00003DC5 18296 0001:00003DC7 18297 0001:00003DCA 18298 0001:00003DCC
+ 18299 0001:00003DCE 18300 0001:00003DD1 18301 0001:00003DD3 18302 0001:00003DD4
+ 18303 0001:00003DD5 19113 0001:00003DD8 19114 0001:00003DD9 19115 0001:00003DDA
+ 19116 0001:00003DDC 19117 0001:00003DDE 19118 0001:00003DE0 19119 0001:00003DE2
+ 19120 0001:00003DE5 19121 0001:00003DE7 19122 0001:00003DE9 19123 0001:00003DEB
+ 19124 0001:00003DED 19125 0001:00003DEF 19126 0001:00003DF1 19127 0001:00003DF3
+ 19128 0001:00003DF4 19129 0001:00003DF5 19130 0001:00003DF6 19853 0001:00003DF8
+ 19854 0001:00003DF9 19855 0001:00003DFA 19856 0001:00003DFD 19857 0001:00003DFF
+ 19858 0001:00003E01 19859 0001:00003E03 19860 0001:00003E05 19861 0001:00003E06
+ 19862 0001:00003E07 19864 0001:00003E09 19865 0001:00003E0B 20050 0001:00003E0C
+ 20051 0001:00003E0F 20052 0001:00003E10 20053 0001:00003E11 20054 0001:00003E12
+ 20055 0001:00003E14 20056 0001:00003E1A 20058 0001:00003E1C 20059 0001:00003E1D
+ 20061 0001:00003E1F 20062 0001:00003E23 20063 0001:00003E24 20065 0001:00003E26
+ 20066 0001:00003E27 20067 0001:00003E28 20069 0001:00003E29 20071 0001:00003E2E
+ 20072 0001:00003E30 20073 0001:00003E33 20075 0001:00003E38 20076 0001:00003E3A
+ 20077 0001:00003E3B 20078 0001:00003E3C 20079 0001:00003E3D 23898 0001:00003E44
+ 23899 0001:00003E47 24127 0001:00003E48 24128 0001:00003E49 24129 0001:00003E4C
+ 24130 0001:00003E4F 24131 0001:00003E50 24132 0001:00003E55 24133 0001:00003E56
+ 24134 0001:00003E5B 24147 0001:00003E5C 24149 0001:00003E60 24151 0001:00003E6F
+ 24152 0001:00003E7E 24153 0001:00003E86 24229 0001:00003E8C 24230 0001:00003E8D
+ 24231 0001:00003E8F 24232 0001:00003E95 24233 0001:00003E97 24235 0001:00003E9A
+ 24236 0001:00003E9C 24238 0001:00003E9F 24239 0001:00003EA2 24240 0001:00003EA4
+ 24241 0001:00003EA5 24242 0001:00003EA7 24243 0001:00003EAC 24245 0001:00003EAD
+ 24246 0001:00003EAE 24247 0001:00003EB1 24248 0001:00003EB2 24270 0001:00003EB4
+ 24271 0001:00003EB7 24277 0001:00003EB8 24278 0001:00003EBB 24279 0001:00003EBD
+ 24280 0001:00003EBE 24281 0001:00003EBF 24282 0001:00003EC2 24283 0001:00003EC4
+ 24284 0001:00003EC6 24285 0001:00003EC8 24286 0001:00003ECB 24287 0001:00003ED0
+ 24289 0001:00003ED2 24290 0001:00003ED3 24291 0001:00003ED8 24292 0001:00003ED9
+ 24293 0001:00003EDA 24294 0001:00003EDD 24296 0001:00003EDF 24297 0001:00003EE2
+ 24298 0001:00003EE3 24300 0001:00003EE8 24302 0001:00003EE9 24305 0001:00003EEA
+ 24306 0001:00003EED 24307 0001:00003EF0 24308 0001:00003EF2 24310 0001:00003EF5
+ 24344 0001:00003EF8 24345 0001:00003EF9 24346 0001:00003EFA 24347 0001:00003EFD
+ 24348 0001:00003EFF 24349 0001:00003F02 24350 0001:00003F04 24351 0001:00003F07
+ 24353 0001:00003F0A 24354 0001:00003F0B 24355 0001:00003F0E 24356 0001:00003F11
+ 24357 0001:00003F16 24358 0001:00003F17 24359 0001:00003F1A 24360 0001:00003F1B
+ 24379 0001:00003F1C 24380 0001:00003F1D 24381 0001:00003F1E 24382 0001:00003F21
+ 24383 0001:00003F23 24384 0001:00003F26 24385 0001:00003F27 24386 0001:00003F28
+ 24387 0001:00003F2A 24388 0001:00003F2B 24389 0001:00003F2D 24391 0001:00003F32
+ 24392 0001:00003F33 24393 0001:00003F34 24394 0001:00003F37 24395 0001:00003F3A
+ 24396 0001:00003F3B 24397 0001:00003F40 24398 0001:00003F41 24399 0001:00003F44
+ 24400 0001:00003F45 24419 0001:00003F48 24420 0001:00003F4B 24421 0001:00003F4D
+ 24422 0001:00003F4E 24424 0001:00003F53 24580 0001:00003F54 24581 0001:00003F5E
+ 26416 0001:00003F60 26417 0001:00003F67 26422 0001:00003F68 26423 0001:00003F77
+ 26470 0001:00003F78 26471 0001:00003F87 26477 0001:00003F88 26478 0001:00003F89
+ 26479 0001:00003F8A 26481 0001:00003F8B 26482 0001:00003F8C 26484 0001:00003F8D
+ 26485 0001:00003F8F 26486 0001:00003F94 26487 0001:00003F95 26488 0001:00003F9B
+ 26490 0001:00003FA1 26491 0001:00003FA2 26492 0001:00003FA3 26493 0001:00003FA5
+ 26495 0001:00003FA7 26496 0001:00003FAD 26497 0001:00003FB3 26498 0001:00003FB4
+ 26500 0001:00003FB5 26501 0001:00003FB6 26502 0001:00003FB7 26503 0001:00003FB9
+ 26504 0001:00003FBA 26505 0001:00003FBC 26507 0001:00003FBE 26508 0001:00003FBF
+ 26510 0001:00003FC0 26511 0001:00003FC1 26512 0001:00003FC2 26513 0001:00003FC3
+ 26514 0001:00003FC5 26515 0001:00003FC6 26516 0001:00003FCB 26517 0001:00003FCC
+ 26518 0001:00003FCD 26519 0001:00003FCE 26520 0001:00003FD0 26521 0001:00003FD3
+ 26522 0001:00003FDA 26523 0001:00003FDD 26524 0001:00003FDF 26525 0001:00003FE1
+ 26528 0001:00003FE6 26529 0001:00003FE7 26530 0001:00003FE8 26531 0001:00003FE9
+ 26532 0001:00003FEB 26533 0001:00003FEC 26534 0001:00003FF1 26535 0001:00003FF2
+ 26536 0001:00003FF3 26537 0001:00003FF4 26538 0001:00003FF6 26539 0001:00003FF9
+ 26540 0001:00004000 26541 0001:00004003 26542 0001:00004005 26543 0001:00004007
+ 26546 0001:0000400C 26547 0001:0000400D 26548 0001:0000400E 26549 0001:0000400F
+ 26550 0001:00004010 26551 0001:00004013 26552 0001:00004014 26553 0001:00004015
+ 26554 0001:00004018 26555 0001:00004019 26558 0001:0000401A 26561 0001:0000401B
+ 26562 0001:0000401C 26563 0001:0000401D 26564 0001:0000401E 26630 0001:00004020
+ 26631 0001:00004021 26632 0001:00004022 26633 0001:00004027 26634 0001:00004029
+ 26635 0001:0000402E 26636 0001:00004030 26637 0001:00004036 26638 0001:0000403A
+ 26639 0001:0000403F 26640 0001:00004044 26641 0001:00004049 26642 0001:0000404B
+ 26643 0001:00004050 26644 0001:00004051 26645 0001:00004053 26646 0001:00004058
+ 26647 0001:0000405E 26648 0001:00004064 26649 0001:00004065 26650 0001:00004066
+ 27001 0001:00004068 27002 0001:0000406B 27003 0001:0000406C 27004 0001:0000406D
+ 27005 0001:0000406E 27006 0001:00004072 27007 0001:00004077 27008 0001:00004078
+ 27009 0001:0000407E 27010 0001:00004081 27011 0001:00004084 27012 0001:00004086
+ 27013 0001:00004088 27014 0001:0000408E 27015 0001:00004090 27016 0001:00004092
+ 27018 0001:00004097 27019 0001:00004098 27020 0001:0000409E 27021 0001:000040A5
+ 27022 0001:000040AC 27023 0001:000040AE 27024 0001:000040B4 27026 0001:000040B8
+ 27027 0001:000040BB 27028 0001:000040C1 27029 0001:000040C4 27030 0001:000040C7
+ 27031 0001:000040CD 27032 0001:000040CE 27033 0001:000040CF 27034 0001:000040D1
+ 27035 0001:000040D4 27036 0001:000040D7 27037 0001:000040D8 27038 0001:000040DD
+ 27039 0001:000040DE 27040 0001:000040E0 27041 0001:000040E3 27042 0001:000040E6
+ 27044 0001:000040E9 27045 0001:000040EA 27046 0001:000040EC 27047 0001:000040EF
+ 27048 0001:000040F1 27049 0001:000040F2 27050 0001:000040F8 27051 0001:000040F9
+ 27052 0001:000040FB 27054 0001:00004101 27055 0001:00004108 27056 0001:0000410F
+ 27057 0001:00004115 27058 0001:0000411A 27059 0001:0000411C 27060 0001:00004121
+ 27061 0001:00004122 27062 0001:00004123 27204 0001:00004128 27206 0001:00004129
+ 27207 0001:0000412B 27209 0001:00004130 27210 0001:00004135 27211 0001:0000413A
+ 27212 0001:0000413F 27213 0001:00004145 27214 0001:0000414B 27215 0001:0000414E
+ 27216 0001:00004154 27217 0001:00004158 27219 0001:0000415E 27220 0001:0000415F
+ 27221 0001:00004160 27222 0001:00004165 27229 0001:00004166 28859 0001:00004168
+ 28860 0001:0000416D 28861 0001:0000416F 28862 0001:00004172 28863 0001:00004173
+ 28864 0001:00004174 28865 0001:00004176 28867 0001:00004179 28868 0001:0000417E
+ 28869 0001:00004185 28871 0001:00004187 28872 0001:00004189 28873 0001:0000418A
+ 28874 0001:0000418F 28875 0001:00004195 28876 0001:0000419A 28877 0001:0000419B
+ 28878 0001:0000419C 28879 0001:000041A1 28880 0001:000041A3 28881 0001:000041A4
+ 28882 0001:000041A5 28883 0001:000041A6 28884 0001:000041A7 28885 0001:000041AC
+ 28886 0001:000041AF 28887 0001:000041B0 28888 0001:000041B3 28889 0001:000041B8
+ 28890 0001:000041BA 28891 0001:000041C0 28892 0001:000041C2 28893 0001:000041C3
+ 28894 0001:000041C4 28895 0001:000041C5 28896 0001:000041CA 28897 0001:000041CD
+ 28898 0001:000041CE 28900 0001:000041CF 28901 0001:000041D1 30536 0001:000041D4
+ 30537 0001:000041D5 30538 0001:000041D6 30539 0001:000041D7 30540 0001:000041D9
+ 30541 0001:000041DB 30542 0001:000041DD 30543 0001:000041E2 30544 0001:000041E7
+ 30545 0001:000041E8 30546 0001:000041E9 30548 0001:000041EA 30552 0001:000041EC
+ 30553 0001:000041EE 30554 0001:000041F4 30555 0001:000041FA 30556 0001:000041FC
+ 30557 0001:00004201 30558 0001:00004206 30559 0001:00004207 30560 0001:0000420C
+ 30567 0001:0000420D 30568 0001:00004213 30569 0001:00004215 30570 0001:00004218
+ 30571 0001:0000421B 30572 0001:0000421E 30573 0001:00004221 30574 0001:00004224
+ 30576 0001:00004225 30580 0001:00004227 30581 0001:00004229 30582 0001:0000422B
+ 30583 0001:0000422F 30584 0001:00004236 30585 0001:00004238 30587 0001:0000423E
+ 30588 0001:00004241 30589 0001:00004243 30590 0001:00004246 30591 0001:0000424C
+ 30592 0001:0000424D 30593 0001:0000424E 30698 0001:00004250 30699 0001:00004251
+ 30700 0001:00004252 30701 0001:00004254 30702 0001:00004259 30703 0001:0000425B
+ 30704 0001:0000425D 30705 0001:00004262 30706 0001:00004263 30707 0001:00004268
+ 30708 0001:00004269 30709 0001:0000426A 30710 0001:0000426C 30711 0001:00004271
+ 30712 0001:00004276 30713 0001:0000427B 30714 0001:00004282 30715 0001:0000428C
+ 30716 0001:00004296 30717 0001:0000429D
+
+Line numbers for IdResourceStrings(IdResourceStrings.pas) segment .text
+
+   336 0001:00005998   336 0001:0000599F
+
+Line numbers for IdURI(IdURI.pas) segment .text
+
+   177 0001:000059D0   177 0001:000059D7
+
+Line numbers for IndyProcs(IndyProcs.pas) segment .text
+
+   105 0001:000059D8   106 0001:000059DF   107 0001:000059E5   108 0001:000059EC
+   110 0001:000059F2   112 0001:000059FB   113 0001:00005A04   114 0001:00005A0D
+   116 0001:00005A18   117 0001:00005A1D   118 0001:00005A24   120 0001:00005A2F
+   124 0001:00005A3A   126 0001:00005A3F   127 0001:00005A48   129 0001:00005A5D
+   132 0001:00005A68   133 0001:00005A73   136 0001:00005A9C   137 0001:00005AA6
+   138 0001:00005AB4   140 0001:00005ACA   142 0001:00005AD4   152 0001:00005ADC
+   153 0001:00005AE2   154 0001:00005AFF   156 0001:00005B34   156 0001:00005B3B
+
+Line numbers for IdGlobal(IdGlobal.pas) segment .text
+
+   249 0001:00005B3C   250 0001:00005B42   252 0001:00005B74   255 0001:00005B78
+   256 0001:00005B7E   257 0001:00005B87   259 0001:00005B9B   261 0001:00005BA7
+   267 0001:00005BB8   268 0001:00005BBA   269 0001:00005BBE   270 0001:00005BC5
+   414 0001:00005CAC   415 0001:00005CC2   416 0001:00005CCE   417 0001:00005CE3
+   418 0001:00005CEB   419 0001:00005D12   563 0001:00005D18   565 0001:00005D1D
+   644 0001:00005D20   645 0001:00005D2E   647 0001:00005D3C   651 0001:00005D49
+   653 0001:00005D55   655 0001:00005D59   656 0001:00005D63   658 0001:00005D69
+   663 0001:00005D72   664 0001:00005D85   666 0001:00005D8B   669 0001:00005DA3
+   844 0001:00005DB8   846 0001:00005DBD  1052 0001:00005DC0  1053 0001:00005DC5
+  1062 0001:00005DC8  1063 0001:00005E34  1055 0001:00005E38  1058 0001:00005E54
+  1060 0001:00005E69  1061 0001:00005E90
+
+Line numbers for IdBaseComponent(IdBaseComponent.pas) segment .text
+
+    41 0001:00005E94    42 0001:00005E9A    43 0001:00005E9F    45 0001:00005ED0
+    45 0001:00005ED7
+
+Line numbers for IdAntiFreezeBase(IdAntiFreezeBase.pas) segment .text
+
+   133 0001:00005F08   133 0001:00005F0F
+
+Line numbers for IdWinsock(IdWinsock.pas) segment .text
+
+  1169 0001:00005F10  1170 0001:00005F16  1171 0001:00005F22  1173 0001:00005F2B
+  1174 0001:00005F3D  1175 0001:00005F4F  1176 0001:00005F61  1177 0001:00005F73
+  1178 0001:00005F85  1179 0001:00005F97  1180 0001:00005FA9  1181 0001:00005FBB
+  1182 0001:00005FCD  1183 0001:00005FDF  1184 0001:00005FF1  1185 0001:00006003
+  1186 0001:00006015  1187 0001:00006027  1188 0001:00006039  1189 0001:0000604B
+  1190 0001:0000605D  1191 0001:0000606F  1192 0001:00006081  1193 0001:00006093
+  1194 0001:000060A5  1195 0001:000060B7  1197 0001:000060C9  1198 0001:000060DB
+  1199 0001:000060ED  1201 0001:000060FF  1203 0001:00006111  1204 0001:00006123
+  1205 0001:00006135  1207 0001:00006147  1209 0001:00006159  1210 0001:0000616B
+  1212 0001:0000617D  1214 0001:0000618F  1216 0001:000061A1  1218 0001:000061B3
+  1220 0001:000061C5  1222 0001:000061D7  1224 0001:000061E9  1226 0001:000061FB
+  1228 0001:0000620D  1230 0001:0000621F  1232 0001:00006231  1234 0001:00006243
+  1235 0001:00006255  1236 0001:00006267  1237 0001:00006279  1239 0001:0000628B
+  1240 0001:0000629D  1241 0001:000062AF  1248 0001:000062C1  1252 0001:000065B8
+  1254 0001:000065C1  1256 0001:000065CC  1257 0001:000065D3  1264 0001:00006604
+  1264 0001:0000660B
+
+Line numbers for IdStackConsts(IdStackConsts.pas) segment .text
+
+   163 0001:0000663C   163 0001:00006643
+
+Line numbers for IdStackWinsock(IdStackWinsock.pas) segment .text
+
+   101 0001:000066E8   102 0001:000066E9   103 0001:000066F8   115 0001:00006700
+   120 0001:00006704   121 0001:0000670D   125 0001:00006714   126 0001:00006719
+   130 0001:00006729   132 0001:00006733   135 0001:0000673C   136 0001:0000673F
+   137 0001:00006748   138 0001:00006751   139 0001:00006756   140 0001:0000675E
+   141 0001:00006767   144 0001:0000676C   145 0001:0000678B   151 0001:00006807
+   158 0001:0000681C   159 0001:0000683C   160 0001:00006843   161 0001:00006857
+   162 0001:0000686F   163 0001:000068A4   170 0001:000068AC   171 0001:000068BF
+   172 0001:000068C7   174 0001:000068D2   178 0001:000068D9   180 0001:000068EB
+   181 0001:000068FD   182 0001:0000690D   186 0001:00006918   187 0001:00006922
+   194 0001:00006924   195 0001:00006930   196 0001:00006934   197 0001:00006947
+   198 0001:00006959   199 0001:00006969   206 0001:00006974   207 0001:0000697E
+   208 0001:0000698F   210 0001:00006993   214 0001:0000699F   215 0001:000069A4
+   216 0001:000069A9   217 0001:000069B0   218 0001:000069B7   219 0001:000069BE
+   221 0001:000069C9   227 0001:000069D0   228 0001:000069DA   229 0001:000069EE
+   230 0001:00006A02   232 0001:00006A06   236 0001:00006A12   238 0001:00006A1B
+   241 0001:00006A20   242 0001:00006A23   243 0001:00006A2F   244 0001:00006A48
+   245 0001:00006A58   250 0001:00006A5C   251 0001:00006A67   256 0001:00006A68
+   257 0001:00006A6B   258 0001:00006A7E   266 0001:00006A84   267 0001:00006AA4
+   268 0001:00006AAB   269 0001:00006ACB   270 0001:00006AE3   271 0001:00006B18
+   282 0001:00006B20   283 0001:00006B27   285 0001:00006B2B   286 0001:00006B32
+   287 0001:00006B3B   289 0001:00006B48   290 0001:00006B51   287 0001:00006B54
+   292 0001:00006B57   297 0001:00006B5C   298 0001:00006B6A   300 0001:00006B6E
+   304 0001:00006B74   306 0001:00006B89   307 0001:00006B95   304 0001:00006B9B
+   308 0001:00006B9E   310 0001:00006BA6   312 0001:00006BB0   313 0001:00006BC3
+   314 0001:00006BD5   315 0001:00006BE7   316 0001:00006BF9   317 0001:00006C06
+   318 0001:00006C13   319 0001:00006C21   321 0001:00006C26   325 0001:00006C4C
+   326 0001:00006C59   327 0001:00006C6C   329 0001:00006C92   330 0001:00006C9F
+   331 0001:00006CAC   332 0001:00006CBC   336 0001:00006CC8   337 0001:00006CCB
+   338 0001:00006CDE   345 0001:00006CE4   346 0001:00006CF3   349 0001:00006D02
+   350 0001:00006D08   351 0001:00006D1B   353 0001:00006D2D   354 0001:00006D46
+   358 0001:00006D50   359 0001:00006D53   360 0001:00006D6A   363 0001:00006D70
+   364 0001:00006D73   366 0001:00006D79   368 0001:00006D81   369 0001:00006D88
+   370 0001:00006D8B   374 0001:00006D90   375 0001:00006D99   379 0001:00006D9C
+   380 0001:00006D9F   381 0001:00006DAE   385 0001:00006DB4   386 0001:00006DBE
+   390 0001:00006DC0   391 0001:00006DCA   396 0001:00006DCC   397 0001:00006DD5
+   398 0001:00006DEA   400 0001:00006DEE   404 0001:00006E04   405 0001:00006E12
+   408 0001:00006E2B   413 0001:00006E33   421 0001:00006E64   422 0001:00006E80
+   423 0001:00006E88   424 0001:00006E96   425 0001:00006EA4   426 0001:00006EBF
+   428 0001:00006EC3   429 0001:00006ED8   430 0001:00006EDA   433 0001:00006EED
+   434 0001:00006F02   431 0001:00006F03   438 0001:00006F1C   440 0001:00006F5C
+   444 0001:00006F64   445 0001:00006F6E   449 0001:00006F70   450 0001:00006F7A
+   460 0001:00006F7C   461 0001:00006F98   462 0001:00006FA0   463 0001:00006FBC
+   465 0001:00006FC0   469 0001:00006FCC   470 0001:00006FD2   473 0001:00006FD6
+   474 0001:00006FF1   471 0001:00006FF2   477 0001:0000701D   480 0001:00007024
+   481 0001:0000702A   482 0001:0000703A   490 0001:00007040   491 0001:00007046
+   492 0001:0000704A   494 0001:00007056   495 0001:0000705D   496 0001:00007060
+   497 0001:00007065   498 0001:00007074   501 0001:00007076   502 0001:00007080
+   503 0001:0000708A   504 0001:00007092   506 0001:00007099   507 0001:000070A4
+   508 0001:000070B2   510 0001:000070C1   515 0001:000070C8   516 0001:000070EA
+   517 0001:000070EF   520 0001:00007112   521 0001:00007120   523 0001:0000713C
+   525 0001:00007157   527 0001:00007188   530 0001:00007190   533 0001:000071B9
+   534 0001:000071D6   535 0001:000071F4   536 0001:00007212   538 0001:00007252
+   543 0001:00007264   544 0001:0000726F   551 0001:00007270   552 0001:00007292
+   553 0001:00007299   554 0001:000072B4   555 0001:000072BA   556 0001:000072D2
+   557 0001:00007305   564 0001:00007310   565 0001:00007332   566 0001:00007339
+   567 0001:00007354   568 0001:0000735A   569 0001:00007372   570 0001:000073A5
+   572 0001:000073E0   573 0001:000073E9   575 0001:000073F2   577 0001:000073FD
+
+Line numbers for IdStack(IdStack.pas) segment .text
+
+   173 0001:00007490   174 0001:0000749B   180 0001:0000749C   181 0001:000074A8
+   182 0001:000074AA   184 0001:000074AD   185 0001:000074B7   187 0001:000074C1
+   189 0001:000074C5   190 0001:000074C7   192 0001:000074C9   185 0001:000074CC
+   193 0001:000074CF   195 0001:000074DB   199 0001:000074E4   200 0001:000074E5
+   201 0001:000074F2   205 0001:000074F5   247 0001:000074F8   251 0001:000074FC
+   252 0001:00007509   264 0001:0000750C   266 0001:00007511   270 0001:00007514
+   271 0001:0000751D   273 0001:0000752D   276 0001:0000753B   278 0001:00007548
+   282 0001:00007553   284 0001:0000755E   287 0001:0000758C   288 0001:000075AE
+   289 0001:000075B5   290 0001:000076C8   291 0001:000076D9   292 0001:000076EA
+   293 0001:000076FB   294 0001:0000770C   295 0001:0000771D   297 0001:0000772E
+   298 0001:0000773F   299 0001:00007750   300 0001:00007761   301 0001:00007772
+   302 0001:00007783   303 0001:00007794   304 0001:000077A5   305 0001:000077B6
+   306 0001:000077C7   307 0001:000077D8   308 0001:000077E9   309 0001:000077FA
+   310 0001:0000780B   311 0001:0000781C   312 0001:0000782D   313 0001:0000783E
+   314 0001:0000784F   315 0001:00007860   316 0001:00007871   317 0001:00007882
+   318 0001:00007893   319 0001:000078A4   320 0001:000078B2   321 0001:000078C0
+   322 0001:000078CE   323 0001:000078DC   324 0001:000078EA   325 0001:000078F8
+   326 0001:00007906   327 0001:00007914   328 0001:00007922   330 0001:0000792E
+   331 0001:0000798D   338 0001:00007994   339 0001:00007997   340 0001:000079BD
+   342 0001:000079C0   343 0001:000079E4   344 0001:000079F7   345 0001:00007A0A
+   346 0001:00007A1D   347 0001:00007A28   348 0001:00007A82   351 0001:00007A94
+   352 0001:00007A97   353 0001:00007A9F   354 0001:00007AA8   357 0001:00007AAC
+   358 0001:00007ACE   359 0001:00007AFE   361 0001:00007B34   361 0001:00007B3B
+
+Line numbers for IdComponent(IdComponent.pas) segment .text
+
+   105 0001:00007B3C   106 0001:00007B41   108 0001:00007B4B   110 0001:00007B5D
+   121 0001:00007B63   124 0001:00007B64   125 0001:00007B67   126 0001:00007B6D
+   128 0001:00007B76   129 0001:00007B82   131 0001:00007B8B   132 0001:00007B94
+   155 0001:00007B98   156 0001:00007B9A   157 0001:00007BA5   159 0001:00007BAC
+   160 0001:00007BB0   161 0001:00007BB6   163 0001:00007BBD   166 0001:00007BCA
+   169 0001:00007BD0   170 0001:00007BD2   172 0001:00007BE0   173 0001:00007BE4
+   175 0001:00007BEB   178 0001:00007BFC   181 0001:00007C00   182 0001:00007C07
+   184 0001:00007C15   186 0001:00007C1C   189 0001:00007C26   190 0001:00007C2A
+   192 0001:00007CAC   192 0001:00007CBF
+
+Line numbers for KOLClasses(KOLClasses.pas) segment .text
+
+   178 0001:00007CC0   179 0001:00007CC8   182 0001:00007CCC   183 0001:00007CCF
+   184 0001:00007CD8   185 0001:00007CE1   190 0001:00007CE4   191 0001:00007CE5
+   193 0001:00007CF2   194 0001:00007CF6   196 0001:00007CFA   197 0001:00007CFC
+   199 0001:00007D03   203 0001:00007D08   204 0001:00007D0F   206 0001:00007D19
+   207 0001:00007D1C   212 0001:00007D20   228 0001:00007D24   229 0001:00007D2A
+   231 0001:00007D31   232 0001:00007D35   233 0001:00007D3C   234 0001:00007D40
+   236 0001:00007D49   240 0001:00007D4C   241 0001:00007D53   246 0001:00007D54
+   247 0001:00007D5A   248 0001:00007D61   250 0001:00007D69   251 0001:00007D77
+   253 0001:00007D80   315 0001:00007D84   316 0001:00007D8A   317 0001:00007D91
+   462 0001:00007D94   465 0001:00007D9A   466 0001:00007DA4   467 0001:00007DA7
+   468 0001:00007DAD   469 0001:00007DB0   470 0001:00007DB9   472 0001:00007DC0
+   475 0001:00007DC4   477 0001:00007DCA   478 0001:00007DD4   479 0001:00007DD9
+   480 0001:00007DE0   689 0001:00007E14   689 0001:00007E1B
+
+Line numbers for IdSocketHandle(IdSocketHandle.pas) segment .text
+
+   104 0001:00007E48   106 0001:00007E51   107 0001:00007E5A   108 0001:00007E6D
+   109 0001:00007E71   112 0001:00007E78   113 0001:00007E7F   115 0001:00007E85
+   116 0001:00007E89   117 0001:00007E9D   118 0001:00007EAC   120 0001:00007EB5
+   123 0001:00007EBC   124 0001:00007EC0   125 0001:00007EDB   127 0001:00007EE0
+   128 0001:00007EE7   130 0001:00007EF0   133 0001:00007EF4   134 0001:00007EF7
+   135 0001:00007F00   136 0001:00007F09   139 0001:00007F0C   140 0001:00007F10
+   141 0001:00007F28   150 0001:00007F30   151 0001:00007F3D   153 0001:00007F68
+   160 0001:00007F70   161 0001:00007F74   162 0001:00007F90   164 0001:00007F95
+   170 0001:00007FA8   174 0001:00007FB9   178 0001:00007FBC   183 0001:00007FC4
+   184 0001:00007FC8   185 0001:00007FE8   222 0001:00007FF0   224 0001:00007FF4
+   225 0001:00008003   226 0001:00008005   227 0001:00008008   236 0001:00008010
+   239 0001:00008014   240 0001:00008017   243 0001:0000801E   244 0001:00008027
+   246 0001:0000802E   249 0001:00008034   254 0001:00008038   255 0001:00008044
+   260 0001:00008048   262 0001:00008052   264 0001:0000805F   267 0001:00008064
+   268 0001:00008078   269 0001:0000807E   272 0001:00008083   274 0001:00008091
+   275 0001:000080A5   281 0001:000080AB   286 0001:000080B5   288 0001:000080BD
+   289 0001:000080CB   290 0001:000080D6   292 0001:000080FC   294 0001:0000810F
+   317 0001:00008118   318 0001:0000811A   319 0001:00008135   324 0001:00008138
+   325 0001:0000813A   326 0001:00008155   329 0001:00008158   330 0001:0000815B
+   331 0001:0000815F   332 0001:00008166   334 0001:0000816A   335 0001:00008172
+   337 0001:00008177   338 0001:0000817F   339 0001:00008184   383 0001:000081B8
+   383 0001:000081BF
+
+Line numbers for IdRawBase(IdRawBase.pas) segment .text
+
+    85 0001:000081C0    86 0001:000081C3    87 0001:000081CA    88 0001:000081D4
+    89 0001:000081E0    90 0001:000081E5    91 0001:000081EA    92 0001:000081F1
+    93 0001:000081F8    96 0001:000081FC    97 0001:000081FF    98 0001:00008207
+    99 0001:0000820F   100 0001:00008218   103 0001:0000821C   104 0001:0000821F
+   106 0001:00008228   108 0001:00008235   109 0001:0000824A   110 0001:0000824D
+   118 0001:00008250   119 0001:00008256   120 0001:0000825C   121 0001:00008264
+   122 0001:0000826E   126 0001:00008274   127 0001:00008285   129 0001:0000828F
+   130 0001:00008293   131 0001:00008296   132 0001:000082A8   135 0001:000082BD
+   139 0001:000082C1   140 0001:000082C3   155 0001:000082CC   156 0001:000082F6
+   157 0001:00008313   158 0001:0000834E   169 0001:00008388   169 0001:0000838F
+
+Line numbers for IdRawClient(IdRawClient.pas) segment .text
+
+    30 0001:000083C0    30 0001:000083C7
+
+Line numbers for IdRawHeaders(IdRawHeaders.pas) segment .text
+
+   306 0001:000083F8   306 0001:000083FF
+
+Line numbers for IdIcmpClient(IdIcmpClient.pas) segment .text
+
+    89 0001:00008444    91 0001:00008445    92 0001:00008454    99 0001:0000845C
+   102 0001:00008460   103 0001:00008463   104 0001:0000846A   105 0001:00008471
+   106 0001:0000847A   107 0001:00008481   117 0001:00008484   118 0001:00008488
+   119 0001:00008497   120 0001:000084A7   121 0001:000084AD   122 0001:000084AF
+   124 0001:000084B8   125 0001:000084BF   122 0001:000084C0   126 0001:000084C3
+   128 0001:000084C9   130 0001:000084D9   131 0001:000084E8   132 0001:000084EF
+   133 0001:000084F4   139 0001:000084FC   140 0001:00008500   141 0001:0000850A
+   142 0001:0000851C   143 0001:00008522   145 0001:00008524   146 0001:00008527
+   147 0001:0000852B   148 0001:00008534   149 0001:0000853F   150 0001:00008547
+   153 0001:0000854E   154 0001:00008556   151 0001:00008557   156 0001:0000855F
+   158 0001:0000856A   159 0001:00008571   163 0001:00008574   164 0001:0000858D
+   172 0001:00008590   173 0001:000085B3   176 0001:000085B9   177 0001:000085BD
+   178 0001:000085CA   179 0001:000085CE   180 0001:000085D9   181 0001:000085DD
+   185 0001:000085E6   186 0001:000085EA   187 0001:000085F0   188 0001:000085FF
+   193 0001:00008605   197 0001:0000860C   199 0001:00008623   201 0001:00008629
+   203 0001:0000862F   210 0001:00008633   211 0001:00008638   212 0001:00008658
+   213 0001:00008660   214 0001:0000866B   215 0001:00008679   218 0001:00008682
+   219 0001:000086A8   222 0001:000086C0   223 0001:000086DB   224 0001:0000871F
+   227 0001:00008724   228 0001:00008727   229 0001:0000872E   230 0001:00008735
+   231 0001:0000873C   232 0001:0000874A   238 0001:0000874C   239 0001:00008753
+   240 0001:00008762   241 0001:00008767   242 0001:00008776   243 0001:00008784
+   244 0001:0000878F   247 0001:00008794   248 0001:00008795   250 0001:0000879F
+   252 0001:000087B1   254 0001:000087E4   254 0001:000087EB
+
+Line numbers for IdUDPBase(IdUDPBase.pas) segment .text
+
+   251 0001:0000881C   251 0001:00008823
+
+Line numbers for IdUDPClient(IdUDPClient.pas) segment .text
+
+    41 0001:00008854    41 0001:0000885B
+
+Line numbers for IdTrivialFTPBase(IdTrivialFTPBase.pas) segment .text
+
+    67 0001:0000888C    67 0001:00008893
+
+Line numbers for IdTrivialFTP(IdTrivialFTP.pas) segment .text
+
+   291 0001:000088C4   291 0001:000088CB
+
+Line numbers for IdSocks(IdSocks.pas) segment .text
+
+   108 0001:000088FC   108 0001:00008903
+
+Line numbers for IdIntercept(IdIntercept.pas) segment .text
+
+    95 0001:00008934    95 0001:0000893B
+
+Line numbers for IdTCPConnection(IdTCPConnection.pas) segment .text
+
+  1106 0001:0000896C  1106 0001:00008973
+
+Line numbers for IdTCPClient(IdTCPClient.pas) segment .text
+
+   355 0001:000089A4   355 0001:000089AB
+
+Line numbers for IdTime(IdTime.pas) segment .text
+
+   118 0001:000089DC   118 0001:000089E3
+
+Line numbers for IdThread(IdThread.pas) segment .text
+
+   157 0001:00008A14   157 0001:00008A1B
+
+Line numbers for IdTelnet(idTelnet.pas) segment .text
+
+   506 0001:00008A4C   506 0001:00008A53
+
+Line numbers for IdIPWatch(IdIPWatch.pas) segment .text
+
+   322 0001:00008A84   322 0001:00008A8B
+
+Line numbers for IdSNTP(IdSNTP.pas) segment .text
+
+   193 0001:00008ABC   193 0001:00008AC3
+
+Line numbers for IdSSLIntercept(IdSSLIntercept.pas) segment .text
+
+    49 0001:00008AF4    49 0001:00008AFB
+
+Line numbers for IdSSLOpenSSLHeaders(IdSSLOpenSSLHeaders.pas) segment .text
+
+  4544 0001:00008AFC  4545 0001:00008B10  4546 0001:00008B17  4547 0001:00008B2B
+  4548 0001:00008B32  4694 0001:00008B34  4695 0001:00008B67  4692 0001:00008B6C
+  4693 0001:00008B73
+
+Line numbers for MySyncObjs(MySyncObjs.pas) segment .text
+
+   223 0001:00008BA4   223 0001:00008BAB
+
+Line numbers for IdThreadMgrDefault(IdThreadMgrDefault.pas) segment .text
+
+    57 0001:00008BDC    57 0001:00008BE3
+
+Line numbers for IdThreadMgr(IdThreadMgr.pas) segment .text
+
+    91 0001:00008C14    91 0001:00008C1B
+
+Line numbers for IdTCPServer(IdTCPServer.pas) segment .text
+
+   497 0001:00008C4C   497 0001:00008C53
+
+Line numbers for IdSSLOpenSSL(IdSSLOpenSSL.pas) segment .text
+
+   314 0001:00008C54   315 0001:00008C59  1256 0001:00008C5C  1257 0001:00008C8F
+  1253 0001:00008C94  1255 0001:00008C9B
+
+Line numbers for Unit1(Unit1_1.inc) segment .text
+
+     4 0001:00008CB0     9 0001:00008CB7    11 0001:00008CC6    12 0001:00008CF7
+    13 0001:00008CFE    15 0001:00008D0A    16 0001:00008D2F    18 0001:00008D45
+    19 0001:00008D7B    20 0001:00008D87    21 0001:00008DA0    23 0001:00008DAC
+    24 0001:00008DDF    25 0001:00008DEB    26 0001:00008E04    27 0001:00008E13
+    28 0001:00008E2A    30 0001:00008E33
+
+Line numbers for Unit1(Unit1.pas) segment .text
+
+    60 0001:00008E78    62 0001:00008E9B    63 0001:00008EA2    65 0001:00008EB1
+    67 0001:00008EBE    75 0001:00008F3C    81 0001:00008F98    82 0001:00008FBB
+    83 0001:00008FD0    84 0001:00008FD9    85 0001:00008FE6    86 0001:00008FF4
+    87 0001:0000900F    89 0001:00009014    90 0001:0000901B    92 0001:00009027
+    87 0001:00009031    94 0001:00009041    96 0001:00009073    99 0001:0000907C
+   100 0001:0000907F   101 0001:0000908C   102 0001:00009096   103 0001:000090A2
+   104 0001:000090AE   106 0001:000090E0   106 0001:000090E7
+
+Line numbers for Sysutils(SysUtils.pas) segment .text
+
+     7 0001:00009118     7 0001:0000911F
+
+Line numbers for Ping(E:\Redactor\kolDown\KOLIndy\Ping\Ping.dpr) segment .text
+
+    11 0001:00009308
+
+Line numbers for Ping(Ping_0.inc) segment .text
+
+     7 0001:00009318    14 0001:00009324
+
+Line numbers for Ping(E:\Redactor\kolDown\KOLIndy\Ping\Ping.dpr) segment .text
+
+    21 0001:00009333
+
+Bound resource files
+
+Ping.drf
+
+
+Program entry point at 0001:00009308

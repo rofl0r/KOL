@@ -1,0 +1,3 @@
+This simple unit is provided to allow you to take a screenshot and return it as PBitmap.
+
+By MrBrdo

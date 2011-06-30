@@ -1,0 +1,443 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Мастера KOL и MCK (документация, исходники, скачать)</TITLE>
+
+<META http-equiv=Keywords 
+
+content="KOL,MCK,delphi, russian, исходники, документация, delphigfx, советы, помощь, компоненты, components, free, Borland, литература, pascal, Borland, microsoft ,windows, интернет, информационные технологии, Internet-technologies, tutorial, programming, программирование, FAQ, Service, faqs, help, server, компактные, программы, VCL" 
+
+name=Keywords>
+
+<META http-equiv=Description content="Мастера KOL  и MCK" name=Description>
+
+<META content=INDEX,FOLLOW name=robots>
+
+<META content="5 days" name=revisit-after>
+
+<META 
+
+content="kol mck vcl delphi pop sources server code base tools open source free software shareware download free tutorial news opengl directx" 
+
+name=RESOURCE-TYPE>
+
+<META http-equiv=content-style-type content=text/css>
+
+<META http-equiv=Content-type content="text/html; charset=windows-1251">
+
+<LINK 
+
+href="main.css" type=text/css rel=stylesheet>
+
+<SCRIPT language=JavaScript 
+
+src="overlib.js"></SCRIPT>
+
+<META content="Microsoft FrontPage 5.0" name=GENERATOR>
+
+</HEAD>
+
+<BODY bgColor=#f2f0f0 leftMargin=0 topMargin=0 marginheight="0" marginwidth="0" 
+
+leftmardgin="0" topmardgin="0" mardginheight="0" mardginwidth="0">
+
+<A 
+
+name=PageTop></A> 
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#112863 border=0>
+
+  <TBODY> 
+
+  <TR> 
+
+    <TD 
+
+    background="bg1.gif" width="80%" height="72"><A 
+
+      href="http://kol.mastak.ru/"><IMG height=81 alt="KOL и MCK - Компактные программы на Delphi" 
+
+      src="logo.gif" 
+
+      width=296 border=0></A></TD>
+
+    <TD vAlign=top align=right 
+
+    background="bg1.gif" width="20%" height="72"> <A href="http://kol.mastak.ru/" target=_top><IMG 
+
+      height=18 alt="Титульная страница" 
+
+      src="home.gif" 
+
+      width=30 border=0></A>&nbsp;<a 
+
+      href="javascript:window.external.AddFavorite('http://kol.mastak.ru/','KOL и MCK - Компактные программы на Delphi')"><img 
+
+      height=18 alt="Сделать закладку" src="bookmark.gif" width=30 
+
+      border=0></a>&nbsp;<A href="mailto:support@kol.mastak.ru"><IMG 
+
+      height=18 alt="Написать письмо" 
+
+      src="mail.gif" 
+
+      width=30 border=0></A>
+
+      <!--begin of Top100-->
+
+      <a href="http://top100.rambler.ru/top100/"> <img src="http://counter.rambler.ru/top100.cnt?272323" alt="Rambler's Top100" width=1 height=1 border=0></a> 
+
+      <!--end of Top100 code-->
+
+      <!--Rating@Mail.ru COUNTER-->
+
+      <script language="JavaScript"><!--
+
+d=document;a='';a+=';r='+escape(d.referrer)
+
+js=10//--></script>
+
+      <script language="JavaScript1.1"><!--
+
+a+=';j='+navigator.javaEnabled()
+
+js=11//--></script>
+
+      <script language="JavaScript1.2"><!--
+
+s=screen;a+=';s='+s.width+'*'+s.height
+
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+
+js=12//--></script>
+
+      <script language="JavaScript1.3"><!--
+
+js=13//--></script>
+
+      <script language="JavaScript"><!--
+
+d.write('<img src="http://top.list.ru/counter'+
+
+'?id=364537;js='+js+a+';rand='+Math.random()+
+
+'" height=1 width=1>')
+
+if(js>11)d.write('<'+'!-- ')//--></script>
+
+      <noscript><img
+
+src="http://top.list.ru/counter?js=na;id=364537"
+
+height=1 width=1 alt=""></noscript>
+
+      <script language="JavaScript"><!--
+
+if(js>11)d.write('--'+'>')//--></script>
+
+      <!--/COUNTER-->
+
+      <a href=http://www.mastak.ru/><img border=0 src=http://www.mastak.ru/images/banners/09.gif alt="Mastak.ru - качественный хостинг на двух континентах" width=120 height=60 align="right"></a> 
+
+    </TD>
+
+  </TR>
+
+  <TR> 
+
+      
+
+    <TD 
+
+    background="bg2.gif" 
+
+    bgColor=#dedbde width="65%" align="right"> 
+
+      <!--// MENU--><FONT class=smallmenu><A 
+      onmouseover="Show('Новости сайта')" onmouseout=Out() 
+      href="http://kol.mastak.ru/index.html#news" target=_parent>Новости</A> | 
+      <A 
+      onmouseover="Show('Коллективная разработка программных проектов на KOL и MCK')" 
+      onmouseout=Out() href="http://kol.mastak.ru/narod.htm"><B>Народный
+      проект</B></A> |<A onmouseover="Show('Документы о  работе с KOL и MCK')" 
+      onmouseout=Out() href="http://kol.mastak.ru/articles.htm"><B> Статьи 
+      </B></A>| <A onmouseover="Show('Документы о  работе с KOL и MCK')" 
+      onmouseout=Out() href="http://kol.mastak.ru/FAQ.htm"><B>ЧаВо 
+      </B></A>| <A 
+      onmouseover="Show('Здесь вы можете скачать свеженький KOL и MCK и многое другое')" 
+      onmouseout=Out() href="http://kol.mastak.ru/files.htm">Файлы</A> | <A
+      onmouseover="Show('Здесь вы можете задать свой вопрос и наверняка получите ответ')" 
+      onmouseout=Out() href="http://delphi.mastak.ru/forum/kol.html">Форум</A> | 
+      <A 
+      onmouseover="Show('Ссылки на  сайты посвященные KOL, MCK и другим интересным технологиям ')" 
+      onmouseout=Out() href="http://kol.mastak.ru/links.htm">Сайты</A> | <!--MENU //-->
+
+      </FONT></TD>
+
+<TD 
+
+    background="bg2.gif" 
+
+    bgColor=#dedbde width="35%" align="right"><font class=smallmenu><a 
+
+      onMouseOver="Show('Вселенная Delphi')" onMouseOut=Out() 
+
+      href="http://delphi.mastak.ru/">Мастера Delphi</a> |  </font></TD>
+
+  </TR>
+
+  <TR> 
+
+    <TD bgColor=#333333 colSpan=2><IMG height=1 alt="" 
+
+      src="1x1.gif" 
+
+      width=1 border=0></TD>
+
+  </TR>
+
+  </TBODY> 
+
+</TABLE>
+
+<DIV class=ahint id=hint></DIV>
+
+<A href="http://mastak.ru/p/1814"> 
+
+<!--// BODY -->
+</A> 
+
+  <H3 class="hnews">KOL и MCK - Компактные программы на Delphi</H3>
+  
+<table width="93%" border="1" bordercolor="#999999" align="center" cellspacing="0" cellpadding="5">
+  <tr> 
+    <td align="left" height="61"> 
+      <p>Сайт посвящен 
+        работе с <b>KOL</b> и <b>MCK</b> в <b>Delphi</b>.<br>
+        <b>KOL</b> - это библиотека объектных типов , которая заменяет <b>VCL</b>. 
+        Основная цель KOL - <b>уменьшение размера</b> конечной программы в <b>5-10</b> 
+        раз по сравнению с тем, что дает VCL. Вы
+      сможете создавать маленькие и эффективные
+      программы. <br>
+        <b>MCK</b> - это набор зеркальных компонент, позволяющих разрабатывать 
+        проект на основе библиотеки KOL визуально.<br>
+        Чтобы получить первоначальные знания о KOL и MCK прочитайте статью <a href="http://delphi.mastak.ru/articles/kol.html">KOL 
+        - кодоэкономичная объектная библиотека для Delphi</a>, написанную автором 
+        KOL <a href="mailto:%20bonanzas@xcl.cjb.net">Владимиром Кладовым</a>.</p>
+    </td>
+    </tr>
+  </table>
+ 
+<br>
+<table width="93%" border="1" bordercolor="#999999" align="center" cellspacing="0" cellpadding="5">
+  <tr> 
+      <td align="left"> 
+        
+      <p>После прочтения статьи, идите в раздел <a href="files.html">Файлы</a> 
+        и качайте свежие версии KOL и MCK, а также другие полезные мелочи. <br>
+          Затем обязательно загляните в раздел <a href="lessons.htm">Уроки 
+          и статьи</a> . Там вы обнаружите цикл уроков по работе с KOL, а также 
+          интересные статьи. <br>
+          Если вам понадобиться справочная информация по библиотеке, то не забудьте 
+          скачать программу xHelpGen, которая генерирует <br>
+        HTML-справку на основе исходного кода KOL. Правда справка на английском 
+        языке.<br>
+        В качестве альтернативы справке мы предлагаем на русском языке <a href="sprav.htm">Справочник 
+        по функциям и процедурам KOL</a>.</p>
+        </td>
+    </tr>
+  </table>
+  
+<br>
+<table width="93%" border="1" bordercolor="#999999" align="center" cellspacing="0" cellpadding="5">
+  <tr> 
+      <td align="left"> 
+        <p>Если у 
+          вас возникли вопросы, то прочитайте <a 
+      o href="faq.htm">FAQ</a> (Часто задаваемые вопросы) 
+          или если не нашли там ответа, пишите свой вопрос в <a href="http://delphi.mastak.ru/forum/kol.html">Форуме</a>.<br>
+        На вопросы с форума также отвечает сам
+        <a href="mailto:bonanzas@xcl.cjb.net">Владимир 
+        Кладов</a>.</p>
+      </td>
+    </tr>
+  </table>
+  
+<br>
+<table width="93%" border="1" bordercolor="#999999" align="center" cellspacing="0" cellpadding="5">
+  <tr> 
+      
+    <td align="left"> 
+      <p>Приглашаются к сотрудничеству и соавторству посетители, которым интересно 
+        программировать на <font face="Verdana, Arial, Helvetica, sans-serif">KOL 
+        и MCK</font>. Приветствуются статьи, вопросы, ваши программы и любая другая 
+        помощь.<br>
+        С нами можно связаться по адресам <a href="mailto:support@kol.mastak.ru">support@kol.mastak.ru</a>,<a href="mailto:gandalf@kol.mastak.ru">gandalf@kol.mastak.ru</a>.</p>
+      </td>
+    </tr>
+  </table>
+  
+<p align="center"><br>
+  <a name="news"></a> 
+<H3 class="hnews"> Новости сайта&nbsp; 
+</H3>
+<TABLE borderColor=#999999 height=21 cellSpacing=0 cellPadding=5 width="93%" 
+align=center border=1>
+  <TBODY>
+<!-- Insert Here -->
+ <TR>
+    <!-- Строка -->
+    <TD width="11%" height=19><B>30.06.2003</B></TD>
+<TD width="89%" height=19>
+<p>
+<b>[ Файлы&nbsp;&#8213;&nbsp;Основные&nbsp;библиотеки&nbsp;и&nbsp;дополнения:&nbsp;KOL&nbsp;и&nbsp;MCK ]=-</b><br>
+<U>Обновился</U><BR>KOL и
+      MCK до версии v1.78. 
+ <BR>Доступно в виде <A
+      href="http://kol.mastak.ru/files/kolmck177to178.zip">обновления</A>
+      (требуется <B><A href="http://kol.mastak.ru/files/Updater.zip">UPDATER
+      v3.1</A></B>)
+      <BR>Полную версию можно скачать <A
+      href="http://kol.mastak.ru/files/kol_mck.zip">здесь</A>.<BR>Об
+      нововведениях можете прочесть <A
+      href="http://bonanzas.rinet.ru/r_intro.htm" target=_blank>здесь</A>.
+    </P>
+<p>
+<b>[ Файлы&nbsp;&#8213;&nbsp;Модули ]=-</b><br>
+<p><u>Появился</u><br>
+  <a href="files/lib/KOLMediaPlayer.zip">KOLMediaPlayer</a> - 
+Раньше часть KOL которая отвечала за MediaPlayer, ныне вынесена в отдельный модуль.
+  <br>
+    <p>Автор: <font face="Arial">
+<a href="mailto:bonanzas@mail.ru">
+Владимир Кладов
+      </a>
+| <a href="http://bonanzas.rinet.ru/rindex.htm" target="_blank">www</a>
+</font></p>
+  </b></p>
+<p><u>Обновился</u><br>
+  <a href="files/lib/kol_err.zip">KOL_ERR v6.0.160</a> - 
+Содержит ERR.PAS и KOLMATH.PAS, предназначенные для замены стандартных модулей SysUtils и math в части обработки исключительных ситуаций. Использование ERR.PAS увеличивает код всего на 6K, и обеспечивает работу конструкций try-finally, try-except, raise с минимальными изменениями в коде. Последнее дополнение - модуль CPLXMATH.PAS - пакет для работы с комплексными числами.
+  <br>
+  </b></p>
+<p><u>Обновился</u><br>
+  <a href="files/lib/kol_Twofish.zip">KOL_Twofish</a> - 
+Объект для шифрации/дешифрации данных.
+  <br>
+  </b></p>
+<p>
+<b>[ Файлы&nbsp;&#8213;&nbsp;Другое ]=-</b><br>
+<p><u>Обновился</u><br>
+  <a href="files/other/KOL2FPC.zip">KOL2FPC</a> - 
+Эта программа позволит откорректировать KOLnMCK до такой степени, чтобы можно было использовать компилятор FPC (Free Pascal Compiler).
+ 
+  <br>
+    <p>Автор: <font face="Arial">
+<a href="mailto:bonanzas@mail.ru">
+Владимир Кладов
+      </a>
+| <a href="http://bonanzas.rinet.ru/rindex.htm" target="_blank">www</a>
+</font></p>
+  </b></p>
+ </TD></TR>
+    <TR> 
+      <!-- Строка -->
+      <TD width="11%" height=19><B>19.09.2001</B></TD>
+      <TD width="89%" height=19>Рождение сайта <B>KOL и MCK - Компактные программы 
+        на Delphi </B>на<A href="http://www.kolforall.by.ru/"> www.kolforall.by.ru</A>. 
+        Выложены основные материалы. Зарегистрировались в SpyLog. Это теперь "вечная 
+        новость". </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<div align="center">
+  <p><br>
+    Более старые новости можно прочесть <a href="OLD_NEWS/index.html">здесь</a><br>
+  </p>
+  <p>Если вы хотите узнавать новсти KOL и нашего сайта по почте подпишитесь на 
+    русскоязчную рассылку <b> Новости KOL и MCK</b>.<br>
+  </p>
+  <FORM TARGET=_top ACTION=http://subscribe.ru/member/quick METHOD=GET>
+    <INPUT TYPE=hidden NAME=action VALUE=quick>
+    <TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 width="276">
+      <TR>
+        <TD BGCOLOR=#FCF5E9 align=center width="268"> <FONT SIZE=-1 color=black>Рассылки 
+          </FONT><A target=_top HREF=http://subscribe.ru/><B><font
+size=-1 color=blue>Subscribe.Ru</font></B> </a> </TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR=#FFFFFF align=CENTER VALIGN=middle width="268"> <FONT SIZE=-1 color=black>Новости 
+          KOL и MCK.</FONT><BR> <FONT SIZE=2> 
+          <INPUT TYPE=hidden NAME=grp VALUE=comp.soft.prog.kolsubscribe>
+          <INPUT TYPE=text NAME=email SIZE=20 MAXLEN=100 VALUE="Ваш e-mail" style="font-size: 9pt">
+          <INPUT name="submit" TYPE=submit style="font-size: 9pt" VALUE="OK">
+          <br>
+          </FONT></TD>
+      </TR>
+    </TABLE>
+  </FORM>
+  <p> Страница рассылки : <a href="http://subscribe.ru/catalog/comp.soft.prog.kolsubscribe">http://subscribe.ru/catalog/comp.soft.prog.kolsubscribe</a> 
+  <p>&nbsp; </p>
+</div>
+<div align="right"><A href="#PageTop">Наверх <IMG height=9 
+  src="top.gif" width=11 
+  border=0></A> </div>
+<table cellspacing=0 cellpadding=0 width="100%" 
+background="bg3.gif" 
+border=0 height="25">
+  <tbody> 
+  <tr background="bg3.gif"> 
+    <td valign=bottom align=left height="17"> 
+      <!-- SpyLOG f:0211 -->
+      <script language="javascript"><!--
+Mu="u3036.78.spylog.com";Md=document;Mnv=navigator;Mp=0;
+Md.cookie="b=b";Mc=0;if(Md.cookie)Mc=1;Mrn=Math.random();
+Mn=(Mnv.appName.substring(0,2)=="Mi")?0:1;Mt=(new Date()).getTimezoneOffset();
+Mz="p="+Mp+"&rn="+Mrn+"&c="+Mc+"&t="+Mt;
+if(self!=top){Mfr=1;}else{Mfr=0;}Msl="1.0";
+//--></script><script language="javascript1.1"><!--
+Mpl="";Msl="1.1";Mj = (Mnv.javaEnabled()?"Y":"N");Mz+='&j='+Mj;
+//--></script><script language="javascript1.2"><!-- 
+Msl="1.2";Ms=screen;Mpx=(Mn==0)?Ms.colorDepth:Ms.pixelDepth;
+Mz+="&wh="+Ms.width+'x'+Ms.height+"&px="+Mpx;
+//--></script><script language="javascript1.3"><!--
+Msl="1.3";//--></script><script language="javascript"><!--
+My="";My+="<a href='http://"+Mu+"/cnt?cid=303678&f=3&p="+Mp+"&rn="+Mrn+"' target='_blank'>";
+My+="<img src='http://"+Mu+"/cnt?cid=303678&"+Mz+"&sl="+Msl+"&r="+escape(Md.referrer)+"&fr="+Mfr+"&pg="+escape(window.location.href);
+My+="' border=0 width=88 height=31 alt='SpyLOG'>";
+My+="</a>";Md.write(My);//--></script><noscript>
+      <a href="http://u3036.78.spylog.com/cnt?cid=303678&f=3&p=0" target="_blank">
+<img src="http://u3036.78.spylog.com/cnt?cid=303678&p=0" alt='SpyLOG' border='0' width=88 height=31 >
+</a></noscript>
+<!-- SpyLOG -->
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-darkblue2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+<!--Rating@Mail.ru LOGO--><a target=_top
+href="http://top.mail.ru/jump?from=364537"><img
+src="http://top.list.ru/counter?id=364537;t=56;l=1"
+border=0 height=31 width=88
+alt="Рейтинг@Mail.ru"></a><!--/LOGO-->
+<a href="http://www.yandex.ru/cy?base=0&host=kol.mastak.ru">
+<img src="http://www.yandex.ru/cycounter?kol.mastak.ru" width=88 height=31 alt="Яндекс цитирования" border=0></a>
+
+
+
+      &nbsp; &nbsp;&nbsp;&nbsp; </td>
+    <td valign=bottom align=middle height="17"> </td>
+    <td valign=bottom align=right height="17"><a href="http://kol.mastak.ru/" 
+      target=_top><img height=18 alt="Титульная страница" 
+      src="home.gif" 
+      width=30 border=0></a>&nbsp;<a 
+      href="javascript:window.external.AddFavorite('http://kol.mastak.ru/','KOL и MCK - Компактные программы на Delphi')"><img 
+      height=18 alt="Сделать закладку" src="bookmark.gif" width=30 
+      border=0></a>&nbsp;<a href="mailto:support@kol.mastak.ru"><img alt="Написать письмо" 
+      src="mail.gif" border=0 width="30" height="18"></a>&nbsp;</td>
+  </tr>
+  </tbody> 
+</table>
+
+</BODY>
+</HTML>

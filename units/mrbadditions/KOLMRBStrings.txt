@@ -1,0 +1,12 @@
+String Handing routines:
+
+  function NumberToken( Text, Divider: String ): Integer;
+  function GetToken(Text: String; Divider: String; Num: Integer; ToEnd: Boolean = False): String;
+  function DeleteToken(Text, Divider: String; Num: Integer): String;
+  function PosEx(Needle: Char; Haystack: String; Num: Integer): Integer;
+  function URLDecode(str: String): String;
+  function UrlEncode(const DecodedStr: String; Pluses: Boolean): String;
+  function Hex2Bin(Text, Buffer: PChar; BufSize: Integer): Integer; assembler;
+  function StringReplace(const S, OldPattern, NewPattern: string; Flags: TReplaceFlags): string;
+
+By MrBrdo

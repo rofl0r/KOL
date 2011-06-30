@@ -1,0 +1,42 @@
+package KOLmdvToolTipD7;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'mdvToolTip for KOL&MCK by Dmitry Matveev'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+{$DEFINE INPACKAGE}
+
+requires
+  rtl,
+  designide,
+  MirrorKOLPackageD7,
+  vclx,
+  vcl,
+  vclactnband;
+
+contains
+  MCKmdvToolTip in 'MCKmdvToolTip.pas',
+  KOLmdvToolTip in 'KOLmdvToolTip.pas';
+
+end.

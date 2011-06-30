@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KOL Help: TListEx object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TListEx( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TListEx = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Extended list, with Objects[ ] property. Created calling <a href=kol_pas.htm#newlistex target="_top">NewListEx</a> function.
+<h3 align="center"><font color="#FF8080">TListEx properties</font></h3>
+<a name="addby"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>AddBy</b></font>: <b>Integer</b>;</font>
+<br>
+</p>
+<a name="items"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Items</b></font>[ Idx: <b>Integer</b> ]: <b>Pointer</b>;</font>
+<br>
+</p>
+<a name="count"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Count</b></font>: <b>Integer</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+</p>
+<a name="itemslist"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ItemsList</b></font>: <a href=kol_pas.htm#plist target="_top">PList</a>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+</p>
+<a name="objlist"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ObjList</b></font>: <a href=kol_pas.htm#plist target="_top">PList</a>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TListEx methods</font></h3>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>virtual</b>;</font>
+<br>
+</p>
+<a name="clear"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Clear</b></font>;</font>
+<br>
+</p>
+<a name="add"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Add</b></font>( Value: <b>Pointer</b> );</font>
+<br>
+</p>
+<a name="addobj"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>AddObj</b></font>( Value, Obj: <b>Pointer</b> );</font>
+<br>
+</p>
+<a name="insert"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Insert</b></font>( Idx: <b>Integer</b>; Value: <b>Pointer</b> );</font>
+<br>
+</p>
+<a name="insertobj"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>InsertObj</b></font>( Idx: <b>Integer</b>; Value, Obj: <b>Pointer</b> );</font>
+<br>
+</p>
+<a name="delete"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Delete</b></font>( Idx: <b>Integer</b> );</font>
+<br>
+</p>
+<a name="deleterange"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>DeleteRange</b></font>( Idx, Len: <b>Integer</b> );</font>
+<br>
+</p>
+<a name="indexof"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>IndexOf</b></font>( Value: <b>Pointer</b> ): <b>Integer</b>;</font>
+<br>
+</p>
+<a name="indexofobj"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>IndexOfObj</b></font>( Obj: <b>Pointer</b> ): <b>Integer</b>;</font>
+<br>
+</p>
+<a name="swap"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Swap</b></font>( Idx1, Idx2: <b>Integer</b> );</font>
+<br>
+</p>
+<a name="moveitem"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>MoveItem</b></font>( OldIdx, NewIdx: <b>Integer</b> );</font>
+<br>
+</p>
+<a name="last"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Last</b></font>: <b>Pointer</b>;</font>
+<br>
+</p>
+<a name="lastobj"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>LastObj</b></font>: <b>Pointer</b>;</font>
+<br>
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TListEx events</font></h3>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TListEx fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1250\uc1 \deff0\deflang1033\deflangfe1045{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f16\fscript\fcharset0\fprq2{\*\panose 030f0702030302020204}Comic Sans MS;}{\f72\froman\fcharset238\fprq2 Times New Roman CE;}{\f73\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f75\froman\fcharset161\fprq2 Times New Roman Greek;}
+{\f76\froman\fcharset162\fprq2 Times New Roman Tur;}{\f77\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f78\fswiss\fcharset238\fprq2 Arial CE;}{\f79\fswiss\fcharset204\fprq2 Arial Cyr;}{\f81\fswiss\fcharset161\fprq2 Arial Greek;}
+{\f82\fswiss\fcharset162\fprq2 Arial Tur;}{\f83\fswiss\fcharset186\fprq2 Arial Baltic;}{\f168\fscript\fcharset238\fprq2 Comic Sans MS CE;}{\f169\fscript\fcharset204\fprq2 Comic Sans MS Cyr;}{\f171\fscript\fcharset161\fprq2 Comic Sans MS Greek;}
+{\f172\fscript\fcharset162\fprq2 Comic Sans MS Tur;}{\f173\fscript\fcharset186\fprq2 Comic Sans MS Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;
+\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{
+\widctlpar\adjustright \fs20\lang1045\cgrid \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}}{\info{\title ActiveKOL package v1}{\author Brandys}{\operator Brandys}{\creatim\yr2002\mo5\dy21\hr20\min13}{\revtim\yr2002\mo5\dy21\hr20\min30}
+{\version2}{\edmins2}{\nofpages2}{\nofwords566}{\nofchars3227}{\*\company Bogus\'b3aw}{\nofcharsws0}{\vern89}}\paperw11906\paperh16838\margl1417\margr1417\margt1417\margb1417 
+\deftab708\widowctrl\ftnbj\aenddoc\hyphhotz425\hyphcaps0\formshade\viewkind1\viewscale90\viewzk2\pgbrdrhead\pgbrdrfoot \fet0\sectd \linex0\headery709\footery709\colsx709\endnhere\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}
+{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}
+{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9
+\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \widctlpar\adjustright \fs20\lang1045\cgrid {\i\f1\fs24\cf9 ActiveKOL package v1.1.106 (6-Nov-2001).
+\par Copyright (C) by Vladimir Kladov.}{\b\f16\fs28\cf9 
+\par 
+\par Content:
+\par   ActiveKOL.pas
+\par   KOLComObj.pas
+\par   TLB2KOL.exe (TLB unit converter)
+\par   Tlb2KolSrc.zip (TLB converter source)
+\par   License.txt
+\par   ActiveKOL_readme.txt (this file)}{\f16 
+\par 
+\par This is a package to extend projects made under Delphi with KOL (Key Objects Library, (C) by Vladimir Kladov, 2001) with capability to include ActiveX components on KOL forms. The main purpose of KOL is cre
+ating small executables, but direct usage of ActiveX controls requires including some units (classes, etc.), which increase size of the application up to 360K again. To solve this, necessary code was extracted from OleCtrls, ComObj and other units and ada
+ptated to use with KOL controls by as much natively way as possible. 
+\par   This version of the package is not visual. It requires at least KOL version 0.87 (to get it, download KOL v0.85, and apply updates to v0.86 and then to v0.87, using Updater.exe utility)
+. Also, KOL_ERR package v3.0.87 or higher needed. Though, this version 1.1.106 is released together with KOL/MCK v1.06 and it is recommended to have the last version of KOL and MCK to work with ActiveKOL package.
+\par   ActiveKOL allows to create applications, 
+containing ActiveX controls, with executable size is starting from 43,5K or less under Delphi5 (when system.dcu replacement used). Delphi5, Delphi4 and Delphi3 versions are supported. Delphi6 will be supported later. Delphi2 will not be supported (it has 
+not available tools to import and use ActiveX control).
+\par 
+\par HISTORY
+\par 
+\par - In v1.1.106, events handling fixed (by Alexey Izyumov).
+\par 
+\par INSTALLATION
+\par 
+\par - extract files to KOL installation directory (KOL v0.87 should be installed already).
+\par - it is possible to add TLB2KOL utility to a list of Delphi tools (Tools|Configure Tools).
+\par 
+\par USAGE
+\par 
+\par - first, import ActiveX control as usual (Component|Import ActiveX Control).
+\par It is not necessary to install ActiveX control imported to Component Palette, so click button Create units, not Install.
+\par - second, run TLB2KOL utility and convert all imported xxxx_TLB.pas units to xxxx_TLBKOL.pas units.
+\par - add a reference to the imported unit in "uses" clause of the unit.
+\par - declare a variable (global or where You wish to do it available). E.g., when You import and use DHTMLEDLib_TLBKOL.pas, You can find control TDHTMLEdit there, derived from TOleCtl. So, your variable should be of type PDHTMLEdit.
+\par - write a code to construct the ActiveX control. E.g.:
+\par 
+\par   var DHTML: PDHTMLEdit;
+\par 
+\par   new( DHTML, CreateParented( Form ) );
+\par 
+\par - then, write a code to change some properties of your control. E.g.
+\par  
+\par   var Path: OleVariant;
+\par 
+\par   DHTML.SetAlign( caClient );
+\par   DHTML.BrowseMode := FALSE;
+\par   Path := 'http://xcl.cjb.net'; // or, use local path, e.g. 'E:\\KOL\\index.html'
+\par   DHTML.LoadURL( Path );
+\par 
+\par This code should work in D5.
+\par 
+\par OTHER NOTES:
+\par 
+\par - there is a problem with Code Completion feature under D4 and D5. While trying to complete names from TOleCtl
+ descendant object, CC failed usually with AV (read 00000000 at 00000000). Don't matter. See to a declaration of the object in converted TLB unit, and write code manually.
+\par 
+\par - When converting some tlb's using convert utility provided, it is possible, that a
+ compiler detect an error 'Identifier redeclared' for some events or fields, when resulting unit will be compiled. Just find identifiers, which are conflicting, and rename it. E.g. FOnClick to FOnClick1 (everywhere in the unit).
+\par 
+\par - You can use ActiveX cont
+rols with MCK projects (MCK - Mirror Classes Kit). But now, not visually. Just write constructing code in OnFormCreate event handler. Capability to use ActiveX controls in visual MCK projects visually will be added later (may be).
+\par 
+\par - To compile Tlb2Kol, MCK and Delphi5 needed. If You find what should be changed in Tlb2Kol project, or in supplied sources, give me know, please.
+\par 
+\par ------------------------------------------
+\par http://xcl.cjb.net 
+\par mailt: bonanzas@xcl.cjb.net
+\par }}

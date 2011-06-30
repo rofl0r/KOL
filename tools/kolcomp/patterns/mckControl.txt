@@ -1,0 +1,154 @@
+unit mck_KC_;
+
+interface
+
+uses
+  Windows, Messages, Classes, Controls, mirror, mckCtrls, KOL, Graphics, KOL_KC_;
+
+type
+
+  TKOL_KC_ = class(TKOL_PC_)
+  private
+    // fNotAvailable: Boolean;
+
+    // fOnMyEvent: TOnMyEvent;
+    // procedure SetOnMyEvent(Value: TOnMyEvent);
+
+  protected
+    procedure FirstCreate; override;
+    function TypeName: String; override;
+    function AdditionalUnits: String; override;
+    function SetupParams(const AName, AParent: String): String; override;
+    procedure AssignEvents(SL: TStringList; const AName: String); override;
+    procedure SetupFirst(SL: TStringList; const AName, AParent, Prefix: String); override;
+    procedure SetupLast(SL: TStringList; const AName, AParent, Prefix: String); override;
+    procedure SetupConstruct(SL: TStringList; const AName, AParent, Prefix: String); override;
+
+  public
+    constructor Create(Owner: TComponent); override;
+
+  published
+
+    // property OnMyEvent: TOnMyEvent read fOnMyEvent write SetOnMyEvent;
+
+    { ÑÊĞÛÒÈÅ ÑÂÎÉÑÒÂ Â <ÈÍÑÏÅÊÒÎĞÅ ÎÁÚÅÊÒÎÂ> }
+    // property Options: Boolean read fNotAvailable;
+  end;
+
+procedure Register;
+
+{$R *.dcr}
+
+implementation
+
+procedure Register;
+begin
+RegisterComponents('KOL _PP_', [TKOL_KC_]);
+end;
+
+{ ÄÎÁÀÂËÅÍÈÅ ÌÎÄÓËß }
+function TKOL_KC_.AdditionalUnits;
+begin
+Result := ', KOL_KC_';
+end;
+
+function TKOL_KC_.TypeName: String;
+begin
+Result := 'TKOL_KC_';
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{------------------}
+{ ÏÎÄÌÅÍÀ ÇÍÀ×ÅÍÈÉ }
+{------------------}
+procedure TKOL_KC_.FirstCreate;
+begin
+// Íå ñîçäàâàéòå ñâîéñòâî â MCK, åñëè õîòèòå, ÷òîá
+// ó íåãî áûëî ïîñòîÿííîå çíà÷åíèå, çàäàííîå Âàìè.
+// CurIndex := -1;
+end;
+
+{----------------}
+{ ĞÎÄÈÒÅËÜ ÔÎĞÌÀ }
+{----------------}
+function TKOL_KC_.SetupParams;
+begin
+Result := AParent;
+end;
+
+{--------------------------}
+{ ĞÅÃÈÑÒĞÀÖÈß ÎÁĞÀÁÎÒ×ÈÊÎÂ }
+{--------------------------}
+procedure TKOL_KC_.AssignEvents;
+begin
+inherited;
+// DoAssignEvents(SL, AName, ['OnMyEvent'], [@OnMyEvent]);
+// DoAssignEvents(SL, AName, ['OnEvent1', 'OnEvent2'], [@OnEvent1, @OnEvent2]);
+end;
+
+{------------------------------------}
+{ ÑÎÇÄÀÍÈÅ KOL ÎÁÚÅÊÒÀ Â unitX_X.inc }
+{------------------------------------}
+procedure TKOL_KC_.SetupConstruct;
+const
+ spc = ', ';
+ Boolean2Str: array [Boolean] of String = ('FALSE', 'TRUE');
+
+var
+ S: String;
+// SDV: String; 
+begin
+S := GenerateTransparentInits;
+
+// FirstCreate; { ÏÎÄÌÅÍÀ ÇÍÀ×ÅÍÈÉ }
+
+// SDV := spc + Boolean2Str[ShowDV] + spc;
+
+{ Ôîğìèğîâàíèå ñòğîêè ñîçäàíèÿ îáúåêòà }
+ SL.Add(Prefix + AName + ' := New_KC_(' + SetupParams(AName, AParent) +
+
+// SDV + Color2Str(myColor) + { ÏÀĞÀÌÅÒĞÛ }
+
+ ');');
+
+if S <> '' then SL.Add(Prefix + AName + S + ';');
+end;
+
+{--------------------------}
+{ ÄÎÁÀÂËÅÍÈÅ Â unitX_X.inc }
+{--------------------------}
+procedure TKOL_KC_.SetupFirst;
+begin
+ inherited;
+
+// SL.Add(Prefix + AName + '.myStr := ''' + myStr + ''';');
+end;
+
+{--------------------------}
+{ ÄÎÁÀÂËÅÍÈÅ Â unitX_X.inc }
+{--------------------------}
+procedure TKOL_KC_.SetupLast;
+begin
+ inherited;
+
+// SL.Add(Prefix + AName + '.myInt := ' + Int2Str(myInt) + ';');
+end;
+////////////////////////////////////////////////////////////////////////////////
+
+{-------------}
+{ ÊÎÍÑÒĞÓÊÒÎĞ }
+{-------------}
+constructor TKOL_KC_.Create;
+begin
+ inherited;
+
+// fmyInt := 10;
+end;
+
+{ procedure TKOL_KC_.SetOnMyEvent;
+begin
+fOnMyEvent := Value;
+Change;
+end; }
+
+end.

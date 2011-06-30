@@ -1,0 +1,51 @@
+package MirrorKOLPackageD6;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION '_KOL_ mirror controls for Delphi 6'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+{$DEFINE INPACKAGE}
+{$DEFINE PAS_VERSION}
+{$DEFINE noMCKLOG}
+{$DEFINE noNOT_USE_KOLCtrlWrapper}
+
+requires
+  vcl,
+  vclx,
+  designide;
+
+contains
+  mirror in 'mirror.pas',
+  kol in 'Kol.pas',
+  mckCtrls in 'mckCtrls.pas',
+  mckObjs in 'mckObjs.pas',
+  mckAccEditor in 'mckAccEditor.pas' {KOLAccEdit},
+  mckMenuEditor in 'mckMenuEditor.pas',
+  mckFileFilterEditor in 'mckFileFilterEditor.pas' {fmFileFilterEditor},
+  mckToolbarEditor in 'mckToolbarEditor.pas' {fmToolbarEditor},
+  mckLVColumnsEditor in 'mckLVColumnsEditor.pas',
+  mckCtrlDraw in 'mckCtrlDraw.pas',
+  mckActionListEditor in 'mckActionListEditor.pas';
+
+end.

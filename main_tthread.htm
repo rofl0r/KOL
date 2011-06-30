@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>KOL Help: TThread object (main frame)</title>
+<base target="_top">
+</head>
+
+<body bgcolor="#FFFFEF" text="#000000" link="#008080" vlink="#008000" alink="#808000">
+<p><font face="Courier" color="#800080"><b>TThread( unit <a href=kol_pas.htm>KOL.pas</a> )
+ <font face="Wingdings">ï</font> <a href=tobj.htm>TObj</a>
+ <font face="Wingdings">ï</font> <a href=_tobj.htm>_TObj</a>
+</b></font></p>
+<p><b>
+TThread = object( <a href=tobj.htm target="_top">TObj</a> )
+</b></p>
+Thread object. It is possible not to derive Your own thread-based
+object, but instead create thread <a href=#suspended target="main">Suspended</a> and assign event
+<a href=#onexecute target="main">OnExecute</a>. To create, use one of <a href=kol_pas.htm#newthread target="_top">NewThread</a> of <a href=kol_pas.htm#newthreadex target="_top">NewThreadEx</a> functions,
+or derive Your own descendant object and write creation function
+(or constructor) for it.
+<br><br>
+Aknowledgements. Originally class ZThread was developed for XCL:
+<br> * By: Tim Slusher : junior@nlcomm.com
+<br> * Home: http://www.nlcomm.com/~junior
+<h3 align="center"><font color="#FF8080">TThread properties</font></h3>
+<a name="handle"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Handle</b></font>: THandle;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Thread handle. It is created immediately when object is created
+(using <a href=kol_pas.htm#newthread target="_top">NewThread</a>).
+</p>
+<a name="suspended"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Suspended</b></font>: <b>boolean</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+True, if suspended.
+</p>
+<a name="terminated"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Terminated</b></font>: <b>boolean</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+True, if terminated.
+</p>
+<a name="threadid"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ThreadId</b></font>: <b>DWORD</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#209;</font>&nbsp;&nbsp;&nbsp;
+<br>
+Thread id.
+</p>
+<a name="priorityclass"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>PriorityClass</b></font>: <b>Integer</b>;</font>
+<br>
+Thread priority class. One of following values: HIGH_PRIORITY_CLASS,
+IDLE_PRIORITY_CLASS, NORMAL_PRIORITY_CLASS, REALTIME_PRIORITY_CLASS.
+</p>
+<a name="threadpriority"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>ThreadPriority</b></font>: <b>Integer</b>;</font>
+<br>
+Thread priority value. One of following values: THREAD_PRIORITY_ABOVE_NORMAL,
+THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE,
+THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL, THREAD_PRIORITY_TIME_CRITICAL.
+</p>
+<a name="data"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>Data</b></font>: <b>Pointer</b>;</font>
+<br>
+Custom data pointer. Use it for Youe own purpose.
+</p>
+<a name="autofree"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>AutoFree</b></font>: <b>Boolean</b>;</font>
+<br>
+Set this property to true to provide automatic destroying of thread
+object when its executing is finished.
+</p>
+<h4 align="center"><font color="black">Properties, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TThread methods</font></h3>
+<a name="destroy"></a>
+<p>
+<font face="Courier" color="#800080"><b>destructor</b> <font color="#808000"><b>Destroy</b></font>; <b>virtual</b>;</font>
+&nbsp;&nbsp;&nbsp;<font face="Webdings" size=7>&#78;</font>&nbsp;&nbsp;&nbsp;
+<br>
+</p>
+<a name="execute"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>Execute</b></font>: <b>integer</b>; <b>virtual</b>;</font>
+<br>
+Executes thread. Do not call this method from another thread! (Even do
+not call this method at all!) Instead, use <a href=#resume target="main">Resume</a>.
+<br>
+Note also that in contrast to VCL, it is not necessary to create your
+own descendant object from TThread and override Execute method. In KOL,
+it is sufficient to create an instance of TThread object (see <a href=kol_pas.htm#newthread target="_top">NewThread</a>,
+<a href=kol_pas.htm#newthreadex target="_top">NewThreadEx</a>, <a href=kol_pas.htm#newthreadautofree target="_top">NewThreadAutoFree</a> functions) and assign <a href=#onexecute target="main">OnExecute</a> event
+handler for it.
+</p>
+<a name="resume"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Resume</b></font>;</font>
+<br>
+Continues executing. It is necessary to make call for every
+nested <a href=#suspend target="main">Suspend</a>.
+</p>
+<a name="suspend"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Suspend</b></font>;</font>
+<br>
+Suspends thread until it will be resumed. Can be called from another
+thread or from the thread itself.
+</p>
+<a name="terminate"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Terminate</b></font>;</font>
+<br>
+Terminates thread.
+</p>
+<a name="waitfor"></a>
+<p>
+<font face="Courier" color="#800080"><b>function</b> <font color="#808000"><b>WaitFor</b></font>: <b>Integer</b>;</font>
+<br>
+Waits (infinitively) until thead will be finished.
+</p>
+<a name="synchronize"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>Synchronize</b></font>( Method: TThreadMethod );</font>
+<br>
+Call it to execute given method in main thread context. <a href=kol_pas.htm#applet target="_top">Applet</a> variable
+must exist for that time.
+</p>
+<a name="synchronizeex"></a>
+<p>
+<font face="Courier" color="#800080"><b>procedure</b> <font color="#808000"><b>SynchronizeEx</b></font>( Method: TThreadMethodEx; Param: <b>Pointer</b> );</font>
+<br>
+Call it to execute given method in main thread context, with a given
+parameter. <a href=kol_pas.htm#applet target="_top">Applet</a> variable must exist for that time. Param must not be nil.
+</p>
+<h4 align="center"><font color="black">Methods, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TThread events</font></h3>
+<a name="onexecute"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnExecute</b></font>: <a href=kol_pas.htm#tonthreadexecute target="_top">TOnThreadExecute</a>;</font>
+<br>
+Is called, when <a href=#execute target="main">Execute</a> is starting.
+</p>
+<a name="onsuspend"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnSuspend</b></font>: <a href=kol_pas.htm#tobjectmethod target="_top">TObjectMethod</a>;</font>
+<br>
+Is called, when <a href=#suspend target="main">Suspend</a> is performed.
+</p>
+<a name="onresume"></a>
+<p>
+<font face="Courier" color="#800080"><b>property</b> <font color="#808000"><b>OnResume</b></font>: <a href=kol_pas.htm#tonevent target="_top">TOnEvent</a>;</font>
+<br>
+Is called, when resumed.
+</p>
+<h4 align="center"><font color="black">Events, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<h3 align="center"><font color="#FF8080">TThread fields</font></h3>
+<h4 align="center"><font color="black">Fields, inherited from <a href="tobj.htm" target="_top">TObj</a></font></h4>
+<hr>
+<p align="center">[&nbsp;<a href=index.htm>Index</a>&nbsp;]</p>
+<p align="center"><font face="Comic Sans MS"><small>This help is generated 22-Sep-2005 by KOL Help generator, (C) 2000-2001 by Vladimir Kladov<br>Modified (C) 2003 by Alexander Bartov</small></font></p>
+</body>
+</html>

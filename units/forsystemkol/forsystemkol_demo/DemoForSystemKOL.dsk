@@ -1,0 +1,142 @@
+[MainWindow]
+Create=1
+Visible=1
+State=2
+Left=0
+Top=0
+Width=640
+Height=106
+MaxLeft=-4
+MaxTop=-4
+MaxWidth=648
+MaxHeight=106
+ClientWidth=640
+ClientHeight=60
+
+[ProjectManager]
+LargeButtons=1
+Column0Width=75
+Column1Width=125
+Column2Width=125
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=-1
+Top=101
+Width=190
+Height=337
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=313
+SplitPos=106
+
+[HistoryLists\hiSearchSymbol]
+Count=2
+H0=EM_LINEFROMCHAR
+H1=CreateEllipticRgn
+
+[HistoryLists\hiOpenFile]
+Count=30
+H0=h:\program files\delphi-projects\kol\forinet\forsystemkol\forsystemkol.pas
+H1=h:\program files\borland\delphi 3\kollib\mykolcomponents\scrollra\kolscrollra.pas
+H2=h:\program files\borland\delphi 3\source\vcl\stdctrls.pas
+H3=h:\program files\delphi-projects\x\sysutils.pas
+H4=h:\program files\borland\delphi 3\kollib\system\system.pas
+H5=h:\program files\borland\delphi 3\mycomponents\unitstrings.pas
+H6=h:\program files\borland\delphi 3\mycomponents\unitdebug.pas
+H7=h:\program files\borland\delphi 3\mycomponents\debug1.dpk
+H8=h:\program files\borland\delphi 3\components\mivskin\example\mainunitexample.pas
+H9=h:\program files\borland\delphi 3\tdosmemo\dos2win v1.00\u_main.pas
+H10=h:\program files\borland\delphi 3\source\rtl\win\windows.pas
+H11=h:\program files\borland\delphi 3\ossyneditlib\packages\syncompletionproposal.pas
+H12=h:\program files\borland\delphi 3\rx\demo\riched2\richedit.dpr
+H13=h:\program files\borland\delphi 3\demos\doc\filmanex\fmxutils.pas
+H14=h:\program files\delphi-projects\tags\unit1.pas
+H15=h:\program files\delphi-projects\html-editor\unit2.pas
+H16=h:\program files\delphi-projects\html-editor\unit3.pas
+H17=h:\program files\delphi-projects\visualpicture\unit1.pas
+H18=h:\program files\delphi-projects\visualpicture\unit2.pas
+H19=h:\program files\delphi-projects\units\forsystem\forsystem.txt
+H20=h:\program files\delphi-projects\first\unit1.pas
+H21=h:\program files\delphi-projects\osselograph\newprogram\osselograph.dpr
+H22=h:\program files\delphi-projects\html-editor\htmleditor.dpr
+H23=h:\program files\html-projects\games.html
+H24=h:\program files\borland\delphi 3\rx\demo\riched2\remain.pas
+H25=c:\program files\projects\systemres\project1.dpr
+H26=c:\program files\projects\sql\sanya\program\project1.dpr
+H27=c:\program files\projects\osselograph\program\project1.dpr
+H28=c:\program files\projects\met_opt2\main.~fm
+H29=h:\program files\borland\delphi 3\bin\dfwkbd.dll
+
+[HistoryLists\hiUnitAlias]
+Count=1
+H0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+
+[HistoryLists\hiLibUnitAliases]
+Count=1
+H0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+
+[Closed Files]
+File_0=SourceModule,'H:\Program Files\Delphi-Projects\KOL\ForINet\ForSystemKOL\ForSystemKOL.pas',0,1,1,67,10,0,0
+File_1=SourceModule,'H:\Program Files\Borland\Delphi 3\KolLib\MyKOLComponents\ScrollRA\KOLScrollRA.pas',0,1,328,18,333,0,0
+File_2=SourceModule,'H:\Program Files\Borland\Delphi 3\Source\VCL\stdctrls.pas',0,1,3588,1,3602,0,0
+File_3=SourceModule,'H:\Program Files\Borland\Delphi 3\Lib\SysUtils.pas',0,1,3914,5,3920,0,0
+File_4=SourceModule,'H:\Program Files\Delphi-Projects\x\sysutils.pas',0,1,3916,15,3920,0,0
+File_5=SourceModule,'H:\Program Files\Borland\Delphi 3\KolLib\System\system.pas',0,1,610,1,621,0,0
+File_6=SourceModule,'h:\program files\borland\delphi 3\KolLib\System\SysInit.pas',0,1,319,3,331,0,0
+File_7=PackageEditModule,'H:\Program Files\Borland\Delphi 3\MyComponents\Debug1.dpk',0,195,164,580,461,1
+File_8=SourceModule,'H:\Program Files\Borland\Delphi 3\MyComponents\Debuger1v.pas',0,1,57,1,67,0,0
+File_9=SourceModule,'H:\Program Files\Borland\Delphi 3\MyComponents\UnitDebug.pas',0,1,522,1,531,1,0
+
+[Modules]
+Module0=H:\Program Files\Delphi-Projects\KOL\ForINet\ForSystemKOL\Unit1.pas
+Module1=H:\Program Files\Delphi-Projects\KOL\ForINet\ForSystemKOL\DemoForSystemKOL.dpr
+Count=2
+EditWindowCount=1
+
+[H:\Program Files\Delphi-Projects\KOL\ForINet\ForSystemKOL\Unit1.pas]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[H:\Program Files\Delphi-Projects\KOL\ForINet\ForSystemKOL\DemoForSystemKOL.dpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+Create=1
+Visible=1
+State=2
+Left=188
+Top=123
+Width=457
+Height=329
+MaxLeft=-4
+MaxTop=98
+MaxWidth=648
+MaxHeight=358
+ClientWidth=640
+ClientHeight=331
+SplitPos=50
+MessagePane=0
+ViewCount=1
+CurrentView=0
+View0=0
+
+[View0]
+Module=H:\Program Files\Delphi-Projects\KOL\ForINet\ForSystemKOL\Unit1.pas
+CursorX=11
+CursorY=124
+TopLine=110
+LeftCol=1
+
+[Watches]
+Count=0
+
+[Breakpoints]
+Count=0
+
